@@ -8,6 +8,7 @@ CREATE TABLE `tbltransactions` (
 	`productID` INT(11) NOT NULL,
 	`stockAdjustment` INT(11) NOT NULL,
 	`transactionDate` DATE NOT NULL,
+	`transactionPaid` BIT(1) NULL DEFAULT NULL,
 	PRIMARY KEY (`transactionID`) USING BTREE,
 	INDEX `productID` (`productID`) USING BTREE,
 	CONSTRAINT `productID` FOREIGN KEY (`productID`) REFERENCES `gallerydb`.`tblproducts` (`productID`) ON UPDATE NO ACTION ON DELETE NO ACTION
