@@ -1,7 +1,7 @@
 -- Data Definition Language - Statement for tblartists
 -- Gallery Database System - Iteration 1
--- github.com/tomquinn04/nea3.3iteration
--- (c) Tom Quinn 2021
+-- github.com/tomquinn04/nea3.2design
+-- (c) Tom Quinn 2022
 
 CREATE TABLE `tblartists` (
 	`artistID` INT(11) NOT NULL AUTO_INCREMENT,
