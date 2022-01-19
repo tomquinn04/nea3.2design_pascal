@@ -8,10 +8,10 @@ object Form1: TForm1
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -14
-  Font.Name = 'Ubuntu'
+  Font.Name = 'Segoe UI'
   Font.Style = []
   PixelsPerInch = 96
-  TextHeight = 18
+  TextHeight = 19
   object GridPanel5: TGridPanel
     Left = 0
     Top = 0
