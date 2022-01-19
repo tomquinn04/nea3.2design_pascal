@@ -2,22 +2,21 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 686
-  ClientWidth = 1062
+  ClientHeight = 634
+  ClientWidth = 962
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -12
-  Font.Name = 'Tahoma'
+  Font.Height = -14
+  Font.Name = 'Ubuntu'
   Font.Style = []
-  OldCreateOrder = False
-  PixelsPerInch = 110
-  TextHeight = 14
+  PixelsPerInch = 96
+  TextHeight = 18
   object GridPanel5: TGridPanel
     Left = 0
     Top = 0
-    Width = 1062
-    Height = 686
+    Width = 962
+    Height = 634
     Align = alClient
     Caption = 'GridPanel5'
     ColumnCollection = <
@@ -38,32 +37,26 @@ object Form1: TForm1
         Value = 94.000000000000000000
       end>
     TabOrder = 0
-    ExplicitLeft = 448
-    ExplicitTop = 344
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitWidth = 927
+    ExplicitHeight = 599
     object PageControl1: TPageControl
       Left = 1
-      Top = 42
-      Width = 1060
-      Height = 643
+      Top = 39
+      Width = 960
+      Height = 594
       ActivePage = TabSheet1
       Align = alClient
       TabHeight = 40
       TabOrder = 0
       TabWidth = 120
-      ExplicitLeft = 16
-      ExplicitTop = 40
-      ExplicitWidth = 1001
-      ExplicitHeight = 601
       object TabSheet1: TTabSheet
         Caption = 'TabSheet1'
         object GridPanel1: TGridPanel
           AlignWithMargins = True
           Left = 3
           Top = 3
-          Width = 1046
-          Height = 587
+          Width = 946
+          Height = 538
           Align = alClient
           Caption = 'GridPanel1'
           Color = clBtnShadow
@@ -91,14 +84,14 @@ object Form1: TForm1
               Value = 100.000000000000000000
             end>
           TabOrder = 0
-          ExplicitWidth = 987
-          ExplicitHeight = 545
+          ExplicitWidth = 911
+          ExplicitHeight = 505
           object GridPanel2: TGridPanel
             AlignWithMargins = True
             Left = 4
             Top = 4
-            Width = 647
-            Height = 579
+            Width = 584
+            Height = 530
             Align = alClient
             Caption = 'GridPanel1'
             Color = clMoneyGreen
@@ -124,14 +117,14 @@ object Form1: TForm1
                 Value = 33.109738704271960000
               end>
             TabOrder = 0
-            ExplicitWidth = 610
-            ExplicitHeight = 537
+            ExplicitWidth = 562
+            ExplicitHeight = 497
             object GridPanel4: TGridPanel
               AlignWithMargins = True
               Left = 4
               Top = 4
-              Width = 639
-              Height = 181
+              Width = 576
+              Height = 165
               Align = alClient
               Caption = 'GridPanel4'
               Color = clActiveBorder
@@ -149,16 +142,16 @@ object Form1: TForm1
                   Value = 50.000000000000000000
                 end>
               TabOrder = 0
-              ExplicitWidth = 602
-              ExplicitHeight = 168
+              ExplicitWidth = 554
+              ExplicitHeight = 155
             end
           end
           object GridPanel3: TGridPanel
             AlignWithMargins = True
-            Left = 657
+            Left = 594
             Top = 4
-            Width = 385
-            Height = 579
+            Width = 348
+            Height = 530
             Align = alClient
             Caption = 'GridPanel1'
             Color = clBackground
@@ -173,9 +166,9 @@ object Form1: TForm1
                 Value = 100.000000000000000000
               end>
             TabOrder = 1
-            ExplicitLeft = 620
-            ExplicitWidth = 363
-            ExplicitHeight = 537
+            ExplicitLeft = 572
+            ExplicitWidth = 335
+            ExplicitHeight = 497
           end
         end
       end
