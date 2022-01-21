@@ -17,6 +17,7 @@ type
     pageReports: TTabSheet;
     pageSettings: TTabSheet;
     GridPanel5: TGridPanel;
+    frameDashboard1: TframeDashboard;
 
   private
     { Private declarations }

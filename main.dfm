@@ -50,6 +50,282 @@ object Form1: TForm1
       TabWidth = 120
       object pageDashboard: TTabSheet
         Caption = 'Dashboard'
+        inline frameDashboard1: TframeDashboard
+          Left = 0
+          Top = 0
+          Width = 954
+          Height = 546
+          Align = alClient
+          TabOrder = 0
+          ExplicitLeft = 6
+          ExplicitTop = 6
+          inherited GridPanel1: TGridPanel
+            Width = 948
+            Height = 540
+            ControlCollection = <
+              item
+                Column = 0
+                Control = frameDashboard1.GridPanel2
+                Row = 0
+              end
+              item
+                Column = 1
+                Control = frameDashboard1.GridPanel3
+                Row = 0
+              end>
+            inherited GridPanel2: TGridPanel
+              Width = 587
+              Height = 534
+              ControlCollection = <
+                item
+                  Column = 0
+                  Control = frameDashboard1.GridPanel7
+                  Row = 0
+                end
+                item
+                  Column = 0
+                  Control = frameDashboard1.GridPanel9
+                  Row = 1
+                end
+                item
+                  Column = 0
+                  Control = frameDashboard1.GridPanel13
+                  Row = 2
+                end>
+              inherited GridPanel7: TGridPanel
+                Width = 581
+                Height = 167
+                ControlCollection = <
+                  item
+                    Column = 0
+                    Control = frameDashboard1.GridPanel4
+                    Row = 1
+                  end
+                  item
+                    Column = 0
+                    Control = frameDashboard1.lblThisMonth
+                    Row = 0
+                  end>
+                inherited GridPanel4: TGridPanel
+                  Top = 37
+                  Width = 575
+                  Height = 127
+                  ControlCollection = <
+                    item
+                      Column = 0
+                      Control = frameDashboard1.GridPanel6
+                      Row = 0
+                    end
+                    item
+                      Column = 1
+                      Control = frameDashboard1.GridPanel8
+                      Row = 0
+                    end
+                    item
+                      Column = 2
+                      Control = frameDashboard1.GridPanel14
+                      Row = 0
+                    end>
+                  inherited GridPanel6: TGridPanel
+                    Width = 224
+                    Height = 121
+                    ControlCollection = <
+                      item
+                        Column = 0
+                        Control = frameDashboard1.txtSalesThisMonth
+                        Row = 0
+                      end
+                      item
+                        Column = 0
+                        Control = frameDashboard1.lblSalesThisMonth
+                        Row = 1
+                      end>
+                    inherited txtSalesThisMonth: TLabel
+                      Width = 224
+                      Height = 97
+                    end
+                    inherited lblSalesThisMonth: TLabel
+                      Left = 60
+                      Top = 99
+                    end
+                  end
+                  inherited GridPanel8: TGridPanel
+                    Left = 233
+                    Width = 171
+                    Height = 121
+                    ControlCollection = <
+                      item
+                        Column = 0
+                        Control = frameDashboard1.txtNewStockItems
+                        Row = 0
+                      end
+                      item
+                        Column = 0
+                        Control = frameDashboard1.lblNewStockItems
+                        Row = 1
+                      end>
+                    inherited txtNewStockItems: TLabel
+                      Width = 171
+                      Height = 97
+                    end
+                    inherited lblNewStockItems: TLabel
+                      Left = 34
+                      Top = 99
+                    end
+                  end
+                  inherited GridPanel14: TGridPanel
+                    Left = 404
+                    Width = 168
+                    Height = 121
+                    ControlCollection = <
+                      item
+                        Column = 0
+                        Control = frameDashboard1.txtSoldStockItems
+                        Row = 0
+                      end
+                      item
+                        Column = 0
+                        Control = frameDashboard1.lblSoldStockItems
+                        Row = 1
+                      end>
+                    inherited txtSoldStockItems: TLabel
+                      Width = 168
+                      Height = 97
+                    end
+                    inherited lblSoldStockItems: TLabel
+                      Top = 99
+                    end
+                  end
+                end
+                inherited lblThisMonth: TLabel
+                  Width = 567
+                  Height = 31
+                end
+              end
+              inherited GridPanel9: TGridPanel
+                Top = 176
+                Width = 581
+                Height = 178
+                ControlCollection = <
+                  item
+                    Column = 0
+                    Control = frameDashboard1.GridPanel10
+                    Row = 1
+                  end
+                  item
+                    Column = 0
+                    Control = frameDashboard1.lblThisYear
+                    Row = 0
+                  end>
+                inherited GridPanel10: TGridPanel
+                  Width = 573
+                  Height = 135
+                  ControlCollection = <
+                    item
+                      Column = 0
+                      Control = frameDashboard1.GridPanel11
+                      Row = 0
+                    end
+                    item
+                      Column = 1
+                      Control = frameDashboard1.GridPanel12
+                      Row = 0
+                    end>
+                  inherited GridPanel11: TGridPanel
+                    Width = 280
+                    Height = 129
+                    ControlCollection = <
+                      item
+                        Column = 0
+                        Control = frameDashboard1.Label4
+                        Row = 0
+                      end
+                      item
+                        Column = 0
+                        Control = frameDashboard1.Label5
+                        Row = 1
+                      end>
+                    inherited Label4: TLabel
+                      Width = 280
+                      Height = 103
+                    end
+                    inherited Label5: TLabel
+                      Left = 96
+                      Top = 106
+                    end
+                  end
+                  inherited GridPanel12: TGridPanel
+                    Left = 289
+                    Width = 281
+                    Height = 129
+                    ControlCollection = <
+                      item
+                        Column = 0
+                        Control = frameDashboard1.Label6
+                        Row = 0
+                      end
+                      item
+                        Column = 0
+                        Control = frameDashboard1.Label7
+                        Row = 1
+                      end>
+                    inherited Label6: TLabel
+                      Width = 281
+                      Height = 103
+                    end
+                    inherited Label7: TLabel
+                      Left = 70
+                      Top = 106
+                    end
+                  end
+                end
+                inherited lblThisYear: TLabel
+                  Width = 565
+                end
+              end
+              inherited GridPanel13: TGridPanel
+                Top = 360
+                Width = 581
+                Height = 171
+                ControlCollection = <
+                  item
+                    Column = 0
+                    Control = frameDashboard1.lblHelpSupport
+                    Row = 0
+                  end>
+                inherited lblHelpSupport: TLabel
+                  Width = 567
+                  Height = 31
+                end
+              end
+            end
+            inherited GridPanel3: TGridPanel
+              Left = 596
+              Width = 349
+              Height = 534
+              ControlCollection = <
+                item
+                  Column = 0
+                  Control = frameDashboard1.GridPanel15
+                  Row = 0
+                end>
+              inherited GridPanel15: TGridPanel
+                Width = 343
+                Height = 528
+                ControlCollection = <
+                  item
+                    Column = 0
+                    Control = frameDashboard1.txtMemos
+                    Row = 0
+                  end>
+                inherited txtMemos: TLabel
+                  Width = 329
+                  Height = 31
+                end
+              end
+            end
+          end
+        end
       end
       object pageTransactions: TTabSheet
         Caption = 'Transactions'
