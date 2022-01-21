@@ -524,10 +524,11 @@ object frameTransactions: TframeTransactions
       AlignWithMargins = True
       Left = 591
       Top = 4
-      Width = 348
+      Width = 347
       Height = 526
       Margins.Left = 2
       Margins.Top = 4
+      Margins.Right = 4
       Margins.Bottom = 4
       Align = alClient
       BevelOuter = bvNone
@@ -553,13 +554,12 @@ object frameTransactions: TframeTransactions
       TabOrder = 1
       ExplicitLeft = 592
       ExplicitTop = 3
-      ExplicitWidth = 347
       ExplicitHeight = 528
       object lblRecentTransactions: TLabel
         AlignWithMargins = True
         Left = 7
         Top = 3
-        Width = 334
+        Width = 333
         Height = 31
         Margins.Left = 7
         Margins.Right = 7
