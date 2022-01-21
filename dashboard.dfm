@@ -25,12 +25,12 @@ object frameDashboard: TframeDashboard
     ControlCollection = <
       item
         Column = 0
-        Control = GridPanel2
+        Control = gridLeft
         Row = 0
       end
       item
         Column = 1
-        Control = GridPanel3
+        Control = gridRight
         Row = 0
       end>
     ParentBackground = False
@@ -39,12 +39,16 @@ object frameDashboard: TframeDashboard
         Value = 100.000000000000000000
       end>
     TabOrder = 0
-    object GridPanel2: TGridPanel
+    object gridLeft: TGridPanel
       AlignWithMargins = True
-      Left = 3
-      Top = 3
+      Left = 4
+      Top = 4
       Width = 583
-      Height = 528
+      Height = 526
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 2
+      Margins.Bottom = 4
       Align = alClient
       BevelOuter = bvNone
       Color = clWhite
@@ -80,6 +84,9 @@ object frameDashboard: TframeDashboard
           Value = 33.109738704271960000
         end>
       TabOrder = 0
+      ExplicitLeft = 3
+      ExplicitTop = 3
+      ExplicitHeight = 528
       object GridPanel7: TGridPanel
         AlignWithMargins = True
         Left = 3
@@ -362,7 +369,7 @@ object frameDashboard: TframeDashboard
         Left = 3
         Top = 174
         Width = 577
-        Height = 176
+        Height = 175
         Align = alClient
         Color = clWhite
         ColumnCollection = <
@@ -389,12 +396,13 @@ object frameDashboard: TframeDashboard
             Value = 79.830525151961940000
           end>
         TabOrder = 1
+        ExplicitHeight = 176
         object GridPanel10: TGridPanel
           AlignWithMargins = True
           Left = 4
           Top = 39
           Width = 569
-          Height = 133
+          Height = 132
           Align = alClient
           Anchors = []
           BevelOuter = bvNone
@@ -424,12 +432,13 @@ object frameDashboard: TframeDashboard
               Value = 100.000000000000000000
             end>
           TabOrder = 0
+          ExplicitHeight = 133
           object GridPanel11: TGridPanel
             AlignWithMargins = True
             Left = 3
             Top = 3
             Width = 278
-            Height = 127
+            Height = 126
             Align = alClient
             BevelOuter = bvNone
             Color = 14935011
@@ -457,14 +466,15 @@ object frameDashboard: TframeDashboard
                 Value = 20.000000000000000000
               end>
             TabOrder = 0
+            ExplicitHeight = 127
             DesignSize = (
               278
-              127)
+              126)
             object Label4: TLabel
               Left = 0
               Top = 0
               Width = 278
-              Height = 102
+              Height = 101
               Align = alClient
               Alignment = taCenter
               Caption = #163'--.--'
@@ -474,7 +484,7 @@ object frameDashboard: TframeDashboard
             end
             object Label5: TLabel
               Left = 95
-              Top = 105
+              Top = 104
               Width = 88
               Height = 19
               Anchors = []
@@ -488,7 +498,7 @@ object frameDashboard: TframeDashboard
             Left = 287
             Top = 3
             Width = 279
-            Height = 127
+            Height = 126
             Align = alClient
             BevelOuter = bvNone
             Color = 14935011
@@ -516,14 +526,15 @@ object frameDashboard: TframeDashboard
                 Value = 20.000000000000000000
               end>
             TabOrder = 1
+            ExplicitHeight = 127
             DesignSize = (
               279
-              127)
+              126)
             object Label6: TLabel
               Left = 0
               Top = 0
               Width = 279
-              Height = 102
+              Height = 101
               Align = alClient
               Alignment = taCenter
               Caption = #163'--.--'
@@ -533,7 +544,7 @@ object frameDashboard: TframeDashboard
             end
             object Label7: TLabel
               Left = 69
-              Top = 105
+              Top = 104
               Width = 140
               Height = 19
               Anchors = []
@@ -568,9 +579,9 @@ object frameDashboard: TframeDashboard
       object GridPanel13: TGridPanel
         AlignWithMargins = True
         Left = 3
-        Top = 356
+        Top = 355
         Width = 577
-        Height = 169
+        Height = 168
         Align = alClient
         BevelOuter = bvNone
         Color = clWhite
@@ -593,6 +604,8 @@ object frameDashboard: TframeDashboard
             Value = 79.830525151961940000
           end>
         TabOrder = 2
+        ExplicitTop = 356
+        ExplicitHeight = 169
         object lblHelpSupport: TLabel
           AlignWithMargins = True
           Left = 7
@@ -616,12 +629,16 @@ object frameDashboard: TframeDashboard
         end
       end
     end
-    object GridPanel3: TGridPanel
+    object gridRight: TGridPanel
       AlignWithMargins = True
-      Left = 592
-      Top = 3
+      Left = 591
+      Top = 4
       Width = 347
-      Height = 528
+      Height = 526
+      Margins.Left = 2
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Align = alClient
       BevelOuter = bvNone
       Color = clWhite
@@ -641,12 +658,14 @@ object frameDashboard: TframeDashboard
           Value = 100.000000000000000000
         end>
       TabOrder = 1
+      ExplicitLeft = 592
+      ExplicitTop = 3
+      ExplicitHeight = 528
       object GridPanel15: TGridPanel
-        AlignWithMargins = True
-        Left = 3
-        Top = 3
-        Width = 341
-        Height = 522
+        Left = 0
+        Top = 0
+        Width = 347
+        Height = 526
         Align = alClient
         BevelOuter = bvNone
         Color = clWhite
@@ -669,11 +688,15 @@ object frameDashboard: TframeDashboard
             Value = 93.524696296198370000
           end>
         TabOrder = 0
+        ExplicitLeft = 3
+        ExplicitTop = 3
+        ExplicitWidth = 341
+        ExplicitHeight = 522
         object txtMemos: TLabel
           AlignWithMargins = True
           Left = 7
           Top = 3
-          Width = 327
+          Width = 333
           Height = 31
           Margins.Left = 7
           Margins.Right = 7

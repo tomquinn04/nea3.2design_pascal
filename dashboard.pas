@@ -9,7 +9,7 @@ uses
 type
   TframeDashboard = class(TFrame)
     GridPanel1: TGridPanel;
-    GridPanel2: TGridPanel;
+    gridLeft: TGridPanel;
     GridPanel7: TGridPanel;
     GridPanel4: TGridPanel;
     GridPanel6: TGridPanel;
@@ -33,7 +33,7 @@ type
     lblThisYear: TLabel;
     GridPanel13: TGridPanel;
     lblHelpSupport: TLabel;
-    GridPanel3: TGridPanel;
+    gridRight: TGridPanel;
     GridPanel15: TGridPanel;
     txtMemos: TLabel;
   private
