@@ -22,6 +22,7 @@ type
     gridRight: TGridPanel;
     lblRecentTransactions: TLabel;
     SearchBox1: TSearchBox;
+    GridPanel4: TGridPanel;
   private
     { Private declarations }
   public

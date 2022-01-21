@@ -388,6 +388,12 @@ object frameArtists: TframeArtists
           Column = 1
           Control = SearchBox1
           Row = 0
+        end
+        item
+          Column = 0
+          ColumnSpan = 2
+          Control = GridPanel4
+          Row = 1
         end>
       ParentBackground = False
       RowCollection = <
@@ -432,6 +438,34 @@ object frameArtists: TframeArtists
         ExplicitTop = 16
         ExplicitWidth = 121
         ExplicitHeight = 27
+      end
+      object GridPanel4: TGridPanel
+        Left = 0
+        Top = 34
+        Width = 347
+        Height = 492
+        Align = alClient
+        Caption = 'GridPanel4'
+        ColumnCollection = <
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end>
+        ControlCollection = <>
+        RowCollection = <
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end>
+        TabOrder = 1
+        ExplicitLeft = 32
+        ExplicitTop = 360
+        ExplicitWidth = 185
+        ExplicitHeight = 41
       end
     end
   end
