@@ -50,690 +50,313 @@ object Form1: TForm1
       TabWidth = 120
       object pageDashboard: TTabSheet
         Caption = 'Dashboard'
-        object GridPanel1: TGridPanel
-          AlignWithMargins = True
-          Left = 3
-          Top = 3
-          Width = 948
-          Height = 540
+        inline frameDashboard1: TframeDashboard
+          Left = 0
+          Top = 0
+          Width = 954
+          Height = 546
           Align = alClient
-          BevelOuter = bvNone
-          Caption = 'GridPanel1'
-          Color = clBtnShadow
-          ColumnCollection = <
-            item
-              Value = 62.532484407484410000
-            end
-            item
-              Value = 37.467515592515590000
-            end>
-          ControlCollection = <
-            item
-              Column = 0
-              Control = GridPanel2
-              Row = 0
-            end
-            item
-              Column = 1
-              Control = GridPanel3
-              Row = 0
-            end>
-          ParentBackground = False
-          RowCollection = <
-            item
-              Value = 100.000000000000000000
-            end>
           TabOrder = 0
-          object GridPanel2: TGridPanel
-            AlignWithMargins = True
-            Left = 3
-            Top = 3
-            Width = 587
-            Height = 534
-            Align = alClient
-            BevelOuter = bvNone
-            Color = clMoneyGreen
-            ColumnCollection = <
-              item
-                Value = 100.000000000000000000
-              end>
+          ExplicitLeft = 6
+          ExplicitTop = 6
+          inherited GridPanel1: TGridPanel
+            Width = 948
+            Height = 540
             ControlCollection = <
               item
                 Column = 0
-                Control = GridPanel7
+                Control = frameDashboard1.GridPanel2
                 Row = 0
               end
               item
-                Column = 0
-                Control = GridPanel9
-                Row = 1
-              end
-              item
-                Column = 0
-                Control = GridPanel13
-                Row = 2
+                Column = 1
+                Control = frameDashboard1.GridPanel3
+                Row = 0
               end>
-            ParentBackground = False
-            RowCollection = <
-              item
-                Value = 32.440279463065830000
-              end
-              item
-                Value = 34.449981832662220000
-              end
-              item
-                Value = 33.109738704271960000
-              end>
-            TabOrder = 0
-            object GridPanel7: TGridPanel
-              AlignWithMargins = True
-              Left = 3
-              Top = 3
-              Width = 581
-              Height = 167
-              Align = alClient
-              BevelOuter = bvNone
-              Color = clWhite
-              ColumnCollection = <
-                item
-                  Value = 100.000000000000000000
-                end>
+            ExplicitLeft = 3
+            ExplicitTop = 3
+            ExplicitWidth = 942
+            ExplicitHeight = 534
+            inherited GridPanel2: TGridPanel
+              Width = 587
+              Height = 534
               ControlCollection = <
                 item
                   Column = 0
-                  Control = GridPanel4
+                  Control = frameDashboard1.GridPanel7
+                  Row = 0
+                end
+                item
+                  Column = 0
+                  Control = frameDashboard1.GridPanel9
                   Row = 1
                 end
                 item
                   Column = 0
-                  Control = lblThisMonth
-                  Row = 0
+                  Control = frameDashboard1.GridPanel13
+                  Row = 2
                 end>
-              ParentBackground = False
-              RowCollection = <
-                item
-                  Value = 20.169474848038060000
-                end
-                item
-                  Value = 79.830525151961940000
-                end>
-              TabOrder = 0
-              object GridPanel4: TGridPanel
-                AlignWithMargins = True
-                Left = 3
-                Top = 37
-                Width = 575
-                Height = 127
-                Align = alClient
-                Anchors = []
-                BevelOuter = bvNone
-                Color = clBlack
-                ColumnCollection = <
-                  item
-                    Value = 40.086226160843200000
-                  end
-                  item
-                    Value = 30.113007154108850000
-                  end
-                  item
-                    Value = 29.800766685047960000
-                  end>
+              ExplicitWidth = 583
+              ExplicitHeight = 528
+              inherited GridPanel7: TGridPanel
+                Width = 581
+                Height = 167
                 ControlCollection = <
                   item
                     Column = 0
-                    Control = GridPanel6
-                    Row = 0
+                    Control = frameDashboard1.GridPanel4
+                    Row = 1
                   end
                   item
-                    Column = 1
-                    Control = GridPanel8
-                    Row = 0
-                  end
-                  item
-                    Column = 2
-                    Control = GridPanel14
+                    Column = 0
+                    Control = frameDashboard1.lblThisMonth
                     Row = 0
                   end>
-                RowCollection = <
-                  item
-                    Value = 100.000000000000000000
-                  end>
-                TabOrder = 0
-                object GridPanel6: TGridPanel
-                  AlignWithMargins = True
-                  Left = 3
-                  Top = 3
-                  Width = 224
-                  Height = 121
-                  Align = alClient
-                  BevelOuter = bvNone
-                  Color = 14935011
-                  ColumnCollection = <
-                    item
-                      Value = 100.000000000000000000
-                    end>
+                ExplicitWidth = 577
+                ExplicitHeight = 165
+                inherited GridPanel4: TGridPanel
+                  Top = 37
+                  Width = 575
+                  Height = 127
                   ControlCollection = <
                     item
                       Column = 0
-                      Control = txtSalesThisMonth
+                      Control = frameDashboard1.GridPanel6
                       Row = 0
                     end
                     item
-                      Column = 0
-                      Control = lblSalesThisMonth
-                      Row = 1
-                    end>
-                  ParentBackground = False
-                  RowCollection = <
-                    item
-                      Value = 80.000000000000000000
+                      Column = 1
+                      Control = frameDashboard1.GridPanel8
+                      Row = 0
                     end
                     item
-                      Value = 20.000000000000000000
+                      Column = 2
+                      Control = frameDashboard1.GridPanel14
+                      Row = 0
                     end>
-                  TabOrder = 0
-                  DesignSize = (
-                    224
-                    121)
-                  object txtSalesThisMonth: TLabel
-                    Left = 0
-                    Top = 0
+                  ExplicitTop = 36
+                  ExplicitWidth = 571
+                  ExplicitHeight = 126
+                  inherited GridPanel6: TGridPanel
                     Width = 224
-                    Height = 97
-                    Align = alClient
-                    Alignment = taCenter
-                    Caption = #163'--.--'
-                    Layout = tlCenter
-                    ExplicitWidth = 35
-                    ExplicitHeight = 19
-                  end
-                  object lblSalesThisMonth: TLabel
-                    Left = 60
-                    Top = 99
-                    Width = 104
-                    Height = 19
-                    Anchors = []
-                    Caption = 'Sales This Month'
-                    ExplicitLeft = 92
-                    ExplicitTop = 131
-                  end
-                end
-                object GridPanel8: TGridPanel
-                  AlignWithMargins = True
-                  Left = 233
-                  Top = 3
-                  Width = 171
-                  Height = 121
-                  Margins.Right = 0
-                  Align = alClient
-                  BevelOuter = bvNone
-                  Color = 14935011
-                  ColumnCollection = <
-                    item
-                      Value = 100.000000000000000000
-                    end>
-                  ControlCollection = <
-                    item
-                      Column = 0
-                      Control = txtNewStockItems
-                      Row = 0
+                    Height = 121
+                    ControlCollection = <
+                      item
+                        Column = 0
+                        Control = frameDashboard1.txtSalesThisMonth
+                        Row = 0
+                      end
+                      item
+                        Column = 0
+                        Control = frameDashboard1.lblSalesThisMonth
+                        Row = 1
+                      end>
+                    ExplicitWidth = 223
+                    ExplicitHeight = 120
+                    inherited txtSalesThisMonth: TLabel
+                      Width = 224
+                      Height = 97
                     end
-                    item
-                      Column = 0
-                      Control = lblNewStockItems
-                      Row = 1
-                    end>
-                  ParentBackground = False
-                  RowCollection = <
-                    item
-                      Value = 80.000000000000000000
+                    inherited lblSalesThisMonth: TLabel
+                      Left = 60
+                      Top = 99
                     end
-                    item
-                      Value = 20.000000000000000000
-                    end>
-                  TabOrder = 1
-                  DesignSize = (
-                    171
-                    121)
-                  object txtNewStockItems: TLabel
-                    Left = 0
-                    Top = 0
+                  end
+                  inherited GridPanel8: TGridPanel
+                    Left = 233
                     Width = 171
-                    Height = 97
-                    Align = alClient
-                    Alignment = taCenter
-                    Caption = '---'
-                    Layout = tlCenter
-                    ExplicitWidth = 18
-                    ExplicitHeight = 19
-                  end
-                  object lblNewStockItems: TLabel
-                    Left = 34
-                    Top = 99
-                    Width = 102
-                    Height = 19
-                    Margins.Left = 0
-                    Anchors = []
-                    Caption = 'New Stock Items'
-                    ExplicitLeft = 1
-                    ExplicitTop = 94
-                  end
-                end
-                object GridPanel14: TGridPanel
-                  AlignWithMargins = True
-                  Left = 404
-                  Top = 3
-                  Width = 168
-                  Height = 121
-                  Margins.Left = 0
-                  Align = alClient
-                  BevelOuter = bvNone
-                  Color = 14935011
-                  ColumnCollection = <
-                    item
-                      Value = 100.000000000000000000
-                    end>
-                  ControlCollection = <
-                    item
-                      Column = 0
-                      Control = txtSoldStockItems
-                      Row = 0
+                    Height = 121
+                    ControlCollection = <
+                      item
+                        Column = 0
+                        Control = frameDashboard1.txtNewStockItems
+                        Row = 0
+                      end
+                      item
+                        Column = 0
+                        Control = frameDashboard1.lblNewStockItems
+                        Row = 1
+                      end>
+                    ExplicitLeft = 232
+                    ExplicitWidth = 169
+                    ExplicitHeight = 120
+                    inherited txtNewStockItems: TLabel
+                      Width = 171
+                      Height = 97
                     end
-                    item
-                      Column = 0
-                      Control = lblSoldStockItems
-                      Row = 1
-                    end>
-                  ParentBackground = False
-                  RowCollection = <
-                    item
-                      Value = 80.000000000000000000
+                    inherited lblNewStockItems: TLabel
+                      Left = 34
+                      Top = 99
                     end
-                    item
-                      Value = 20.000000000000000000
-                    end>
-                  TabOrder = 2
-                  DesignSize = (
-                    168
-                    121)
-                  object txtSoldStockItems: TLabel
-                    Left = 0
-                    Top = 0
+                  end
+                  inherited GridPanel14: TGridPanel
+                    Left = 404
                     Width = 168
-                    Height = 97
-                    Align = alClient
-                    Alignment = taCenter
-                    Caption = '---'
-                    Layout = tlCenter
-                    ExplicitWidth = 18
-                    ExplicitHeight = 19
+                    Height = 121
+                    ControlCollection = <
+                      item
+                        Column = 0
+                        Control = frameDashboard1.txtSoldStockItems
+                        Row = 0
+                      end
+                      item
+                        Column = 0
+                        Control = frameDashboard1.lblSoldStockItems
+                        Row = 1
+                      end>
+                    ExplicitLeft = 401
+                    ExplicitWidth = 167
+                    ExplicitHeight = 120
+                    inherited txtSoldStockItems: TLabel
+                      Width = 168
+                      Height = 97
+                    end
+                    inherited lblSoldStockItems: TLabel
+                      Top = 99
+                    end
                   end
-                  object lblSoldStockItems: TLabel
-                    Left = 33
-                    Top = 99
-                    Width = 101
-                    Height = 19
-                    Anchors = []
-                    Caption = 'Sold Stock Items'
-                    ExplicitLeft = 31
-                    ExplicitTop = 94
-                  end
+                end
+                inherited lblThisMonth: TLabel
+                  Width = 567
+                  Height = 31
                 end
               end
-              object lblThisMonth: TLabel
-                AlignWithMargins = True
-                Left = 7
-                Top = 3
-                Width = 567
-                Height = 31
-                Margins.Left = 7
-                Margins.Right = 7
-                Margins.Bottom = 0
-                Align = alClient
-                Caption = 'This Month...'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -17
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-                Layout = tlCenter
-                ExplicitWidth = 105
-                ExplicitHeight = 23
-              end
-            end
-            object GridPanel9: TGridPanel
-              AlignWithMargins = True
-              Left = 3
-              Top = 176
-              Width = 581
-              Height = 178
-              Align = alClient
-              Color = clWhite
-              ColumnCollection = <
-                item
-                  Value = 100.000000000000000000
-                end>
-              ControlCollection = <
-                item
-                  Column = 0
-                  Control = GridPanel10
-                  Row = 1
-                end
-                item
-                  Column = 0
-                  Control = lblThisYear
-                  Row = 0
-                end>
-              ParentBackground = False
-              RowCollection = <
-                item
-                  Value = 20.169474848038060000
-                end
-                item
-                  Value = 79.830525151961940000
-                end>
-              TabOrder = 1
-              object GridPanel10: TGridPanel
-                AlignWithMargins = True
-                Left = 4
-                Top = 39
-                Width = 573
-                Height = 135
-                Align = alClient
-                Anchors = []
-                BevelOuter = bvNone
-                Color = clBlack
-                ColumnCollection = <
-                  item
-                    Value = 50.000000000000000000
-                  end
-                  item
-                    Value = 50.000000000000000000
-                  end
-                  item
-                  end>
+              inherited GridPanel9: TGridPanel
+                Top = 176
+                Width = 581
+                Height = 178
                 ControlCollection = <
                   item
                     Column = 0
-                    Control = GridPanel11
-                    Row = 0
+                    Control = frameDashboard1.GridPanel10
+                    Row = 1
                   end
                   item
-                    Column = 1
-                    Control = GridPanel12
+                    Column = 0
+                    Control = frameDashboard1.lblThisYear
                     Row = 0
                   end>
-                RowCollection = <
-                  item
-                    Value = 100.000000000000000000
-                  end>
-                TabOrder = 0
-                object GridPanel11: TGridPanel
-                  AlignWithMargins = True
-                  Left = 3
-                  Top = 3
-                  Width = 280
-                  Height = 129
-                  Align = alClient
-                  BevelOuter = bvNone
-                  Color = 14935011
-                  ColumnCollection = <
-                    item
-                      Value = 100.000000000000000000
-                    end>
+                ExplicitTop = 174
+                ExplicitWidth = 577
+                ExplicitHeight = 176
+                inherited GridPanel10: TGridPanel
+                  Width = 573
+                  Height = 135
                   ControlCollection = <
                     item
                       Column = 0
-                      Control = Label4
+                      Control = frameDashboard1.GridPanel11
                       Row = 0
                     end
                     item
-                      Column = 0
-                      Control = Label5
-                      Row = 1
+                      Column = 1
+                      Control = frameDashboard1.GridPanel12
+                      Row = 0
                     end>
-                  ParentBackground = False
-                  RowCollection = <
-                    item
-                      Value = 80.000000000000000000
-                    end
-                    item
-                      Value = 20.000000000000000000
-                    end>
-                  TabOrder = 0
-                  DesignSize = (
-                    280
-                    129)
-                  object Label4: TLabel
-                    Left = 0
-                    Top = 0
+                  ExplicitWidth = 569
+                  ExplicitHeight = 133
+                  inherited GridPanel11: TGridPanel
                     Width = 280
-                    Height = 103
-                    Align = alClient
-                    Alignment = taCenter
-                    Caption = #163'--.--'
-                    Layout = tlCenter
-                    ExplicitWidth = 35
-                    ExplicitHeight = 19
-                  end
-                  object Label5: TLabel
-                    Left = 96
-                    Top = 106
-                    Width = 88
-                    Height = 19
-                    Anchors = []
-                    Caption = 'Sales This Year'
-                    ExplicitLeft = 97
-                    ExplicitTop = 102
-                  end
-                end
-                object GridPanel12: TGridPanel
-                  AlignWithMargins = True
-                  Left = 289
-                  Top = 3
-                  Width = 281
-                  Height = 129
-                  Align = alClient
-                  BevelOuter = bvNone
-                  Color = 14935011
-                  ColumnCollection = <
-                    item
-                      Value = 100.000000000000000000
-                    end>
-                  ControlCollection = <
-                    item
-                      Column = 0
-                      Control = Label6
-                      Row = 0
+                    Height = 129
+                    ControlCollection = <
+                      item
+                        Column = 0
+                        Control = frameDashboard1.Label4
+                        Row = 0
+                      end
+                      item
+                        Column = 0
+                        Control = frameDashboard1.Label5
+                        Row = 1
+                      end>
+                    ExplicitWidth = 278
+                    ExplicitHeight = 127
+                    inherited Label4: TLabel
+                      Width = 280
+                      Height = 103
                     end
-                    item
-                      Column = 0
-                      Control = Label7
-                      Row = 1
-                    end>
-                  ParentBackground = False
-                  RowCollection = <
-                    item
-                      Value = 80.000000000000000000
+                    inherited Label5: TLabel
+                      Left = 96
+                      Top = 106
                     end
-                    item
-                      Value = 20.000000000000000000
-                    end>
-                  TabOrder = 1
-                  DesignSize = (
-                    281
-                    129)
-                  object Label6: TLabel
-                    Left = 0
-                    Top = 0
+                  end
+                  inherited GridPanel12: TGridPanel
+                    Left = 289
                     Width = 281
-                    Height = 103
-                    Align = alClient
-                    Alignment = taCenter
-                    Caption = #163'--.--'
-                    Layout = tlCenter
-                    ExplicitWidth = 35
-                    ExplicitHeight = 19
-                  end
-                  object Label7: TLabel
-                    Left = 70
-                    Top = 106
-                    Width = 140
-                    Height = 19
-                    Anchors = []
-                    Caption = 'Average Monthly Sales'
-                    ExplicitLeft = 71
-                    ExplicitTop = 102
+                    Height = 129
+                    ControlCollection = <
+                      item
+                        Column = 0
+                        Control = frameDashboard1.Label6
+                        Row = 0
+                      end
+                      item
+                        Column = 0
+                        Control = frameDashboard1.Label7
+                        Row = 1
+                      end>
+                    ExplicitLeft = 287
+                    ExplicitWidth = 279
+                    ExplicitHeight = 127
+                    inherited Label6: TLabel
+                      Width = 281
+                      Height = 103
+                    end
+                    inherited Label7: TLabel
+                      Left = 70
+                      Top = 106
+                    end
                   end
                 end
+                inherited lblThisYear: TLabel
+                  Width = 565
+                end
               end
-              object lblThisYear: TLabel
-                AlignWithMargins = True
-                Left = 8
-                Top = 4
-                Width = 565
-                Height = 32
-                Margins.Left = 7
-                Margins.Right = 7
-                Margins.Bottom = 0
-                Align = alClient
-                Caption = 'This Year...'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -17
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-                Layout = tlCenter
-                ExplicitWidth = 84
-                ExplicitHeight = 23
+              inherited GridPanel13: TGridPanel
+                Top = 360
+                Width = 581
+                Height = 171
+                ControlCollection = <
+                  item
+                    Column = 0
+                    Control = frameDashboard1.lblHelpSupport
+                    Row = 0
+                  end>
+                ExplicitTop = 356
+                ExplicitWidth = 577
+                ExplicitHeight = 169
+                inherited lblHelpSupport: TLabel
+                  Width = 567
+                end
               end
             end
-            object GridPanel13: TGridPanel
-              AlignWithMargins = True
-              Left = 3
-              Top = 360
-              Width = 581
-              Height = 171
-              Align = alClient
-              BevelOuter = bvNone
-              Color = clWhite
-              ColumnCollection = <
-                item
-                  Value = 100.000000000000000000
-                end>
+            inherited GridPanel3: TGridPanel
+              Left = 596
+              Width = 349
+              Height = 534
               ControlCollection = <
                 item
                   Column = 0
-                  Control = lblHelpSupport
+                  Control = frameDashboard1.GridPanel15
                   Row = 0
                 end>
-              ParentBackground = False
-              RowCollection = <
-                item
-                  Value = 20.169474848038060000
+              ExplicitLeft = 592
+              ExplicitWidth = 347
+              ExplicitHeight = 528
+              inherited GridPanel15: TGridPanel
+                Width = 343
+                Height = 528
+                ControlCollection = <
+                  item
+                    Column = 0
+                    Control = frameDashboard1.txtMemos
+                    Row = 0
+                  end>
+                ExplicitWidth = 341
+                ExplicitHeight = 522
+                inherited txtMemos: TLabel
+                  Width = 329
                 end
-                item
-                  Value = 79.830525151961940000
-                end>
-              TabOrder = 2
-              object lblHelpSupport: TLabel
-                AlignWithMargins = True
-                Left = 7
-                Top = 3
-                Width = 567
-                Height = 31
-                Margins.Left = 7
-                Margins.Right = 7
-                Margins.Bottom = 0
-                Align = alClient
-                Caption = 'Help and Support'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -17
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-                Layout = tlCenter
-                ExplicitWidth = 144
-                ExplicitHeight = 23
-              end
-            end
-          end
-          object GridPanel3: TGridPanel
-            AlignWithMargins = True
-            Left = 596
-            Top = 3
-            Width = 349
-            Height = 534
-            Align = alClient
-            BevelOuter = bvNone
-            Color = clBackground
-            ColumnCollection = <
-              item
-                Value = 100.000000000000000000
-              end>
-            ControlCollection = <
-              item
-                Column = 0
-                Control = GridPanel15
-                Row = 0
-              end>
-            ParentBackground = False
-            RowCollection = <
-              item
-                Value = 100.000000000000000000
-              end>
-            TabOrder = 1
-            object GridPanel15: TGridPanel
-              AlignWithMargins = True
-              Left = 3
-              Top = 3
-              Width = 343
-              Height = 528
-              Align = alClient
-              BevelOuter = bvNone
-              Color = clWhite
-              ColumnCollection = <
-                item
-                  Value = 100.000000000000000000
-                end>
-              ControlCollection = <
-                item
-                  Column = 0
-                  Control = txtMemos
-                  Row = 0
-                end>
-              ParentBackground = False
-              RowCollection = <
-                item
-                  Value = 6.475303703801627000
-                end
-                item
-                  Value = 93.524696296198370000
-                end>
-              TabOrder = 0
-              object txtMemos: TLabel
-                AlignWithMargins = True
-                Left = 7
-                Top = 3
-                Width = 329
-                Height = 31
-                Margins.Left = 7
-                Margins.Right = 7
-                Margins.Bottom = 0
-                Align = alClient
-                Caption = 'Memos'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -17
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                ParentFont = False
-                Layout = tlCenter
-                ExplicitWidth = 58
-                ExplicitHeight = 23
               end
             end
           end

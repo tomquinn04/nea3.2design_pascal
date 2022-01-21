@@ -2,7 +2,8 @@ program Project1;
 
 uses
   Vcl.Forms,
-  main in 'main.pas' {Form1};
+  main in 'main.pas' {Form1},
+  unit2 in 'unit2.pas' {frameDashboard: TFrame};
 
 {$R *.res}
 
