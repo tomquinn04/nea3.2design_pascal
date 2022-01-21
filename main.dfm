@@ -26,7 +26,7 @@ object Form1: TForm1
     Margins.Top = 10
     Margins.Right = 0
     Margins.Bottom = 0
-    ActivePage = pageDashboard
+    ActivePage = pageArtists
     Align = alClient
     MultiLine = True
     TabHeight = 40
@@ -514,7 +514,7 @@ object Form1: TForm1
           end
           inherited gridRight: TGridPanel
             Left = 595
-            Width = 350
+            Width = 349
             Height = 560
             ControlCollection = <
               item
@@ -527,7 +527,7 @@ object Form1: TForm1
             ExplicitWidth = 350
             ExplicitHeight = 560
             inherited lblRecentTransactions: TLabel
-              Width = 336
+              Width = 335
               Height = 33
             end
           end
@@ -537,6 +537,165 @@ object Form1: TForm1
     object pageArtists: TTabSheet
       Caption = 'Artists'
       ImageIndex = 2
+      inline frameArtists1: TframeArtists
+        Left = 0
+        Top = 0
+        Width = 954
+        Height = 574
+        Align = alClient
+        TabOrder = 0
+        ExplicitLeft = 6
+        ExplicitTop = 34
+        inherited gridRoot: TGridPanel
+          Width = 948
+          Height = 568
+          ControlCollection = <
+            item
+              Column = 0
+              Control = frameArtists1.gridLeft
+              Row = 0
+            end
+            item
+              Column = 1
+              Control = frameArtists1.gridRight
+              Row = 0
+            end>
+          ExplicitLeft = 3
+          ExplicitTop = 3
+          inherited gridLeft: TGridPanel
+            Width = 587
+            Height = 560
+            ControlCollection = <
+              item
+                Column = 0
+                Control = frameArtists1.lblRecordTransaction
+                Row = 0
+              end
+              item
+                Column = 0
+                Control = frameArtists1.gridRecordTransaction
+                Row = 1
+              end>
+            inherited lblRecordTransaction: TLabel
+              Width = 573
+              Height = 33
+            end
+            inherited gridRecordTransaction: TGridPanel
+              Top = 39
+              Width = 581
+              Height = 518
+              ControlCollection = <
+                item
+                  Column = 0
+                  Control = frameArtists1.GridPanel1
+                  Row = 0
+                end
+                item
+                  Column = 0
+                  Control = frameArtists1.GridPanel2
+                  Row = 1
+                end
+                item
+                  Column = 0
+                  Control = frameArtists1.GridPanel3
+                  Row = 2
+                end>
+              inherited GridPanel1: TGridPanel
+                Width = 575
+                Height = 167
+                ControlCollection = <
+                  item
+                    Column = 0
+                    Control = frameArtists1.icnCircle1
+                    Row = 0
+                  end>
+                ExplicitHeight = 156
+                inherited icnCircle1: TImage
+                  Width = 98
+                  Height = 167
+                end
+              end
+              inherited GridPanel2: TGridPanel
+                Top = 176
+                Width = 575
+                Height = 166
+                ControlCollection = <
+                  item
+                    Column = 0
+                    Control = frameArtists1.icnCircle2
+                    Row = 0
+                  end>
+                ExplicitTop = 165
+                ExplicitHeight = 156
+                inherited icnCircle2: TImage
+                  Width = 98
+                  Height = 166
+                end
+              end
+              inherited GridPanel3: TGridPanel
+                Top = 348
+                Width = 575
+                Height = 167
+                ControlCollection = <
+                  item
+                    Column = 0
+                    Control = frameArtists1.icnCircle3
+                    Row = 0
+                  end>
+                ExplicitTop = 327
+                ExplicitHeight = 156
+                inherited icnCircle3: TImage
+                  Width = 98
+                  Height = 167
+                end
+              end
+            end
+          end
+          inherited gridRight: TGridPanel
+            Left = 595
+            Width = 349
+            Height = 560
+            ControlCollection = <
+              item
+                Column = 0
+                Control = frameArtists1.lblRecentTransactions
+                Row = 0
+              end
+              item
+                Column = 1
+                Control = frameArtists1.SearchBox1
+                Row = 0
+              end
+              item
+                Column = 0
+                ColumnSpan = 2
+                Control = frameArtists1.GridPanel4
+                Row = 1
+              end>
+            inherited lblRecentTransactions: TLabel
+              Width = 91
+              Height = 33
+            end
+            inherited SearchBox1: TSearchBox
+              Left = 108
+              Width = 238
+              Height = 30
+              ExplicitLeft = 107
+              ExplicitTop = 3
+              ExplicitWidth = 237
+            end
+            inherited GridPanel4: TGridPanel
+              Top = 36
+              Width = 349
+              Height = 524
+              ExplicitLeft = 0
+              ExplicitTop = 34
+              ExplicitWidth = 347
+              ExplicitHeight = 492
+            end
+          end
+        end
+      end
     end
     object pageProducts: TTabSheet
       Caption = 'Products'
