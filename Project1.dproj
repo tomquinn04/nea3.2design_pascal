@@ -105,9 +105,9 @@
             <Form>Form1</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="unit2.pas">
+        <DCCReference Include="dashboard.pas">
             <Form>frameDashboard</Form>
-            <FormType>dfm</FormType>
+			<FormType>dfm</FormType>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
         <BuildConfiguration Include="Base">

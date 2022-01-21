@@ -3,7 +3,7 @@ program Project1;
 uses
   Vcl.Forms,
   main in 'main.pas' {Form1},
-  unit2 in 'unit2.pas' {frameDashboard: TFrame};
+  dashboard in 'dashboard.pas' {frameDashboard: TFrame};
 
 {$R *.res}
 

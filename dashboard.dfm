@@ -39,10 +39,6 @@ object frameDashboard: TframeDashboard
         Value = 100.000000000000000000
       end>
     TabOrder = 0
-    ExplicitLeft = 0
-    ExplicitTop = 0
-    ExplicitWidth = 948
-    ExplicitHeight = 540
     object GridPanel2: TGridPanel
       AlignWithMargins = True
       Left = 3
@@ -84,8 +80,6 @@ object frameDashboard: TframeDashboard
           Value = 33.109738704271960000
         end>
       TabOrder = 0
-      ExplicitWidth = 587
-      ExplicitHeight = 534
       object GridPanel7: TGridPanel
         AlignWithMargins = True
         Left = 3
@@ -119,8 +113,6 @@ object frameDashboard: TframeDashboard
             Value = 79.830525151961940000
           end>
         TabOrder = 0
-        ExplicitWidth = 581
-        ExplicitHeight = 167
         object GridPanel4: TGridPanel
           AlignWithMargins = True
           Left = 3
@@ -162,9 +154,6 @@ object frameDashboard: TframeDashboard
               Value = 100.000000000000000000
             end>
           TabOrder = 0
-          ExplicitTop = 37
-          ExplicitWidth = 575
-          ExplicitHeight = 127
           object GridPanel6: TGridPanel
             AlignWithMargins = True
             Left = 3
@@ -198,8 +187,6 @@ object frameDashboard: TframeDashboard
                 Value = 20.000000000000000000
               end>
             TabOrder = 0
-            ExplicitWidth = 224
-            ExplicitHeight = 121
             DesignSize = (
               223
               120)
@@ -260,9 +247,6 @@ object frameDashboard: TframeDashboard
                 Value = 20.000000000000000000
               end>
             TabOrder = 1
-            ExplicitLeft = 233
-            ExplicitWidth = 171
-            ExplicitHeight = 121
             DesignSize = (
               169
               120)
@@ -324,9 +308,6 @@ object frameDashboard: TframeDashboard
                 Value = 20.000000000000000000
               end>
             TabOrder = 2
-            ExplicitLeft = 404
-            ExplicitWidth = 168
-            ExplicitHeight = 121
             DesignSize = (
               167
               120)
@@ -408,9 +389,6 @@ object frameDashboard: TframeDashboard
             Value = 79.830525151961940000
           end>
         TabOrder = 1
-        ExplicitTop = 176
-        ExplicitWidth = 581
-        ExplicitHeight = 178
         object GridPanel10: TGridPanel
           AlignWithMargins = True
           Left = 4
@@ -446,8 +424,6 @@ object frameDashboard: TframeDashboard
               Value = 100.000000000000000000
             end>
           TabOrder = 0
-          ExplicitWidth = 573
-          ExplicitHeight = 135
           object GridPanel11: TGridPanel
             AlignWithMargins = True
             Left = 3
@@ -481,8 +457,6 @@ object frameDashboard: TframeDashboard
                 Value = 20.000000000000000000
               end>
             TabOrder = 0
-            ExplicitWidth = 280
-            ExplicitHeight = 129
             DesignSize = (
               278
               127)
@@ -542,9 +516,6 @@ object frameDashboard: TframeDashboard
                 Value = 20.000000000000000000
               end>
             TabOrder = 1
-            ExplicitLeft = 289
-            ExplicitWidth = 281
-            ExplicitHeight = 129
             DesignSize = (
               279
               127)
@@ -622,9 +593,6 @@ object frameDashboard: TframeDashboard
             Value = 79.830525151961940000
           end>
         TabOrder = 2
-        ExplicitTop = 360
-        ExplicitWidth = 581
-        ExplicitHeight = 171
         object lblHelpSupport: TLabel
           AlignWithMargins = True
           Left = 7
@@ -673,9 +641,6 @@ object frameDashboard: TframeDashboard
           Value = 100.000000000000000000
         end>
       TabOrder = 1
-      ExplicitLeft = 596
-      ExplicitWidth = 349
-      ExplicitHeight = 534
       object GridPanel15: TGridPanel
         AlignWithMargins = True
         Left = 3
@@ -704,8 +669,6 @@ object frameDashboard: TframeDashboard
             Value = 93.524696296198370000
           end>
         TabOrder = 0
-        ExplicitWidth = 343
-        ExplicitHeight = 528
         object txtMemos: TLabel
           AlignWithMargins = True
           Left = 7
