@@ -11,14 +11,13 @@ type
   TForm1 = class(TForm)
     PageControl1: TPageControl;
     pageDashboard: TTabSheet;
+    frameDashboard1: TframeDashboard;
     pageTransactions: TTabSheet;
+    frameTransactions1: TframeTransactions;
     pageArtists: TTabSheet;
     pageProducts: TTabSheet;
     pageReports: TTabSheet;
     pageSettings: TTabSheet;
-    GridPanel5: TGridPanel;
-    frameDashboard1: TframeDashboard;
-    frameTransactions1: TframeTransactions;
 
 
   private
