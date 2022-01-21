@@ -38,8 +38,6 @@ object Form1: TForm1
         Value = 94.000000000000000000
       end>
     TabOrder = 0
-    ExplicitWidth = 927
-    ExplicitHeight = 599
     object PageControl1: TPageControl
       Left = 0
       Top = 38
@@ -127,16 +125,12 @@ object Form1: TForm1
                 Value = 33.109738704271960000
               end>
             TabOrder = 0
-            ExplicitLeft = 4
-            ExplicitTop = 4
-            ExplicitWidth = 586
-            ExplicitHeight = 532
             object GridPanel7: TGridPanel
               AlignWithMargins = True
               Left = 3
               Top = 3
-              Width = 577
-              Height = 165
+              Width = 581
+              Height = 167
               Align = alClient
               BevelOuter = bvNone
               Color = clWhite
@@ -164,16 +158,12 @@ object Form1: TForm1
                   Value = 79.830525151961940000
                 end>
               TabOrder = 0
-              ExplicitLeft = 4
-              ExplicitTop = 4
-              ExplicitWidth = 578
-              ExplicitHeight = 166
               object GridPanel4: TGridPanel
                 AlignWithMargins = True
                 Left = 3
-                Top = 36
-                Width = 569
-                Height = 126
+                Top = 37
+                Width = 575
+                Height = 127
                 Align = alClient
                 Anchors = []
                 BevelOuter = bvNone
@@ -186,7 +176,7 @@ object Form1: TForm1
                     Value = 30.113007154108850000
                   end
                   item
-                    Value = 29.800766685047950000
+                    Value = 29.800766685047960000
                   end>
                 ControlCollection = <
                   item
@@ -209,16 +199,12 @@ object Form1: TForm1
                     Value = 100.000000000000000000
                   end>
                 TabOrder = 0
-                ExplicitLeft = 4
-                ExplicitTop = 175
-                ExplicitWidth = 576
-                ExplicitHeight = 176
                 object GridPanel6: TGridPanel
                   AlignWithMargins = True
                   Left = 3
                   Top = 3
-                  Width = 222
-                  Height = 120
+                  Width = 224
+                  Height = 121
                   Align = alClient
                   BevelOuter = bvNone
                   Color = 14935011
@@ -246,29 +232,24 @@ object Form1: TForm1
                       Value = 20.000000000000000000
                     end>
                   TabOrder = 0
-                  ExplicitLeft = 4
-                  ExplicitTop = 4
-                  ExplicitHeight = 117
                   DesignSize = (
-                    222
-                    120)
+                    224
+                    121)
                   object txtSalesThisMonth: TLabel
                     Left = 0
                     Top = 0
-                    Width = 222
-                    Height = 96
+                    Width = 224
+                    Height = 97
                     Align = alClient
                     Alignment = taCenter
                     Caption = #163'--.--'
                     Layout = tlCenter
-                    ExplicitLeft = 1
-                    ExplicitTop = 1
                     ExplicitWidth = 35
                     ExplicitHeight = 19
                   end
                   object lblSalesThisMonth: TLabel
-                    Left = 59
-                    Top = 98
+                    Left = 60
+                    Top = 99
                     Width = 104
                     Height = 19
                     Anchors = []
@@ -279,10 +260,10 @@ object Form1: TForm1
                 end
                 object GridPanel8: TGridPanel
                   AlignWithMargins = True
-                  Left = 231
+                  Left = 233
                   Top = 3
-                  Width = 168
-                  Height = 120
+                  Width = 171
+                  Height = 121
                   Margins.Right = 0
                   Align = alClient
                   BevelOuter = bvNone
@@ -311,29 +292,24 @@ object Form1: TForm1
                       Value = 20.000000000000000000
                     end>
                   TabOrder = 1
-                  ExplicitLeft = 232
-                  ExplicitTop = 4
-                  ExplicitHeight = 117
                   DesignSize = (
-                    168
-                    120)
+                    171
+                    121)
                   object txtNewStockItems: TLabel
                     Left = 0
                     Top = 0
-                    Width = 168
-                    Height = 96
+                    Width = 171
+                    Height = 97
                     Align = alClient
                     Alignment = taCenter
                     Caption = '---'
                     Layout = tlCenter
-                    ExplicitLeft = 1
-                    ExplicitTop = 1
                     ExplicitWidth = 18
                     ExplicitHeight = 19
                   end
                   object lblNewStockItems: TLabel
-                    Left = 33
-                    Top = 98
+                    Left = 34
+                    Top = 99
                     Width = 102
                     Height = 19
                     Margins.Left = 0
@@ -345,10 +321,10 @@ object Form1: TForm1
                 end
                 object GridPanel14: TGridPanel
                   AlignWithMargins = True
-                  Left = 399
+                  Left = 404
                   Top = 3
-                  Width = 167
-                  Height = 120
+                  Width = 168
+                  Height = 121
                   Margins.Left = 0
                   Align = alClient
                   BevelOuter = bvNone
@@ -377,30 +353,24 @@ object Form1: TForm1
                       Value = 20.000000000000000000
                     end>
                   TabOrder = 2
-                  ExplicitLeft = 400
-                  ExplicitTop = 4
-                  ExplicitWidth = 166
-                  ExplicitHeight = 117
                   DesignSize = (
-                    167
-                    120)
+                    168
+                    121)
                   object txtSoldStockItems: TLabel
                     Left = 0
                     Top = 0
-                    Width = 167
-                    Height = 96
+                    Width = 168
+                    Height = 97
                     Align = alClient
                     Alignment = taCenter
                     Caption = '---'
                     Layout = tlCenter
-                    ExplicitLeft = 1
-                    ExplicitTop = 1
                     ExplicitWidth = 18
                     ExplicitHeight = 19
                   end
                   object lblSoldStockItems: TLabel
                     Left = 33
-                    Top = 98
+                    Top = 99
                     Width = 101
                     Height = 19
                     Anchors = []
@@ -414,8 +384,8 @@ object Form1: TForm1
                 AlignWithMargins = True
                 Left = 7
                 Top = 3
-                Width = 561
-                Height = 30
+                Width = 567
+                Height = 31
                 Margins.Left = 7
                 Margins.Right = 7
                 Margins.Bottom = 0
@@ -428,8 +398,6 @@ object Form1: TForm1
                 Font.Style = [fsBold]
                 ParentFont = False
                 Layout = tlCenter
-                ExplicitLeft = 4
-                ExplicitTop = 4
                 ExplicitWidth = 105
                 ExplicitHeight = 23
               end
@@ -437,9 +405,9 @@ object Form1: TForm1
             object GridPanel9: TGridPanel
               AlignWithMargins = True
               Left = 3
-              Top = 174
-              Width = 577
-              Height = 176
+              Top = 176
+              Width = 581
+              Height = 178
               Align = alClient
               Color = clWhite
               ColumnCollection = <
@@ -466,16 +434,12 @@ object Form1: TForm1
                   Value = 79.830525151961940000
                 end>
               TabOrder = 1
-              ExplicitLeft = 572
-              ExplicitTop = 242
-              ExplicitWidth = 335
-              ExplicitHeight = 497
               object GridPanel10: TGridPanel
                 AlignWithMargins = True
                 Left = 4
                 Top = 39
-                Width = 569
-                Height = 133
+                Width = 573
+                Height = 135
                 Align = alClient
                 Anchors = []
                 BevelOuter = bvNone
@@ -505,14 +469,12 @@ object Form1: TForm1
                     Value = 100.000000000000000000
                   end>
                 TabOrder = 0
-                ExplicitWidth = 570
-                ExplicitHeight = 134
                 object GridPanel11: TGridPanel
                   AlignWithMargins = True
                   Left = 3
                   Top = 3
-                  Width = 278
-                  Height = 127
+                  Width = 280
+                  Height = 129
                   Align = alClient
                   BevelOuter = bvNone
                   Color = 14935011
@@ -540,30 +502,24 @@ object Form1: TForm1
                       Value = 20.000000000000000000
                     end>
                   TabOrder = 0
-                  ExplicitLeft = 4
-                  ExplicitTop = 4
-                  ExplicitWidth = 276
-                  ExplicitHeight = 122
                   DesignSize = (
-                    278
-                    127)
+                    280
+                    129)
                   object Label4: TLabel
                     Left = 0
                     Top = 0
-                    Width = 278
-                    Height = 101
+                    Width = 280
+                    Height = 103
                     Align = alClient
                     Alignment = taCenter
                     Caption = #163'--.--'
                     Layout = tlCenter
-                    ExplicitLeft = 1
-                    ExplicitTop = 1
                     ExplicitWidth = 35
                     ExplicitHeight = 19
                   end
                   object Label5: TLabel
-                    Left = 95
-                    Top = 104
+                    Left = 96
+                    Top = 106
                     Width = 88
                     Height = 19
                     Anchors = []
@@ -574,10 +530,10 @@ object Form1: TForm1
                 end
                 object GridPanel12: TGridPanel
                   AlignWithMargins = True
-                  Left = 287
+                  Left = 289
                   Top = 3
-                  Width = 279
-                  Height = 127
+                  Width = 281
+                  Height = 129
                   Align = alClient
                   BevelOuter = bvNone
                   Color = 14935011
@@ -605,30 +561,24 @@ object Form1: TForm1
                       Value = 20.000000000000000000
                     end>
                   TabOrder = 1
-                  ExplicitLeft = 286
-                  ExplicitTop = 4
-                  ExplicitWidth = 276
-                  ExplicitHeight = 122
                   DesignSize = (
-                    279
-                    127)
+                    281
+                    129)
                   object Label6: TLabel
                     Left = 0
                     Top = 0
-                    Width = 277
-                    Height = 101
+                    Width = 281
+                    Height = 103
                     Align = alClient
                     Alignment = taCenter
                     Caption = #163'--.--'
                     Layout = tlCenter
-                    ExplicitLeft = 1
-                    ExplicitTop = 1
                     ExplicitWidth = 35
                     ExplicitHeight = 19
                   end
                   object Label7: TLabel
-                    Left = 68
-                    Top = 104
+                    Left = 70
+                    Top = 106
                     Width = 140
                     Height = 19
                     Anchors = []
@@ -642,7 +592,7 @@ object Form1: TForm1
                 AlignWithMargins = True
                 Left = 8
                 Top = 4
-                Width = 561
+                Width = 565
                 Height = 32
                 Margins.Left = 7
                 Margins.Right = 7
@@ -656,7 +606,6 @@ object Form1: TForm1
                 Font.Style = [fsBold]
                 ParentFont = False
                 Layout = tlCenter
-                ExplicitLeft = 4
                 ExplicitWidth = 84
                 ExplicitHeight = 23
               end
@@ -664,9 +613,9 @@ object Form1: TForm1
             object GridPanel13: TGridPanel
               AlignWithMargins = True
               Left = 3
-              Top = 356
-              Width = 577
-              Height = 169
+              Top = 360
+              Width = 581
+              Height = 171
               Align = alClient
               BevelOuter = bvNone
               Color = clWhite
@@ -689,14 +638,11 @@ object Form1: TForm1
                   Value = 79.830525151961940000
                 end>
               TabOrder = 2
-              ExplicitLeft = 4
-              ExplicitTop = 359
-              ExplicitWidth = 578
               object lblHelpSupport: TLabel
                 AlignWithMargins = True
                 Left = 7
                 Top = 3
-                Width = 561
+                Width = 567
                 Height = 31
                 Margins.Left = 7
                 Margins.Right = 7
@@ -710,8 +656,6 @@ object Form1: TForm1
                 Font.Style = [fsBold]
                 ParentFont = False
                 Layout = tlCenter
-                ExplicitLeft = 4
-                ExplicitTop = 4
                 ExplicitWidth = 144
                 ExplicitHeight = 23
               end
@@ -742,9 +686,6 @@ object Form1: TForm1
                 Value = 100.000000000000000000
               end>
             TabOrder = 1
-            ExplicitTop = 4
-            ExplicitWidth = 348
-            ExplicitHeight = 532
             object GridPanel15: TGridPanel
               AlignWithMargins = True
               Left = 3
@@ -773,8 +714,6 @@ object Form1: TForm1
                   Value = 93.524696296198370000
                 end>
               TabOrder = 0
-              ExplicitLeft = 6
-              ExplicitTop = 6
               object txtMemos: TLabel
                 AlignWithMargins = True
                 Left = 7
