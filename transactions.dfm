@@ -35,20 +35,22 @@ object frameTransactions: TframeTransactions
     ParentBackground = False
     RowCollection = <
       item
-        SizeStyle = ssAuto
+        Value = 100.000000000000000000
       end>
     TabOrder = 0
-    ExplicitLeft = -302
-    ExplicitTop = -54
     object gridLeft: TGridPanel
       AlignWithMargins = True
-      Left = 3
-      Top = 3
+      Left = 4
+      Top = 4
       Width = 583
-      Height = 528
+      Height = 526
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 2
+      Margins.Bottom = 4
       Align = alClient
       BevelOuter = bvNone
-      Color = clMoneyGreen
+      Color = clWhite
       ColumnCollection = <
         item
           Value = 100.000000000000000000
@@ -73,6 +75,9 @@ object frameTransactions: TframeTransactions
           Value = 93.524696296198370000
         end>
       TabOrder = 0
+      ExplicitLeft = 3
+      ExplicitTop = 3
+      ExplicitHeight = 528
       object lblRecordTransaction: TLabel
         AlignWithMargins = True
         Left = 7
@@ -99,7 +104,7 @@ object frameTransactions: TframeTransactions
         Left = 3
         Top = 37
         Width = 577
-        Height = 488
+        Height = 486
         Align = alClient
         BevelOuter = bvNone
         ColumnCollection = <
@@ -132,7 +137,6 @@ object frameTransactions: TframeTransactions
             Control = GridPanel5
             Row = 4
           end>
-        ParentBackground = False
         RowCollection = <
           item
             Value = 20.000000000000000000
@@ -150,17 +154,15 @@ object frameTransactions: TframeTransactions
             Value = 20.000000000000000000
           end>
         TabOrder = 0
-        ExplicitLeft = -6
-        ExplicitTop = 61
+        ExplicitHeight = 488
         object GridPanel1: TGridPanel
           AlignWithMargins = True
           Left = 3
           Top = 3
           Width = 571
-          Height = 92
+          Height = 91
           Align = alClient
           BevelOuter = bvNone
-          Caption = 'GridPanel1'
           Color = clWhite
           ColumnCollection = <
             item
@@ -181,15 +183,12 @@ object frameTransactions: TframeTransactions
               Value = 100.000000000000000000
             end>
           TabOrder = 0
-          ExplicitLeft = 408
-          ExplicitTop = 72
-          ExplicitWidth = 185
-          ExplicitHeight = 41
+          ExplicitHeight = 92
           object icnCircle1: TImage
             Left = 0
             Top = 0
             Width = 97
-            Height = 92
+            Height = 91
             Align = alClient
             Center = True
             Picture.Data = {
@@ -225,12 +224,11 @@ object frameTransactions: TframeTransactions
         object GridPanel2: TGridPanel
           AlignWithMargins = True
           Left = 3
-          Top = 101
+          Top = 100
           Width = 571
           Height = 91
           Align = alClient
           BevelOuter = bvNone
-          Caption = 'GridPanel1'
           Color = clWhite
           ColumnCollection = <
             item
@@ -251,10 +249,7 @@ object frameTransactions: TframeTransactions
               Value = 100.000000000000000000
             end>
           TabOrder = 1
-          ExplicitLeft = 408
-          ExplicitTop = 72
-          ExplicitWidth = 185
-          ExplicitHeight = 41
+          ExplicitTop = 101
           object icnCircle2: TImage
             Left = 0
             Top = 0
@@ -304,12 +299,11 @@ object frameTransactions: TframeTransactions
         object GridPanel3: TGridPanel
           AlignWithMargins = True
           Left = 3
-          Top = 198
+          Top = 197
           Width = 571
           Height = 92
           Align = alClient
           BevelOuter = bvNone
-          Caption = 'GridPanel1'
           Color = clWhite
           ColumnCollection = <
             item
@@ -330,10 +324,7 @@ object frameTransactions: TframeTransactions
               Value = 100.000000000000000000
             end>
           TabOrder = 2
-          ExplicitLeft = 408
-          ExplicitTop = 72
-          ExplicitWidth = 185
-          ExplicitHeight = 41
+          ExplicitTop = 198
           object icnCircle3: TImage
             Left = 0
             Top = 0
@@ -384,12 +375,11 @@ object frameTransactions: TframeTransactions
         object GridPanel4: TGridPanel
           AlignWithMargins = True
           Left = 3
-          Top = 296
+          Top = 295
           Width = 571
           Height = 91
           Align = alClient
           BevelOuter = bvNone
-          Caption = 'GridPanel1'
           Color = clWhite
           ColumnCollection = <
             item
@@ -410,10 +400,7 @@ object frameTransactions: TframeTransactions
               Value = 100.000000000000000000
             end>
           TabOrder = 3
-          ExplicitLeft = 408
-          ExplicitTop = 72
-          ExplicitWidth = 185
-          ExplicitHeight = 41
+          ExplicitTop = 296
           object icnCircle4: TImage
             Left = 0
             Top = 0
@@ -459,12 +446,11 @@ object frameTransactions: TframeTransactions
         object GridPanel5: TGridPanel
           AlignWithMargins = True
           Left = 3
-          Top = 393
+          Top = 392
           Width = 571
-          Height = 92
+          Height = 91
           Align = alClient
           BevelOuter = bvNone
-          Caption = 'GridPanel1'
           Color = clWhite
           ColumnCollection = <
             item
@@ -485,15 +471,13 @@ object frameTransactions: TframeTransactions
               Value = 100.000000000000000000
             end>
           TabOrder = 4
-          ExplicitLeft = 408
-          ExplicitTop = 72
-          ExplicitWidth = 185
-          ExplicitHeight = 41
+          ExplicitTop = 393
+          ExplicitHeight = 92
           object icnCircle5: TImage
             Left = 0
             Top = 0
             Width = 97
-            Height = 92
+            Height = 91
             Align = alClient
             Center = True
             Picture.Data = {
@@ -538,10 +522,13 @@ object frameTransactions: TframeTransactions
     end
     object gridRight: TGridPanel
       AlignWithMargins = True
-      Left = 592
-      Top = 3
-      Width = 347
-      Height = 528
+      Left = 591
+      Top = 4
+      Width = 348
+      Height = 526
+      Margins.Left = 2
+      Margins.Top = 4
+      Margins.Bottom = 4
       Align = alClient
       BevelOuter = bvNone
       Color = clWhite
@@ -564,15 +551,15 @@ object frameTransactions: TframeTransactions
           Value = 93.524696296198370000
         end>
       TabOrder = 1
-      ExplicitLeft = 202
-      ExplicitTop = 496
-      ExplicitWidth = 185
-      ExplicitHeight = 41
+      ExplicitLeft = 592
+      ExplicitTop = 3
+      ExplicitWidth = 347
+      ExplicitHeight = 528
       object lblRecentTransactions: TLabel
         AlignWithMargins = True
         Left = 7
         Top = 3
-        Width = 333
+        Width = 334
         Height = 31
         Margins.Left = 7
         Margins.Right = 7
