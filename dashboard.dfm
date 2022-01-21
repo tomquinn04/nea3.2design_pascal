@@ -47,7 +47,7 @@ object frameDashboard: TframeDashboard
       Height = 528
       Align = alClient
       BevelOuter = bvNone
-      Color = clMoneyGreen
+      Color = clWhite
       ColumnCollection = <
         item
           Value = 100.000000000000000000
@@ -624,7 +624,7 @@ object frameDashboard: TframeDashboard
       Height = 528
       Align = alClient
       BevelOuter = bvNone
-      Color = clBackground
+      Color = clWhite
       ColumnCollection = <
         item
           Value = 100.000000000000000000
