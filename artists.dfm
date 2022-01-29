@@ -440,20 +440,45 @@ object frameArtists: TframeArtists
           item
             Value = 100.000000000000000000
           end>
-        ControlCollection = <>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = GridArtistsList
+            Row = 0
+          end>
         RowCollection = <
           item
             Value = 100.000000000000000000
           end>
         TabOrder = 1
+        object GridArtistsList: TDBGrid
+          Left = 1
+          Top = 1
+          Width = 345
+          Height = 490
+          Align = alClient
+          DataSource = SourceArtistsList
+          TabOrder = 0
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -14
+          TitleFont.Name = 'Segoe UI'
+          TitleFont.Style = []
+        end
       end
     end
   end
   object QryArtistsList: TFDQuery
     Connection = fDbConnection.DbConnection
     SQL.Strings = (
-      'SELECT * FROM tblartists;')
+      
+        'SELECT artistID, artistLastName, artistFirstName, artistEmail FR' +
+        'OM tblartists;')
     Left = 832
     Top = 448
+  end
+  object SourceArtistsList: TDataSource
+    Left = 746
+    Top = 465
   end
 end

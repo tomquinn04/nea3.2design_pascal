@@ -8,7 +8,8 @@ uses
   Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.WinXCtrls, FireDAC.Stan.Intf,
   FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
-  Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, dbconnection;
+  Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, dbconnection, Vcl.Grids,
+  Vcl.DBGrids;
 
 type
   TframeArtists = class(TFrame)
@@ -27,6 +28,8 @@ type
     SearchBox1: TSearchBox;
     GridPanel4: TGridPanel;
     QryArtistsList: TFDQuery;
+    GridArtistsList: TDBGrid;
+    SourceArtistsList: TDataSource;
   private
     { Private declarations }
   public
