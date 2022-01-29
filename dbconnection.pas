@@ -12,14 +12,12 @@ uses
 
 type
   TfDbConnection = class(TForm)
-
-
+    FDManager1: TFDManager;
+    ConnectionDBTesting: TFDConnection;
+    FDGUIxWaitCursor1: TFDGUIxWaitCursor;
   private
     { Private declarations }
   public
-    { Public declarations }
-    DbConnection: TFDConnection;
-    FDGUIxWaitCursor1: TFDGUIxWaitCursor;
   end;
 
 var

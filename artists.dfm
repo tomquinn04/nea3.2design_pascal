@@ -469,7 +469,7 @@ object frameArtists: TframeArtists
     end
   end
   object QryArtistsList: TFDQuery
-    Connection = fDbConnection.DbConnection
+    Connection = fDbConnection.ConnectionDBTesting
     SQL.Strings = (
       
         'SELECT artistID, artistLastName, artistFirstName, artistEmail FR' +
