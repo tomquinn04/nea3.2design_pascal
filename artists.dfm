@@ -478,6 +478,8 @@ object frameArtists: TframeArtists
     Top = 448
   end
   object SourceArtistsList: TDataSource
+    AutoEdit = False
+    DataSet = QryArtistsList
     Left = 746
     Top = 465
   end

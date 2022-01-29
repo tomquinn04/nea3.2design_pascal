@@ -13,13 +13,24 @@ object fDbConnection: TfDbConnection
   PixelsPerInch = 96
   TextHeight = 15
   object DbConnection: TFDConnection
+    ConnectionName = 'DBC'
     Params.Strings = (
       'Database=gallerydb'
       'User_Name=galleryuser'
       'Password=galleryuser'
       'Server=localhost'
       'DriverID=MySQL')
+    UpdateOptions.AssignedValues = [uvEDelete, uvEInsert, uvEUpdate]
+    UpdateOptions.EnableDelete = False
+    UpdateOptions.EnableInsert = False
+    UpdateOptions.EnableUpdate = False
+    Connected = True
     Left = 472
     Top = 320
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 288
+    Top = 136
   end
 end
