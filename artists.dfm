@@ -450,6 +450,7 @@ object frameArtists: TframeArtists
     end
   end
   object QryArtistsList: TFDQuery
+    Connection = fDbConnection.DbConnection
     SQL.Strings = (
       'SELECT * FROM tblartists;')
     Left = 832
