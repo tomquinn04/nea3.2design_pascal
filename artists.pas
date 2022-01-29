@@ -8,7 +8,7 @@ uses
   Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.WinXCtrls, FireDAC.Stan.Intf,
   FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
-  Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, dbconnection, Vcl.Grids,
+  Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, dbconnection, datamodule, Vcl.Grids,
   Vcl.DBGrids;
 
 type
@@ -27,9 +27,9 @@ type
     lblRecentTransactions: TLabel;
     SearchBox1: TSearchBox;
     GridPanel4: TGridPanel;
-    QryArtistsList: TFDQuery;
     GridArtistsList: TDBGrid;
     SourceArtistsList: TDataSource;
+    FDQuery1: TFDQuery;
   private
     { Private declarations }
   public

@@ -12,7 +12,6 @@ uses
 
 type
   TfDbConnection = class(TForm)
-    FDManager1: TFDManager;
     ConnectionDBTesting: TFDConnection;
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
   private

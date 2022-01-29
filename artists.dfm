@@ -468,19 +468,18 @@ object frameArtists: TframeArtists
       end
     end
   end
-  object QryArtistsList: TFDQuery
-    Connection = fDbConnection.ConnectionDBTesting
-    SQL.Strings = (
-      
-        'SELECT artistID, artistLastName, artistFirstName, artistEmail FR' +
-        'OM tblartists;')
-    Left = 832
-    Top = 448
-  end
   object SourceArtistsList: TDataSource
     AutoEdit = False
-    DataSet = QryArtistsList
+    DataSet = FDQuery1
     Left = 746
     Top = 465
+  end
+  object FDQuery1: TFDQuery
+    Connection = DataModule1.FDConnection1
+    SQL.Strings = (
+      'SELECT artistID, artistLastName, artistFirstName, artistEmail'
+      'FROM tblartists;')
+    Left = 842
+    Top = 409
   end
 end
