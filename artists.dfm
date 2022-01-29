@@ -38,8 +38,6 @@ object frameArtists: TframeArtists
         Value = 100.000000000000000000
       end>
     TabOrder = 0
-    ExplicitLeft = 6
-    ExplicitTop = 6
     object gridLeft: TGridPanel
       AlignWithMargins = True
       Left = 4
@@ -134,7 +132,7 @@ object frameArtists: TframeArtists
             Value = 33.333333333333340000
           end
           item
-            Value = 33.333333333333340000
+            Value = 33.333333333333310000
           end>
         TabOrder = 0
         object GridPanel1: TGridPanel
@@ -165,7 +163,6 @@ object frameArtists: TframeArtists
               Value = 100.000000000000000000
             end>
           TabOrder = 0
-          ExplicitHeight = 91
           object icnCircle1: TImage
             Left = 0
             Top = 0
@@ -231,8 +228,6 @@ object frameArtists: TframeArtists
               Value = 100.000000000000000000
             end>
           TabOrder = 1
-          ExplicitTop = 100
-          ExplicitHeight = 91
           object icnCircle2: TImage
             Left = 0
             Top = 0
@@ -307,8 +302,6 @@ object frameArtists: TframeArtists
               Value = 100.000000000000000000
             end>
           TabOrder = 2
-          ExplicitTop = 197
-          ExplicitHeight = 92
           object icnCircle3: TImage
             Left = 0
             Top = 0
@@ -434,9 +427,6 @@ object frameArtists: TframeArtists
         Align = alClient
         TabOrder = 0
         Text = 'SearchBox1'
-        ExplicitLeft = 200
-        ExplicitTop = 16
-        ExplicitWidth = 121
         ExplicitHeight = 27
       end
       object GridPanel4: TGridPanel
@@ -448,25 +438,21 @@ object frameArtists: TframeArtists
         Caption = 'GridPanel4'
         ColumnCollection = <
           item
-            Value = 50.000000000000000000
-          end
-          item
-            Value = 50.000000000000000000
+            Value = 100.000000000000000000
           end>
         ControlCollection = <>
         RowCollection = <
           item
-            Value = 50.000000000000000000
-          end
-          item
-            Value = 50.000000000000000000
+            Value = 100.000000000000000000
           end>
         TabOrder = 1
-        ExplicitLeft = 32
-        ExplicitTop = 360
-        ExplicitWidth = 185
-        ExplicitHeight = 41
       end
     end
+  end
+  object QryArtistsList: TFDQuery
+    SQL.Strings = (
+      'SELECT * FROM tblartists;')
+    Left = 832
+    Top = 448
   end
 end
