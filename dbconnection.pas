@@ -10,7 +10,7 @@ uses
   FireDAC.Phys.MySQLDef, FireDAC.VCLUI.Wait, Data.DB, FireDAC.Comp.Client;
 
 type
-  TForm2 = class(TForm)
+  TfDbConnection = class(TForm)
 
   private
     { Private declarations }
@@ -20,7 +20,7 @@ type
   end;
 
 var
-  Form2: TForm2;
+  fDbConnection: TfDbConnection;
 
 implementation
 
