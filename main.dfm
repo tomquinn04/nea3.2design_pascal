@@ -43,6 +43,8 @@ object Form1: TForm1
         TabOrder = 0
         ExplicitLeft = 6
         ExplicitTop = 34
+        ExplicitWidth = 954
+        ExplicitHeight = 574
         inherited GridPanel1: TGridPanel
           Width = 948
           Height = 568
@@ -57,6 +59,8 @@ object Form1: TForm1
               Control = frameDashboard1.gridRight
               Row = 0
             end>
+          ExplicitWidth = 948
+          ExplicitHeight = 568
           inherited gridLeft: TGridPanel
             Width = 587
             Height = 560
@@ -76,9 +80,7 @@ object Form1: TForm1
                 Control = frameDashboard1.GridPanel13
                 Row = 2
               end>
-            ExplicitLeft = 4
-            ExplicitTop = 4
-            ExplicitHeight = 526
+            ExplicitWidth = 587
             inherited GridPanel7: TGridPanel
               Width = 581
               Height = 176
@@ -93,6 +95,8 @@ object Form1: TForm1
                   Control = frameDashboard1.lblThisMonth
                   Row = 0
                 end>
+              ExplicitWidth = 581
+              ExplicitHeight = 176
               inherited GridPanel4: TGridPanel
                 Top = 38
                 Width = 575
@@ -113,6 +117,9 @@ object Form1: TForm1
                     Control = frameDashboard1.GridPanel14
                     Row = 0
                   end>
+                ExplicitTop = 38
+                ExplicitWidth = 575
+                ExplicitHeight = 135
                 inherited GridPanel6: TGridPanel
                   Width = 224
                   Height = 129
@@ -127,13 +134,17 @@ object Form1: TForm1
                       Control = frameDashboard1.lblSalesThisMonth
                       Row = 1
                     end>
+                  ExplicitWidth = 224
+                  ExplicitHeight = 129
                   inherited txtSalesThisMonth: TLabel
-                    Width = 224
-                    Height = 103
+                    Width = 35
+                    Height = 19
                   end
                   inherited lblSalesThisMonth: TLabel
                     Left = 60
                     Top = 106
+                    ExplicitLeft = 60
+                    ExplicitTop = 106
                   end
                 end
                 inherited GridPanel8: TGridPanel
@@ -151,13 +162,18 @@ object Form1: TForm1
                       Control = frameDashboard1.lblNewStockItems
                       Row = 1
                     end>
+                  ExplicitLeft = 233
+                  ExplicitWidth = 171
+                  ExplicitHeight = 129
                   inherited txtNewStockItems: TLabel
-                    Width = 171
-                    Height = 103
+                    Width = 18
+                    Height = 19
                   end
                   inherited lblNewStockItems: TLabel
                     Left = 34
                     Top = 106
+                    ExplicitLeft = 34
+                    ExplicitTop = 106
                   end
                 end
                 inherited GridPanel14: TGridPanel
@@ -175,18 +191,22 @@ object Form1: TForm1
                       Control = frameDashboard1.lblSoldStockItems
                       Row = 1
                     end>
+                  ExplicitLeft = 404
+                  ExplicitWidth = 168
+                  ExplicitHeight = 129
                   inherited txtSoldStockItems: TLabel
-                    Width = 168
-                    Height = 103
+                    Width = 18
+                    Height = 19
                   end
                   inherited lblSoldStockItems: TLabel
                     Top = 106
+                    ExplicitTop = 106
                   end
                 end
               end
               inherited lblThisMonth: TLabel
-                Width = 567
-                Height = 32
+                Width = 105
+                Height = 23
               end
             end
             inherited GridPanel9: TGridPanel
@@ -204,7 +224,8 @@ object Form1: TForm1
                   Control = frameDashboard1.lblThisYear
                   Row = 0
                 end>
-              ExplicitHeight = 175
+              ExplicitTop = 185
+              ExplicitWidth = 581
               inherited GridPanel10: TGridPanel
                 Top = 41
                 Width = 573
@@ -220,7 +241,8 @@ object Form1: TForm1
                     Control = frameDashboard1.GridPanel12
                     Row = 0
                   end>
-                ExplicitHeight = 132
+                ExplicitTop = 41
+                ExplicitWidth = 573
                 inherited GridPanel11: TGridPanel
                   Width = 280
                   Height = 136
@@ -235,14 +257,16 @@ object Form1: TForm1
                       Control = frameDashboard1.Label5
                       Row = 1
                     end>
-                  ExplicitHeight = 126
+                  ExplicitWidth = 280
                   inherited Label4: TLabel
-                    Width = 280
-                    Height = 109
+                    Width = 35
+                    Height = 19
                   end
                   inherited Label5: TLabel
                     Left = 96
                     Top = 113
+                    ExplicitLeft = 96
+                    ExplicitTop = 113
                   end
                 end
                 inherited GridPanel12: TGridPanel
@@ -260,20 +284,23 @@ object Form1: TForm1
                       Control = frameDashboard1.Label7
                       Row = 1
                     end>
-                  ExplicitHeight = 126
+                  ExplicitLeft = 289
+                  ExplicitWidth = 281
                   inherited Label6: TLabel
-                    Width = 281
-                    Height = 109
+                    Width = 35
+                    Height = 19
                   end
                   inherited Label7: TLabel
                     Left = 70
                     Top = 113
+                    ExplicitLeft = 70
+                    ExplicitTop = 113
                   end
                 end
               end
               inherited lblThisYear: TLabel
-                Width = 565
-                Height = 34
+                Width = 84
+                Height = 23
               end
             end
             inherited GridPanel13: TGridPanel
@@ -287,11 +314,8 @@ object Form1: TForm1
                   Row = 0
                 end>
               ExplicitTop = 355
+              ExplicitWidth = 581
               ExplicitHeight = 168
-              inherited lblHelpSupport: TLabel
-                Width = 567
-                Height = 33
-              end
             end
           end
           inherited gridRight: TGridPanel
@@ -306,6 +330,7 @@ object Form1: TForm1
               end>
             ExplicitLeft = 591
             ExplicitTop = 4
+            ExplicitWidth = 349
             ExplicitHeight = 526
             inherited GridPanel15: TGridPanel
               Width = 349
@@ -320,10 +345,6 @@ object Form1: TForm1
               ExplicitTop = 0
               ExplicitWidth = 347
               ExplicitHeight = 526
-              inherited txtMemos: TLabel
-                Width = 335
-                Height = 33
-              end
             end
           end
         end
@@ -375,10 +396,6 @@ object Form1: TForm1
             ExplicitTop = 4
             ExplicitWidth = 587
             ExplicitHeight = 560
-            inherited lblRecordTransaction: TLabel
-              Width = 573
-              Height = 33
-            end
             inherited gridRecordTransaction: TGridPanel
               Top = 39
               Width = 581
@@ -526,10 +543,6 @@ object Form1: TForm1
             ExplicitTop = 4
             ExplicitWidth = 350
             ExplicitHeight = 560
-            inherited lblRecentTransactions: TLabel
-              Width = 335
-              Height = 33
-            end
           end
         end
       end
@@ -544,8 +557,8 @@ object Form1: TForm1
         Height = 574
         Align = alClient
         TabOrder = 0
-        ExplicitLeft = 6
-        ExplicitTop = 34
+        ExplicitWidth = 954
+        ExplicitHeight = 574
         inherited gridRoot: TGridPanel
           Width = 948
           Height = 568
@@ -562,6 +575,8 @@ object Form1: TForm1
             end>
           ExplicitLeft = 3
           ExplicitTop = 3
+          ExplicitWidth = 948
+          ExplicitHeight = 568
           inherited gridLeft: TGridPanel
             Width = 587
             Height = 560
@@ -576,6 +591,8 @@ object Form1: TForm1
                 Control = frameArtists1.gridRecordTransaction
                 Row = 1
               end>
+            ExplicitWidth = 587
+            ExplicitHeight = 560
             inherited lblRecordTransaction: TLabel
               Width = 573
               Height = 33
@@ -600,6 +617,19 @@ object Form1: TForm1
                   Control = frameArtists1.GridPanel3
                   Row = 2
                 end>
+              RowCollection = <
+                item
+                  Value = 33.333333333333340000
+                end
+                item
+                  Value = 33.333333333333340000
+                end
+                item
+                  Value = 33.333333333333310000
+                end>
+              ExplicitTop = 39
+              ExplicitWidth = 581
+              ExplicitHeight = 518
               inherited GridPanel1: TGridPanel
                 Width = 575
                 Height = 167
@@ -609,10 +639,13 @@ object Form1: TForm1
                     Control = frameArtists1.icnCircle1
                     Row = 0
                   end>
-                ExplicitHeight = 156
+                ExplicitWidth = 575
+                ExplicitHeight = 167
                 inherited icnCircle1: TImage
                   Width = 98
                   Height = 167
+                  ExplicitWidth = 98
+                  ExplicitHeight = 167
                 end
               end
               inherited GridPanel2: TGridPanel
@@ -625,11 +658,14 @@ object Form1: TForm1
                     Control = frameArtists1.icnCircle2
                     Row = 0
                   end>
-                ExplicitTop = 165
-                ExplicitHeight = 156
+                ExplicitTop = 176
+                ExplicitWidth = 575
+                ExplicitHeight = 166
                 inherited icnCircle2: TImage
                   Width = 98
                   Height = 166
+                  ExplicitWidth = 98
+                  ExplicitHeight = 166
                 end
               end
               inherited GridPanel3: TGridPanel
@@ -642,11 +678,14 @@ object Form1: TForm1
                     Control = frameArtists1.icnCircle3
                     Row = 0
                   end>
-                ExplicitTop = 327
-                ExplicitHeight = 156
+                ExplicitTop = 348
+                ExplicitWidth = 575
+                ExplicitHeight = 167
                 inherited icnCircle3: TImage
                   Width = 98
                   Height = 167
+                  ExplicitWidth = 98
+                  ExplicitHeight = 167
                 end
               end
             end
@@ -672,6 +711,9 @@ object Form1: TForm1
                 Control = frameArtists1.GridPanel4
                 Row = 1
               end>
+            ExplicitLeft = 595
+            ExplicitWidth = 349
+            ExplicitHeight = 560
             inherited lblRecentTransactions: TLabel
               Width = 91
               Height = 33
@@ -680,18 +722,18 @@ object Form1: TForm1
               Left = 108
               Width = 238
               Height = 30
-              ExplicitLeft = 107
+              ExplicitLeft = 108
               ExplicitTop = 3
-              ExplicitWidth = 237
+              ExplicitWidth = 238
             end
             inherited GridPanel4: TGridPanel
               Top = 36
               Width = 349
               Height = 524
               ExplicitLeft = 0
-              ExplicitTop = 34
-              ExplicitWidth = 347
-              ExplicitHeight = 492
+              ExplicitTop = 36
+              ExplicitWidth = 349
+              ExplicitHeight = 524
             end
           end
         end
@@ -709,5 +751,16 @@ object Form1: TForm1
       Caption = 'Settings'
       ImageIndex = 5
     end
+  end
+  object DbConnection: TFDConnection
+    Params.Strings = (
+      'Database=gallerydb'
+      'User_Name=galleryuser'
+      'Password=galleryuser'
+      'Server=localhost'
+      'DriverID=MySQL')
+    Connected = True
+    Left = 472
+    Top = 320
   end
 end
