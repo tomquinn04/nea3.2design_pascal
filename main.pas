@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.ExtCtrls, Vcl.StdCtrls,
-  dashboard, Vcl.Imaging.pngimage, transactions;
+  dashboard, Vcl.Imaging.pngimage, transactions, artists;
 
 type
   TForm1 = class(TForm)
@@ -18,6 +18,7 @@ type
     pageReports: TTabSheet;
     pageSettings: TTabSheet;
     frameDashboard1: TframeDashboard;
+    frameArtists1: TframeArtists;
 
 
   private
