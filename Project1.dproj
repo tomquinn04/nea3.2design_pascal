@@ -120,9 +120,10 @@
             <FormType>dfm</FormType>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
-        <DCCReference Include="dbconnection.pas">
-            <Form>fDbConnection</Form>
+        <DCCReference Include="datamodule.pas">
+            <Form>DataModule1</Form>
             <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <None Include="qryartistsgrid.sql"/>
         <BuildConfiguration Include="Base">
