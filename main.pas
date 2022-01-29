@@ -23,7 +23,9 @@ type
     pageSettings: TTabSheet;
     frameDashboard1: TframeDashboard;
     frameArtists1: TframeArtists;
+  public
     DbConnection: TFDConnection;
+
 
 
   private
@@ -38,9 +40,5 @@ var
 implementation
 
 {$R *.dfm}
-
-
-
-
 
 end.
