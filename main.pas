@@ -24,7 +24,6 @@ type
     frameDashboard1: TframeDashboard;
     frameArtists1: TframeArtists;
   public
-    DbConnection: TFDConnection;
 
 
 

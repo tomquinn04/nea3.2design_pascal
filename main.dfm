@@ -26,7 +26,7 @@ object Form1: TForm1
     Margins.Top = 10
     Margins.Right = 0
     Margins.Bottom = 0
-    ActivePage = pageArtists
+    ActivePage = pageSettings
     Align = alClient
     MultiLine = True
     TabHeight = 40
@@ -742,9 +742,6 @@ object Form1: TForm1
             end
           end
         end
-        inherited QryArtistsList: TFDQuery
-          Connection = DbConnection
-        end
       end
     end
     object pageProducts: TTabSheet
@@ -759,15 +756,5 @@ object Form1: TForm1
       Caption = 'Settings'
       ImageIndex = 5
     end
-  end
-  object DbConnection: TFDConnection
-    Params.Strings = (
-      'Database=gallerydb'
-      'User_Name=galleryuser'
-      'Password=galleryuser'
-      'Server=localhost'
-      'DriverID=MySQL')
-    Left = 472
-    Top = 320
   end
 end
