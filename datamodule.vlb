@@ -1,0 +1,15 @@
+﻿[FDGUIxWaitCursor1]
+Coordinates=0,0,113,33
+
+[FDManager1]
+Coordinates=132,1,76,33
+
+[FDConnection1]
+Coordinates=113,52,90,33
+
+[QryArtists]
+Coordinates=10,10,83,249
+
+[SourceArtistsList]
+Coordinates=132,104,100,33
+

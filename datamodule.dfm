@@ -1,6 +1,6 @@
 object DataModule1: TDataModule1
-  Height = 230
-  Width = 446
+  Height = 471
+  Width = 722
   PixelsPerInch = 110
   object FDConnection1: TFDConnection
     Params.Strings = (
@@ -25,5 +25,21 @@ object DataModule1: TDataModule1
     Active = True
     Left = 352
     Top = 96
+  end
+  object SourceArtistsList: TDataSource
+    AutoEdit = False
+    DataSet = QryArtists
+    Left = 410
+    Top = 194
+  end
+  object QryArtists: TFDQuery
+    Active = True
+    FilterOptions = [foCaseInsensitive, foNoPartialCompare]
+    Connection = FDConnection1
+    SQL.Strings = (
+      'SELECT *'
+      'FROM tblartists;')
+    Left = 250
+    Top = 178
   end
 end

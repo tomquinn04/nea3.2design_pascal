@@ -7,13 +7,16 @@ uses
   FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait,
   FireDAC.Comp.UI, Data.DB, FireDAC.Comp.Client, FireDAC.Phys.MySQL,
-  FireDAC.Phys.MySQLDef;
+  FireDAC.Phys.MySQLDef, FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf,
+  FireDAC.DApt, FireDAC.Comp.DataSet;
 
 type
   TDataModule1 = class(TDataModule)
     FDConnection1: TFDConnection;
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
     FDManager1: TFDManager;
+    SourceArtistsList: TDataSource;
+    QryArtists: TFDQuery;
   private
     { Private declarations }
   public
@@ -24,6 +27,8 @@ var
   DataModule1: TDataModule1;
 
 implementation
+
+
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 

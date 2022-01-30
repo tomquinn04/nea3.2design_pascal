@@ -26,7 +26,7 @@ object Form1: TForm1
     Margins.Top = 10
     Margins.Right = 0
     Margins.Bottom = 0
-    ActivePage = pageSettings
+    ActivePage = pageArtists
     Align = alClient
     MultiLine = True
     TabHeight = 40
@@ -78,8 +78,6 @@ object Form1: TForm1
                 Control = frameDashboard1.GridPanel13
                 Row = 2
               end>
-            ExplicitLeft = 3
-            ExplicitTop = 3
             ExplicitWidth = 587
             ExplicitHeight = 560
             inherited GridPanel7: TGridPanel
@@ -138,8 +136,8 @@ object Form1: TForm1
                   ExplicitWidth = 224
                   ExplicitHeight = 129
                   inherited txtSalesThisMonth: TLabel
-                    Width = 35
-                    Height = 19
+                    Width = 224
+                    Height = 103
                   end
                   inherited lblSalesThisMonth: TLabel
                     Left = 60
@@ -167,8 +165,8 @@ object Form1: TForm1
                   ExplicitWidth = 171
                   ExplicitHeight = 129
                   inherited txtNewStockItems: TLabel
-                    Width = 18
-                    Height = 19
+                    Width = 171
+                    Height = 103
                   end
                   inherited lblNewStockItems: TLabel
                     Left = 34
@@ -196,8 +194,8 @@ object Form1: TForm1
                   ExplicitWidth = 168
                   ExplicitHeight = 129
                   inherited txtSoldStockItems: TLabel
-                    Width = 18
-                    Height = 19
+                    Width = 168
+                    Height = 103
                   end
                   inherited lblSoldStockItems: TLabel
                     Top = 106
@@ -206,8 +204,8 @@ object Form1: TForm1
                 end
               end
               inherited lblThisMonth: TLabel
-                Width = 105
-                Height = 23
+                Width = 567
+                Height = 32
               end
             end
             inherited GridPanel9: TGridPanel
@@ -263,8 +261,8 @@ object Form1: TForm1
                   ExplicitWidth = 280
                   ExplicitHeight = 136
                   inherited Label4: TLabel
-                    Width = 35
-                    Height = 19
+                    Width = 280
+                    Height = 109
                   end
                   inherited Label5: TLabel
                     Left = 96
@@ -292,8 +290,8 @@ object Form1: TForm1
                   ExplicitWidth = 281
                   ExplicitHeight = 136
                   inherited Label6: TLabel
-                    Width = 35
-                    Height = 19
+                    Width = 281
+                    Height = 109
                   end
                   inherited Label7: TLabel
                     Left = 70
@@ -304,8 +302,8 @@ object Form1: TForm1
                 end
               end
               inherited lblThisYear: TLabel
-                Width = 84
-                Height = 23
+                Width = 565
+                Height = 34
               end
             end
             inherited GridPanel13: TGridPanel
@@ -338,8 +336,6 @@ object Form1: TForm1
             ExplicitWidth = 349
             ExplicitHeight = 560
             inherited GridPanel15: TGridPanel
-              Width = 349
-              Height = 560
               ControlCollection = <
                 item
                   Column = 0
@@ -401,6 +397,10 @@ object Form1: TForm1
             ExplicitTop = 4
             ExplicitWidth = 587
             ExplicitHeight = 560
+            inherited lblRecordTransaction: TLabel
+              Width = 573
+              Height = 33
+            end
             inherited gridRecordTransaction: TGridPanel
               Top = 39
               Width = 581
@@ -548,6 +548,10 @@ object Form1: TForm1
             ExplicitTop = 4
             ExplicitWidth = 349
             ExplicitHeight = 560
+            inherited lblRecentTransactions: TLabel
+              Width = 335
+              Height = 33
+            end
           end
         end
       end
@@ -562,8 +566,8 @@ object Form1: TForm1
         Height = 574
         Align = alClient
         TabOrder = 0
-        ExplicitWidth = 954
-        ExplicitHeight = 574
+        ExplicitLeft = 6
+        ExplicitTop = 34
         inherited gridRoot: TGridPanel
           Width = 948
           Height = 568
@@ -578,8 +582,6 @@ object Form1: TForm1
               Control = frameArtists1.gridRight
               Row = 0
             end>
-          ExplicitWidth = 948
-          ExplicitHeight = 568
           inherited gridLeft: TGridPanel
             Width = 587
             Height = 560
@@ -591,91 +593,60 @@ object Form1: TForm1
               end
               item
                 Column = 0
-                Control = frameArtists1.gridRecordTransaction
+                Control = frameArtists1.GridPanel1
                 Row = 1
               end>
-            ExplicitWidth = 587
-            ExplicitHeight = 560
-            inherited gridRecordTransaction: TGridPanel
-              Top = 39
-              Width = 581
-              Height = 518
+            inherited lblRecordTransaction: TLabel
+              Width = 573
+              Height = 33
+            end
+            inherited GridPanel1: TGridPanel
+              Top = 36
+              Width = 587
+              Height = 524
               ControlCollection = <
                 item
-                  Column = 0
-                  Control = frameArtists1.GridPanel1
-                  Row = 0
+                  Column = 2
+                  Control = frameArtists1.Panel1
+                  Row = 11
+                  RowSpan = 5
                 end
                 item
-                  Column = 0
-                  Control = frameArtists1.GridPanel2
-                  Row = 1
+                  Column = 2
+                  Control = frameArtists1.Button1
+                  Row = 16
                 end
                 item
-                  Column = 0
-                  Control = frameArtists1.GridPanel3
-                  Row = 2
+                  Column = 2
+                  Control = frameArtists1.EditArtistAddress1
+                  Row = 8
+                end
+                item
+                  Column = 2
+                  Control = frameArtists1.EditArtistAddress2
+                  Row = 9
                 end>
-              ExplicitTop = 39
-              ExplicitWidth = 581
-              ExplicitHeight = 518
-              inherited GridPanel1: TGridPanel
-                Width = 575
-                Height = 167
-                ControlCollection = <
-                  item
-                    Column = 0
-                    Control = frameArtists1.icnCircle1
-                    Row = 0
-                  end>
-                ExplicitWidth = 575
-                ExplicitHeight = 167
-                inherited icnCircle1: TImage
-                  Width = 98
-                  Height = 167
-                  ExplicitWidth = 98
-                  ExplicitHeight = 167
-                end
+              inherited Panel1: TPanel
+                Left = 86
+                Top = 323
+                Width = 415
+                Height = 139
               end
-              inherited GridPanel2: TGridPanel
-                Top = 176
-                Width = 575
-                Height = 166
-                ControlCollection = <
-                  item
-                    Column = 0
-                    Control = frameArtists1.icnCircle2
-                    Row = 0
-                  end>
-                ExplicitTop = 176
-                ExplicitWidth = 575
-                ExplicitHeight = 166
-                inherited icnCircle2: TImage
-                  Width = 98
-                  Height = 166
-                  ExplicitWidth = 98
-                  ExplicitHeight = 166
-                end
+              inherited Button1: TButton
+                Left = 256
+                Top = 467
               end
-              inherited GridPanel3: TGridPanel
-                Top = 348
-                Width = 575
-                Height = 167
-                ControlCollection = <
-                  item
-                    Column = 0
-                    Control = frameArtists1.icnCircle3
-                    Row = 0
-                  end>
-                ExplicitTop = 348
-                ExplicitWidth = 575
-                ExplicitHeight = 167
-                inherited icnCircle3: TImage
-                  Width = 98
-                  Height = 167
-                  ExplicitWidth = 98
-                  ExplicitHeight = 167
-                end
+              inherited EditArtistAddress1: TEdit
+                Left = 86
+                Top = 236
+                Width = 415
+                Height = 23
+              end
+              inherited EditArtistAddress2: TEdit
+                Left = 86
+                Top = 265
+                Width = 415
+                Height = 23
               end
             end
           end
@@ -700,16 +671,14 @@ object Form1: TForm1
                 Control = frameArtists1.GridPanel4
                 Row = 1
               end>
-            ExplicitLeft = 595
-            ExplicitWidth = 349
-            ExplicitHeight = 560
+            inherited lblRecentTransactions: TLabel
+              Width = 91
+              Height = 33
+            end
             inherited SearchBox1: TSearchBox
               Left = 108
               Width = 238
               Height = 30
-              ExplicitLeft = 108
-              ExplicitWidth = 238
-              ExplicitHeight = 30
             end
             inherited GridPanel4: TGridPanel
               Top = 36
@@ -721,9 +690,10 @@ object Form1: TForm1
                   Control = frameArtists1.GridArtistsList
                   Row = 0
                 end>
-              ExplicitTop = 36
-              ExplicitWidth = 349
-              ExplicitHeight = 524
+              inherited GridArtistsList: TDBGrid
+                Width = 347
+                Height = 522
+              end
             end
           end
         end
