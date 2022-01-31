@@ -1,5 +1,7 @@
 program Project1;
 
+{$R *.dres}
+
 uses
   Vcl.Forms,
   main in 'main.pas' {Form1},

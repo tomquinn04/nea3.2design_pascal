@@ -23,6 +23,7 @@ type
     pageSettings: TTabSheet;
     frameDashboard1: TframeDashboard;
     frameArtists1: TframeArtists;
+    procedure FormCreate(Sender: TObject);
   public
 
 
@@ -39,7 +40,12 @@ var
 implementation
 
 {$R *.dfm}
+{$R cursors.res}
 
-
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  Screen.Cursors[1234] := LoadCursor(HInstance, 'DUCKCURSOR');
+  Screen.Cursor := 1234;
+end;
 
 end.

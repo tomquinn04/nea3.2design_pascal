@@ -1,6 +1,7 @@
 object Form1: TForm1
   Left = 0
   Top = 0
+  Cursor = 1234
   Margins.Left = 0
   Margins.Top = 0
   Margins.Right = 0
@@ -14,6 +15,7 @@ object Form1: TForm1
   Font.Height = -14
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 19
   object PageControl1: TPageControl
@@ -319,6 +321,10 @@ object Form1: TForm1
               ExplicitTop = 378
               ExplicitWidth = 581
               ExplicitHeight = 179
+              inherited lblHelpSupport: TLabel
+                Width = 567
+                Height = 33
+              end
             end
           end
           inherited gridRight: TGridPanel
@@ -336,6 +342,8 @@ object Form1: TForm1
             ExplicitWidth = 349
             ExplicitHeight = 560
             inherited GridPanel15: TGridPanel
+              Width = 349
+              Height = 560
               ControlCollection = <
                 item
                   Column = 0
@@ -346,6 +354,10 @@ object Form1: TForm1
               ExplicitTop = 0
               ExplicitWidth = 349
               ExplicitHeight = 560
+              inherited txtMemos: TLabel
+                Width = 335
+                Height = 33
+              end
             end
           end
         end
@@ -613,18 +625,39 @@ object Form1: TForm1
                 end
                 item
                   Column = 2
-                  Control = frameArtists1.Button1
+                  Control = frameArtists1.BtnSave
                   Row = 16
                 end
                 item
                   Column = 2
                   Control = frameArtists1.EditArtistAddress1
-                  Row = 8
+                  Row = 3
                 end
                 item
                   Column = 2
                   Control = frameArtists1.EditArtistAddress2
-                  Row = 9
+                  Row = 4
+                end
+                item
+                  Column = 2
+                  Control = frameArtists1.GridPanel2
+                  Row = 5
+                end
+                item
+                  Column = 2
+                  Control = frameArtists1.GridPanel3
+                  Row = 1
+                end
+                item
+                  Column = 2
+                  Control = frameArtists1.GridPanel6
+                  Row = 2
+                end
+                item
+                  Column = 2
+                  Control = frameArtists1.EditPrivateNotes
+                  Row = 6
+                  RowSpan = 5
                 end>
               inherited Panel1: TPanel
                 Left = 86
@@ -632,21 +665,105 @@ object Form1: TForm1
                 Width = 415
                 Height = 139
               end
-              inherited Button1: TButton
+              inherited BtnSave: TButton
                 Left = 256
                 Top = 467
               end
               inherited EditArtistAddress1: TEdit
-                Left = 86
-                Top = 236
-                Width = 415
-                Height = 23
+                Left = 84
+                Top = 89
+                Width = 419
+                Height = 27
               end
               inherited EditArtistAddress2: TEdit
-                Left = 86
-                Top = 265
-                Width = 415
-                Height = 23
+                Left = 84
+                Top = 118
+                Width = 419
+                Height = 27
+              end
+              inherited GridPanel2: TGridPanel
+                Left = 83
+                Top = 146
+                Width = 421
+                Height = 29
+                ControlCollection = <
+                  item
+                    Column = 0
+                    Control = frameArtists1.EditArtistAddress3
+                    Row = 0
+                  end
+                  item
+                    Column = 1
+                    Control = frameArtists1.EditPostcode
+                    Row = 0
+                  end>
+                inherited EditArtistAddress3: TEdit
+                  Width = 271
+                  Height = 27
+                end
+                inherited EditPostcode: TEdit
+                  Left = 274
+                  Width = 146
+                  Height = 27
+                end
+              end
+              inherited GridPanel3: TGridPanel
+                Left = 83
+                Top = 30
+                Width = 421
+                Height = 29
+                ControlCollection = <
+                  item
+                    Column = 0
+                    Control = frameArtists1.EditFirstName
+                    Row = 0
+                  end
+                  item
+                    Column = 1
+                    Control = frameArtists1.EditLastName
+                    Row = 0
+                  end>
+                inherited EditFirstName: TEdit
+                  Width = 208
+                  Height = 27
+                end
+                inherited EditLastName: TEdit
+                  Left = 211
+                  Width = 209
+                  Height = 27
+                end
+              end
+              inherited GridPanel6: TGridPanel
+                Left = 83
+                Top = 59
+                Width = 421
+                Height = 29
+                ControlCollection = <
+                  item
+                    Column = 0
+                    Control = frameArtists1.EditTelephone
+                    Row = 0
+                  end
+                  item
+                    Column = 1
+                    Control = frameArtists1.EditEmail
+                    Row = 0
+                  end>
+                inherited EditTelephone: TEdit
+                  Width = 164
+                  Height = 27
+                end
+                inherited EditEmail: TEdit
+                  Left = 167
+                  Width = 253
+                  Height = 27
+                end
+              end
+              inherited EditPrivateNotes: TEdit
+                Left = 84
+                Top = 176
+                Width = 419
+                Height = 143
               end
             end
           end

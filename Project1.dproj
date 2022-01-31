@@ -126,6 +126,10 @@
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <None Include="qryartistsgrid.sql"/>
+        <RcItem Include="handrawn duck.cur">
+            <ResourceType>CURSOR</ResourceType>
+            <ResourceId>Cursor_Duck</ResourceId>
+        </RcItem>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -155,6 +159,12 @@
                 <DeployFile LocalName="Win32\Debug\Project1.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>Project1.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="handrawn duck.cur" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
