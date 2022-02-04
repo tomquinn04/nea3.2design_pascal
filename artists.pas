@@ -10,7 +10,7 @@ uses
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
   Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, datamodule, Vcl.Grids,
   Vcl.DBGrids, Vcl.Mask, Vcl.DBCtrls, Vcl.ComCtrls, Vcl.ToolWin,
-  Vcl.TitleBarCtrls;
+  Vcl.TitleBarCtrls, Vcl.Buttons;
 
 type
   TframeArtists = class(TFrame)
@@ -37,7 +37,9 @@ type
     EditPrivateNotes: TEdit;
     GridTitle: TGridPanel;
     lblRecordTransaction: TLabel;
-    TitleBarPanel1: TTitleBarPanel;
+    GridPanel5: TGridPanel;
+    BtnDelete: TSpeedButton;
+    BtnNew: TSpeedButton;
     procedure GridArtistsListCellClick(Column: TColumn);
     procedure SearchBox1Change(Sender: TObject);
     procedure updateForm(recordID: Integer);

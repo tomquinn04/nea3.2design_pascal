@@ -486,12 +486,15 @@ object frameArtists: TframeArtists
           end
           item
             Column = 1
-            Control = TitleBarPanel1
+            Control = GridPanel5
             Row = 0
           end>
         RowCollection = <
           item
             Value = 100.000000000000000000
+          end
+          item
+            SizeStyle = ssAuto
           end>
         TabOrder = 1
         object lblRecordTransaction: TLabel
@@ -515,15 +518,77 @@ object frameArtists: TframeArtists
           ExplicitWidth = 350
           ExplicitHeight = 23
         end
-        object TitleBarPanel1: TTitleBarPanel
-          Left = 373
-          Top = 1
-          Width = 209
-          Height = 25
-          CustomButtons = <>
-          ExplicitLeft = 472
-          ExplicitTop = 8
-          ExplicitWidth = 41
+        object GridPanel5: TGridPanel
+          AlignWithMargins = True
+          Left = 376
+          Top = 4
+          Width = 201
+          Height = 26
+          Margins.Right = 5
+          Align = alClient
+          BevelOuter = bvNone
+          ColumnCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          ControlCollection = <
+            item
+              Column = 0
+              Control = BtnDelete
+              Row = 0
+            end
+            item
+              Column = 1
+              Control = BtnNew
+              Row = 0
+            end>
+          RowCollection = <
+            item
+              Value = 100.000000000000000000
+            end>
+          TabOrder = 0
+          ExplicitLeft = 424
+          ExplicitTop = 16
+          ExplicitWidth = 185
+          ExplicitHeight = 41
+          object BtnDelete: TSpeedButton
+            AlignWithMargins = True
+            Left = 3
+            Top = 0
+            Width = 94
+            Height = 26
+            Margins.Top = 0
+            Margins.Bottom = 0
+            Align = alClient
+            Caption = 'Delete Artist'
+            ExplicitLeft = 24
+            ExplicitWidth = 23
+            ExplicitHeight = 22
+          end
+          object BtnNew: TSpeedButton
+            AlignWithMargins = True
+            Left = 103
+            Top = 0
+            Width = 95
+            Height = 26
+            Margins.Top = 0
+            Margins.Bottom = 0
+            Align = alClient
+            Caption = 'New Artist'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -14
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ExplicitLeft = 128
+            ExplicitTop = 8
+            ExplicitWidth = 23
+            ExplicitHeight = 22
+          end
         end
       end
     end
