@@ -17,6 +17,18 @@ type
     FDManager1: TFDManager;
     SourceArtistsList: TDataSource;
     QryArtists: TFDQuery;
+    QryArtistFromID: TFDQuery;
+    QryArtistFromIDartistID: TFDAutoIncField;
+    QryArtistFromIDartistLastName: TStringField;
+    QryArtistFromIDartistFirstName: TStringField;
+    QryArtistFromIDartistAddress1: TStringField;
+    QryArtistFromIDartistAddress2: TStringField;
+    QryArtistFromIDartistAddress3: TStringField;
+    QryArtistFromIDartistAddress4: TStringField;
+    QryArtistFromIDartistEmail: TStringField;
+    QryArtistFromIDartistPhone: TStringField;
+    QryArtistFromIDartistBankDetails: TStringField;
+    QryArtistFromIDartistNotes: TMemoField;
   private
     { Private declarations }
   public

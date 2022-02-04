@@ -1,6 +1,6 @@
 object DataModule1: TDataModule1
-  Height = 471
-  Width = 722
+  Height = 483
+  Width = 695
   PixelsPerInch = 110
   object FDConnection1: TFDConnection
     Params.Strings = (
@@ -41,5 +41,88 @@ object DataModule1: TDataModule1
       'FROM tblartists;')
     Left = 250
     Top = 178
+  end
+  object QryArtistFromID: TFDQuery
+    FilterOptions = [foCaseInsensitive, foNoPartialCompare]
+    Connection = FDConnection1
+    SQL.Strings = (
+      'SELECT *'
+      'FROM tblartists'
+      'WHERE artistID = :ID;')
+    Left = 162
+    Top = 274
+    ParamData = <
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        ParamType = ptInput
+        Size = 5
+        Value = Null
+      end>
+    object QryArtistFromIDartistID: TFDAutoIncField
+      FieldName = 'artistID'
+      Origin = 'artistID'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object QryArtistFromIDartistLastName: TStringField
+      FieldName = 'artistLastName'
+      Origin = 'artistLastName'
+      Required = True
+      Size = 50
+    end
+    object QryArtistFromIDartistFirstName: TStringField
+      FieldName = 'artistFirstName'
+      Origin = 'artistFirstName'
+      Required = True
+      Size = 50
+    end
+    object QryArtistFromIDartistAddress1: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'artistAddress1'
+      Origin = 'artistAddress1'
+      Size = 50
+    end
+    object QryArtistFromIDartistAddress2: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'artistAddress2'
+      Origin = 'artistAddress2'
+      Size = 50
+    end
+    object QryArtistFromIDartistAddress3: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'artistAddress3'
+      Origin = 'artistAddress3'
+      Size = 50
+    end
+    object QryArtistFromIDartistAddress4: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'artistAddress4'
+      Origin = 'artistAddress4'
+      Size = 50
+    end
+    object QryArtistFromIDartistEmail: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'artistEmail'
+      Origin = 'artistEmail'
+      Size = 50
+    end
+    object QryArtistFromIDartistPhone: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'artistPhone'
+      Origin = 'artistPhone'
+      Size = 50
+    end
+    object QryArtistFromIDartistBankDetails: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'artistBankDetails'
+      Origin = 'artistBankDetails'
+      Size = 50
+    end
+    object QryArtistFromIDartistNotes: TMemoField
+      AutoGenerateValue = arDefault
+      FieldName = 'artistNotes'
+      Origin = 'artistNotes'
+      BlobType = ftMemo
+    end
   end
 end
