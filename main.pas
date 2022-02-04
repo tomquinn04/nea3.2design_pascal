@@ -44,7 +44,7 @@ implementation
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-  Screen.Cursors[1234] := LoadCursor(HInstance, 'DUCKCURSOR');
+  Screen.Cursors[1234] := LoadCursor(HInstance, 'CDUCK');
   Screen.Cursor := 1234;
 end;
 

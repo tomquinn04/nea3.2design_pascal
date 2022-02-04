@@ -9,15 +9,14 @@ uses
   FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
   Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, datamodule, Vcl.Grids,
-  Vcl.DBGrids, Vcl.Mask, Vcl.DBCtrls;
+  Vcl.DBGrids, Vcl.Mask, Vcl.DBCtrls, Vcl.ComCtrls, Vcl.ToolWin,
+  Vcl.TitleBarCtrls;
 
 type
   TframeArtists = class(TFrame)
     gridRoot: TGridPanel;
     gridLeft: TGridPanel;
-    lblRecordTransaction: TLabel;
     gridRight: TGridPanel;
-    lblRecentTransactions: TLabel;
     SearchBox1: TSearchBox;
     GridPanel4: TGridPanel;
     GridArtistsList: TDBGrid;
@@ -36,11 +35,16 @@ type
     EditTelephone: TEdit;
     EditEmail: TEdit;
     EditPrivateNotes: TEdit;
+    GridTitle: TGridPanel;
+    lblRecordTransaction: TLabel;
+    TitleBarPanel1: TTitleBarPanel;
     procedure GridArtistsListCellClick(Column: TColumn);
     procedure SearchBox1Change(Sender: TObject);
     procedure updateForm(recordID: Integer);
     procedure markUnsaved(Sender: TObject);
     procedure markSaved(Sender: TObject);
+    function getCurrentID(Sender: TObject): integer;
+    procedure postChanges(Sender: TObject);
   private
     { Private declarations }
   public
@@ -56,21 +60,35 @@ var { Unit Variables }
   currentRecordID: Integer = -1; { Holds current record. -1 = no record }
 
 procedure TframeArtists.GridArtistsListCellClick(Column: TColumn);
+var
+  response: integer;
 begin
   if boolUnsavedChanges then
   begin
     { Message Box }
-    showmessage('unsaved');
+    Case MessageDlg('Save changes?', mtConfirmation, mbYesNoCancel, 0) of
+      mrYes: postChanges(self);
+      mrNo: updateForm(getCurrentID(self));
+      MrCancel:
+    End;
   end
   else
   begin
     // Set currentRecordID for future SQL - this might not be needed as
     // fireDAC seems to deal with filtering, selection, etc in its own
     // way which I have found sufficient so far
-    currentRecordID := GridArtistsList.DataSource.DataSet.FieldByName('artistID').AsInteger;
-    updateForm(currentRecordID);
+
+    updateForm(getCurrentID(self));
   end;
 
+end;
+
+
+
+
+function TframeArtists.getCurrentID(Sender: TObject): integer;
+begin
+  Result := GridArtistsList.DataSource.DataSet.FieldByName('artistID').AsInteger;
 end;
 
 procedure TframeArtists.markUnsaved(Sender: TObject);
@@ -118,6 +136,11 @@ begin
   markSaved(self); // setting the .Text values triggers OnChance and markUnsaved
                    // so I need to set the unsaved back to false as there haven't
                    // actually been any changes
+end;
+
+procedure TframeArtists.postChanges(Sender: TObject);
+begin
+  markSaved(Sender);
 end;
 
 end.

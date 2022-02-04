@@ -58,13 +58,13 @@ object frameArtists: TframeArtists
       ControlCollection = <
         item
           Column = 0
-          Control = lblRecordTransaction
-          Row = 0
+          Control = GridPanel1
+          Row = 1
         end
         item
           Column = 0
-          Control = GridPanel1
-          Row = 1
+          Control = GridTitle
+          Row = 0
         end>
       ParentBackground = False
       RowCollection = <
@@ -75,27 +75,6 @@ object frameArtists: TframeArtists
           Value = 93.524696296198370000
         end>
       TabOrder = 0
-      object lblRecordTransaction: TLabel
-        AlignWithMargins = True
-        Left = 7
-        Top = 3
-        Width = 569
-        Height = 31
-        Margins.Left = 7
-        Margins.Right = 7
-        Margins.Bottom = 0
-        Align = alClient
-        Caption = 'Select an artist from the right-hand side, or create new'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -17
-        Font.Name = 'Segoe UI'
-        Font.Style = [fsBold]
-        ParentFont = False
-        Layout = tlCenter
-        ExplicitWidth = 442
-        ExplicitHeight = 23
-      end
       object GridPanel1: TGridPanel
         Left = 0
         Top = 34
@@ -486,6 +465,67 @@ object frameArtists: TframeArtists
           ExplicitHeight = 27
         end
       end
+      object GridTitle: TGridPanel
+        Left = 0
+        Top = 0
+        Width = 583
+        Height = 34
+        Align = alClient
+        ColumnCollection = <
+          item
+            Value = 64.068951565770150000
+          end
+          item
+            Value = 35.931048434229850000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = lblRecordTransaction
+            Row = 0
+          end
+          item
+            Column = 1
+            Control = TitleBarPanel1
+            Row = 0
+          end>
+        RowCollection = <
+          item
+            Value = 100.000000000000000000
+          end>
+        TabOrder = 1
+        object lblRecordTransaction: TLabel
+          AlignWithMargins = True
+          Left = 8
+          Top = 4
+          Width = 358
+          Height = 29
+          Margins.Left = 7
+          Margins.Right = 7
+          Margins.Bottom = 0
+          Align = alClient
+          Caption = 'Select an artist from the right-hand side, or'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -17
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+          Layout = tlCenter
+          ExplicitWidth = 350
+          ExplicitHeight = 23
+        end
+        object TitleBarPanel1: TTitleBarPanel
+          Left = 373
+          Top = 1
+          Width = 209
+          Height = 25
+          CustomButtons = <>
+          ExplicitLeft = 472
+          ExplicitTop = 8
+          ExplicitWidth = 41
+        end
+      end
     end
     object gridRight: TGridPanel
       AlignWithMargins = True
@@ -509,11 +549,6 @@ object frameArtists: TframeArtists
         end>
       ControlCollection = <
         item
-          Column = 0
-          Control = lblRecentTransactions
-          Row = 0
-        end
-        item
           Column = 1
           Control = SearchBox1
           Row = 0
@@ -533,27 +568,6 @@ object frameArtists: TframeArtists
           Value = 93.524696296198370000
         end>
       TabOrder = 1
-      object lblRecentTransactions: TLabel
-        AlignWithMargins = True
-        Left = 7
-        Top = 3
-        Width = 90
-        Height = 31
-        Margins.Left = 7
-        Margins.Right = 7
-        Margins.Bottom = 0
-        Align = alClient
-        Caption = 'Artists'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -17
-        Font.Name = 'Segoe UI'
-        Font.Style = [fsBold]
-        ParentFont = False
-        Layout = tlCenter
-        ExplicitWidth = 52
-        ExplicitHeight = 23
-      end
       object SearchBox1: TSearchBox
         AlignWithMargins = True
         Left = 107
@@ -588,6 +602,9 @@ object frameArtists: TframeArtists
         RowCollection = <
           item
             Value = 100.000000000000000000
+          end
+          item
+            SizeStyle = ssAuto
           end>
         TabOrder = 1
         object GridArtistsList: TDBGrid
