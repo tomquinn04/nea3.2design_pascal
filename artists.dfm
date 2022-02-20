@@ -550,10 +550,6 @@ object frameArtists: TframeArtists
               Value = 100.000000000000000000
             end>
           TabOrder = 0
-          ExplicitLeft = 424
-          ExplicitTop = 16
-          ExplicitWidth = 185
-          ExplicitHeight = 41
           object BtnDelete: TSpeedButton
             AlignWithMargins = True
             Left = 3
@@ -584,6 +580,7 @@ object frameArtists: TframeArtists
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             ParentFont = False
+            OnClick = BtnNewClick
             ExplicitLeft = 128
             ExplicitTop = 8
             ExplicitWidth = 23

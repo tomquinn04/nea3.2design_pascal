@@ -47,6 +47,7 @@ type
     procedure markSaved(Sender: TObject);
     function getCurrentID(Sender: TObject): integer;
     procedure postChanges(Sender: TObject);
+    procedure BtnNewClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -87,6 +88,27 @@ end;
 
 
 
+
+procedure TframeArtists.BtnNewClick(Sender: TObject);
+begin
+  if boolUnsavedChanges then
+  begin
+    { Message Box }
+    Case MessageDlg('Save changes?', mtConfirmation, mbYesNoCancel, 0) of
+      mrYes: postChanges(self);
+      mrNo:;
+      MrCancel:
+    End;
+  end
+  else
+  begin
+    // Set currentRecordID for future SQL - this might not be needed as
+    // fireDAC seems to deal with filtering, selection, etc in its own
+    // way which I have found sufficient so far
+    //GridArtistsList.DataSource.DataSet.AppendRecord([]);
+    //updateForm(GridArtistsList.DataSource.DataSet.FindLast.ToInteger);
+  end;
+end;
 
 function TframeArtists.getCurrentID(Sender: TObject): integer;
 begin
@@ -135,7 +157,7 @@ begin
   datamodule1.QryArtistFromID.ParamByName('ID').value := null;
   datamodule1.QryArtistFromID.Close; // reset query
 
-  markSaved(self); // setting the .Text values triggers OnChance and markUnsaved
+  markSaved(self); // setting the .Text values triggers OnChange and markUnsaved
                    // so I need to set the unsaved back to false as there haven't
                    // actually been any changes
 end;

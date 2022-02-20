@@ -1,6 +1,6 @@
 object DataModule1: TDataModule1
-  Height = 483
-  Width = 695
+  Height = 230
+  Width = 446
   PixelsPerInch = 110
   object FDConnection1: TFDConnection
     Params.Strings = (
@@ -33,7 +33,6 @@ object DataModule1: TDataModule1
     Top = 194
   end
   object QryArtists: TFDQuery
-    Active = True
     FilterOptions = [foCaseInsensitive, foNoPartialCompare]
     Connection = FDConnection1
     SQL.Strings = (
@@ -63,6 +62,7 @@ object DataModule1: TDataModule1
       FieldName = 'artistID'
       Origin = 'artistID'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object QryArtistFromIDartistLastName: TStringField
       FieldName = 'artistLastName'
