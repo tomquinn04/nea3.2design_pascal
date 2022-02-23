@@ -436,6 +436,10 @@ object Form1: TForm1
               ExplicitTop = 378
               ExplicitWidth = 581
               ExplicitHeight = 179
+              inherited lblHelpSupport: TLabel
+                Width = 567
+                Height = 33
+              end
             end
           end
           inherited gridRight: TGridPanel
@@ -453,6 +457,8 @@ object Form1: TForm1
             ExplicitWidth = 349
             ExplicitHeight = 560
             inherited GridPanel15: TGridPanel
+              Width = 349
+              Height = 560
               ControlCollection = <
                 item
                   Column = 0
@@ -463,6 +469,10 @@ object Form1: TForm1
               ExplicitTop = 0
               ExplicitWidth = 349
               ExplicitHeight = 560
+              inherited txtMemos: TLabel
+                Width = 335
+                Height = 33
+              end
             end
           end
         end
@@ -645,6 +655,8 @@ object Form1: TForm1
         TabOrder = 0
         ExplicitLeft = 6
         ExplicitTop = 34
+        ExplicitWidth = 954
+        ExplicitHeight = 574
         inherited gridRoot: TGridPanel
           Width = 948
           Height = 568
@@ -659,6 +671,8 @@ object Form1: TForm1
               Control = frameArtists1.gridRight
               Row = 0
             end>
+          ExplicitWidth = 948
+          ExplicitHeight = 568
           inherited gridLeft: TGridPanel
             Width = 587
             Height = 560
@@ -673,6 +687,8 @@ object Form1: TForm1
                 Control = frameArtists1.GridTitle
                 Row = 0
               end>
+            ExplicitWidth = 587
+            ExplicitHeight = 560
             inherited GridPanel1: TGridPanel
               Top = 36
               Width = 587
@@ -720,27 +736,42 @@ object Form1: TForm1
                   Row = 6
                   RowSpan = 5
                 end>
+              ExplicitTop = 36
+              ExplicitWidth = 587
+              ExplicitHeight = 524
               inherited Panel1: TPanel
                 Left = 86
                 Top = 323
                 Width = 415
                 Height = 139
+                ExplicitLeft = 86
+                ExplicitTop = 323
+                ExplicitWidth = 415
+                ExplicitHeight = 139
               end
               inherited BtnSave: TButton
                 Left = 256
                 Top = 467
+                ExplicitLeft = 256
+                ExplicitTop = 467
               end
               inherited EditArtistAddress1: TEdit
                 Left = 84
                 Top = 89
                 Width = 419
                 Height = 27
+                ExplicitLeft = 84
+                ExplicitTop = 89
+                ExplicitWidth = 419
               end
               inherited EditArtistAddress2: TEdit
                 Left = 84
                 Top = 118
                 Width = 419
                 Height = 27
+                ExplicitLeft = 84
+                ExplicitTop = 118
+                ExplicitWidth = 419
               end
               inherited GridPanel2: TGridPanel
                 Left = 83
@@ -758,14 +789,21 @@ object Form1: TForm1
                     Control = frameArtists1.EditPostcode
                     Row = 0
                   end>
+                ExplicitLeft = 83
+                ExplicitTop = 146
+                ExplicitWidth = 421
+                ExplicitHeight = 29
                 inherited EditArtistAddress3: TEdit
                   Width = 271
                   Height = 27
+                  ExplicitWidth = 271
                 end
                 inherited EditPostcode: TEdit
                   Left = 274
                   Width = 146
                   Height = 27
+                  ExplicitLeft = 274
+                  ExplicitWidth = 146
                 end
               end
               inherited GridPanel3: TGridPanel
@@ -784,14 +822,21 @@ object Form1: TForm1
                     Control = frameArtists1.EditLastName
                     Row = 0
                   end>
+                ExplicitLeft = 83
+                ExplicitTop = 30
+                ExplicitWidth = 421
+                ExplicitHeight = 29
                 inherited EditFirstName: TEdit
                   Width = 208
                   Height = 27
+                  ExplicitWidth = 208
                 end
                 inherited EditLastName: TEdit
                   Left = 211
                   Width = 209
                   Height = 27
+                  ExplicitLeft = 211
+                  ExplicitWidth = 209
                 end
               end
               inherited GridPanel6: TGridPanel
@@ -810,14 +855,21 @@ object Form1: TForm1
                     Control = frameArtists1.EditEmail
                     Row = 0
                   end>
+                ExplicitLeft = 83
+                ExplicitTop = 59
+                ExplicitWidth = 421
+                ExplicitHeight = 29
                 inherited EditTelephone: TEdit
                   Width = 164
                   Height = 27
+                  ExplicitWidth = 164
                 end
                 inherited EditEmail: TEdit
                   Left = 167
                   Width = 253
                   Height = 27
+                  ExplicitLeft = 167
+                  ExplicitWidth = 253
                 end
               end
               inherited EditPrivateNotes: TEdit
@@ -825,6 +877,10 @@ object Form1: TForm1
                 Top = 176
                 Width = 419
                 Height = 143
+                ExplicitLeft = 84
+                ExplicitTop = 176
+                ExplicitWidth = 419
+                ExplicitHeight = 143
               end
             end
             inherited GridTitle: TGridPanel
@@ -841,10 +897,8 @@ object Form1: TForm1
                   Control = frameArtists1.GridPanel5
                   Row = 0
                 end>
-              inherited lblRecordTransaction: TLabel
-                Width = 361
-                Height = 31
-              end
+              ExplicitWidth = 587
+              ExplicitHeight = 36
               inherited GridPanel5: TGridPanel
                 Left = 379
                 Width = 202
@@ -860,13 +914,20 @@ object Form1: TForm1
                     Control = frameArtists1.BtnNew
                     Row = 0
                   end>
+                ExplicitLeft = 379
+                ExplicitWidth = 202
+                ExplicitHeight = 28
                 inherited BtnDelete: TSpeedButton
                   Width = 95
                   Height = 28
+                  ExplicitWidth = 95
+                  ExplicitHeight = 28
                 end
                 inherited BtnNew: TSpeedButton
                   Left = 104
                   Height = 28
+                  ExplicitLeft = 104
+                  ExplicitHeight = 28
                 end
               end
             end
@@ -887,10 +948,16 @@ object Form1: TForm1
                 Control = frameArtists1.GridPanel4
                 Row = 1
               end>
+            ExplicitLeft = 595
+            ExplicitWidth = 349
+            ExplicitHeight = 560
             inherited SearchBox1: TSearchBox
               Left = 108
               Width = 238
               Height = 30
+              ExplicitLeft = 108
+              ExplicitWidth = 238
+              ExplicitHeight = 30
             end
             inherited GridPanel4: TGridPanel
               Top = 36
@@ -902,6 +969,9 @@ object Form1: TForm1
                   Control = frameArtists1.GridArtistsList
                   Row = 0
                 end>
+              ExplicitTop = 36
+              ExplicitWidth = 349
+              ExplicitHeight = 524
               inherited GridArtistsList: TDBGrid
                 Width = 347
                 Height = 522
