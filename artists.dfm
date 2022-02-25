@@ -501,8 +501,8 @@ object frameArtists: TframeArtists
           AlignWithMargins = True
           Left = 8
           Top = 4
-          Width = 358
-          Height = 29
+          Width = 350
+          Height = 23
           Margins.Left = 7
           Margins.Right = 7
           Margins.Bottom = 0
@@ -515,8 +515,6 @@ object frameArtists: TframeArtists
           Font.Style = [fsBold]
           ParentFont = False
           Layout = tlCenter
-          ExplicitWidth = 350
-          ExplicitHeight = 23
         end
         object GridPanel5: TGridPanel
           AlignWithMargins = True

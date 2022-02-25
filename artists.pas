@@ -48,6 +48,7 @@ type
     function getCurrentID(Sender: TObject): integer;
     procedure postChanges(Sender: TObject);
     procedure BtnNewClick(Sender: TObject);
+    function changesMsgBox(Sender: TObject): boolean;
   private
     { Private declarations }
   public
@@ -62,52 +63,30 @@ var { Unit Variables }
   boolUnsavedChanges: Boolean = False; { Holds state of the edit panel }
   currentRecordID: Integer = -1; { Holds current record. -1 = no record }
 
-procedure TframeArtists.GridArtistsListCellClick(Column: TColumn);
-var
-  response: integer;
+function TframeArtists.changesMsgBox(Sender: TObject): boolean;
+// outputs:
+// true => changes saved / changes discarded / no changes
+// false => operation cancelled
 begin
   if boolUnsavedChanges then
   begin
-    { Message Box }
-    Case MessageDlg('Save changes?', mtConfirmation, mbYesNoCancel, 0) of
-      mrYes: postChanges(self);
-      mrNo: updateForm(getCurrentID(self));
-      MrCancel:
-    End;
+    case MessageDlg('Save changes?', mtConfirmation, mbYesNoCancel, 0) of
+      mrYes: begin postChanges(Sender); Result := True; end;
+      mrNo: Result := True;
+      mrCancel: Result := False
+    end;
   end
-  else
-  begin
-    // Set currentRecordID for future SQL - this might not be needed as
-    // fireDAC seems to deal with filtering, selection, etc in its own
-    // way which I have found sufficient so far
-
-    updateForm(getCurrentID(self));
-  end;
-
+  else Result := True; // in case there are no changes to save
 end;
 
-
-
+procedure TframeArtists.GridArtistsListCellClick(Column: TColumn);
+begin
+  if changesMsgBox(self) then updateForm(getCurrentID(self));
+end;
 
 procedure TframeArtists.BtnNewClick(Sender: TObject);
 begin
-  if boolUnsavedChanges then
-  begin
-    { Message Box }
-    Case MessageDlg('Save changes?', mtConfirmation, mbYesNoCancel, 0) of
-      mrYes: postChanges(self);
-      mrNo:;
-      MrCancel:
-    End;
-  end
-  else
-  begin
-    // Set currentRecordID for future SQL - this might not be needed as
-    // fireDAC seems to deal with filtering, selection, etc in its own
-    // way which I have found sufficient so far
-    //GridArtistsList.DataSource.DataSet.AppendRecord([]);
-    //updateForm(GridArtistsList.DataSource.DataSet.FindLast.ToInteger);
-  end;
+  if changesmsgBox(self) then; // TODO
 end;
 
 function TframeArtists.getCurrentID(Sender: TObject): integer;
