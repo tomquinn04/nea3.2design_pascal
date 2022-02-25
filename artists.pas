@@ -49,6 +49,7 @@ type
     procedure postChanges(Sender: TObject);
     procedure BtnNewClick(Sender: TObject);
     function changesMsgBox(Sender: TObject): boolean;
+    function sendForValidation(Sender: TObject): string;
   private
     { Private declarations }
   public
@@ -142,8 +143,40 @@ begin
 end;
 
 procedure TframeArtists.postChanges(Sender: TObject);
+var validationOutput: String;
 begin
-  markSaved(Sender);
+  validationOutput := sendForValidation(Sender);
+  if validationOutput = '' then
+  begin
+    markSaved(Sender);
+  end
+  else
+  begin
+    Application.MessageBox(PWideChar(concat('Error while saving changes: ',validationOutput)), 'Error Saving Changes', MB_OK);
+  end;
+end;
+
+function TframeArtists.sendForValidation(Sender: TObject): string;
+var fields : dataModule.TFieldsArray;
+begin
+  { ** initialise array ** }
+  SetLength(fields, 11);
+
+  { ** fill array from form ** }
+  // fields[0] := not used
+  fields[1] :=  EditLastName.Text;
+  fields[2] :=  EditFirstName.Text;
+  fields[3] :=  EditArtistAddress1.Text;
+  fields[4] :=  EditArtistAddress2.Text;
+  fields[5] :=  EditArtistAddress3.Text;
+  fields[6] :=  EditPostcode.Text;
+  fields[7] :=  EditEmail.Text;
+  fields[8] :=  EditTelephone.Text;
+  // fields[9] := not used
+  // fields[10] := not used
+
+  { ** pass array to validation function **}
+  Result := dataModule1.validateArtist(fields);
 end;
 
 end.
