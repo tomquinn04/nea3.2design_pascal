@@ -1,6 +1,6 @@
 object DataModule1: TDataModule1
-  Height = 230
-  Width = 446
+  Height = 670
+  Width = 883
   PixelsPerInch = 110
   object FDConnection1: TFDConnection
     Params.Strings = (
@@ -33,6 +33,7 @@ object DataModule1: TDataModule1
     Top = 194
   end
   object QryArtists: TFDQuery
+    Active = True
     FilterOptions = [foCaseInsensitive, foNoPartialCompare]
     Connection = FDConnection1
     SQL.Strings = (
@@ -40,8 +41,74 @@ object DataModule1: TDataModule1
       'FROM tblartists;')
     Left = 250
     Top = 178
+    object QryArtistsartistID: TFDAutoIncField
+      FieldName = 'artistID'
+      Origin = 'artistID'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object QryArtistsartistLastName: TStringField
+      FieldName = 'artistLastName'
+      Origin = 'artistLastName'
+      Required = True
+      Size = 50
+    end
+    object QryArtistsartistFirstName: TStringField
+      FieldName = 'artistFirstName'
+      Origin = 'artistFirstName'
+      Required = True
+      Size = 50
+    end
+    object QryArtistsartistAddress1: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'artistAddress1'
+      Origin = 'artistAddress1'
+      Size = 50
+    end
+    object QryArtistsartistAddress2: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'artistAddress2'
+      Origin = 'artistAddress2'
+      Size = 50
+    end
+    object QryArtistsartistAddress3: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'artistAddress3'
+      Origin = 'artistAddress3'
+      Size = 50
+    end
+    object QryArtistsartistAddress4: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'artistAddress4'
+      Origin = 'artistAddress4'
+      Size = 50
+    end
+    object QryArtistsartistEmail: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'artistEmail'
+      Origin = 'artistEmail'
+      Size = 50
+    end
+    object QryArtistsartistPhone: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'artistPhone'
+      Origin = 'artistPhone'
+      Size = 50
+    end
+    object QryArtistsartistBankDetails: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'artistBankDetails'
+      Origin = 'artistBankDetails'
+      Size = 50
+    end
+    object QryArtistsartistNotes: TMemoField
+      AutoGenerateValue = arDefault
+      FieldName = 'artistNotes'
+      Origin = 'artistNotes'
+      BlobType = ftMemo
+    end
   end
   object QryArtistFromID: TFDQuery
+    Active = True
     FilterOptions = [foCaseInsensitive, foNoPartialCompare]
     Connection = FDConnection1
     SQL.Strings = (
@@ -62,7 +129,6 @@ object DataModule1: TDataModule1
       FieldName = 'artistID'
       Origin = 'artistID'
       ProviderFlags = [pfInWhere, pfInKey]
-      ReadOnly = True
     end
     object QryArtistFromIDartistLastName: TStringField
       FieldName = 'artistLastName'

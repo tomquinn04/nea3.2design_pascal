@@ -18,6 +18,17 @@ type
     SourceArtistsList: TDataSource;
     QryArtists: TFDQuery;
     QryArtistFromID: TFDQuery;
+    QryArtistsartistID: TFDAutoIncField;
+    QryArtistsartistLastName: TStringField;
+    QryArtistsartistFirstName: TStringField;
+    QryArtistsartistAddress1: TStringField;
+    QryArtistsartistAddress2: TStringField;
+    QryArtistsartistAddress3: TStringField;
+    QryArtistsartistAddress4: TStringField;
+    QryArtistsartistEmail: TStringField;
+    QryArtistsartistPhone: TStringField;
+    QryArtistsartistBankDetails: TStringField;
+    QryArtistsartistNotes: TMemoField;
     QryArtistFromIDartistID: TFDAutoIncField;
     QryArtistFromIDartistLastName: TStringField;
     QryArtistFromIDartistFirstName: TStringField;
