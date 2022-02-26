@@ -100,6 +100,9 @@ else if fields[8].Length > 18 then Result := 'Telephone cannot be longer than 18
   // no validation needed as it is a long TEXT/MEMO field
 
 else Result := '';
-end;
+end; { I chose to put validation in the datamodule, keeping anything that doesn't
+        directly interface with a form such as this out of the form units
+        - validation follows the validation rules in word doc section 2.2
+          backend data dictionary }
 
 end.

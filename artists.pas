@@ -83,27 +83,31 @@ end;
 procedure TframeArtists.GridArtistsListCellClick(Column: TColumn);
 begin
   if changesMsgBox(self) then updateForm(getCurrentID(self));
-end;
+end; { triggers a check for unsaved changes then updates the form
+        with the new selected record }
 
 procedure TframeArtists.BtnNewClick(Sender: TObject);
 begin
   if changesmsgBox(self) then; // TODO
-end;
+end; { needs to create a new record, get the ID, then update the form
+        - for this to work I need to work out how to set default values
+            for each field, or just create a new record with default values
+              pre-filled }
 
 function TframeArtists.getCurrentID(Sender: TObject): integer;
 begin
   Result := GridArtistsList.DataSource.DataSet.FieldByName('artistID').AsInteger;
-end;
+end; { function to make retreiving the selected row easier }
 
 procedure TframeArtists.markUnsaved(Sender: TObject);
 begin
   boolUnsavedChanges := True;
-end;
+end; { allows me to add extra functionality to marking unsaved if I need }
 
 procedure TframeArtists.markSaved(Sender: TObject);
 begin
   boolUnsavedChanges := False;
-end;
+end; { allows me to add extra functionality to marking saved if I need }
 
 procedure TframeArtists.SearchBox1Change(Sender: TObject);
 var
@@ -115,7 +119,7 @@ begin
   GridArtistsList.DataSource.DataSet.Filtered := False;
   GridArtistsList.DataSource.DataSet.Filter := filterstr;
   GridArtistsList.DataSource.DataSet.Filtered := True;
-end;
+end; { filters the SQL recordset according to the search textbox }
 
 procedure TframeArtists.updateForm(recordID: Integer);
 begin
