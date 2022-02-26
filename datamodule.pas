@@ -11,6 +11,7 @@ uses
   FireDAC.DApt, FireDAC.Comp.DataSet, System.RegularExpressions;
 
 type
+  TRecordType  = ShortInt;
   TFieldsArray = Array of String;
   TDataModule1 = class(TDataModule)
     FDConnection1: TFDConnection;
@@ -46,16 +47,42 @@ type
   public
     { Public declarations }
     function validateArtist(fields: TFieldsArray): string;
+    function commitArtist(fields: TFieldsArray; id: shortint; recordType: TRecordType): string;
+    function checkDBConnection: boolean;
   end;
 
 var
   DataModule1: TDataModule1;
+
+const
+  { TRecordType }
+  RecordNewNoID: TRecordType = 0;
+  RecordExistingFromGrid: TRecordType = 1;
+  RecordExistingFromID: TRecordType = 2;
 
 implementation
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
+
+function TDataModule1.checkDBConnection: boolean;
+begin
+  Result := True; // TODO implement DB connection checking, username/pass form etc
+end;
+
+
+function TDataModule1.commitArtist(fields: TFieldsArray; id: shortint; recordType: TRecordType): string;
+var validationResult: string;
+begin
+  validationResult := validateArtist(fields); // force data validation
+  if validationResult = '' then
+  begin
+
+  end
+  else Result := validationResult;
+
+end;
 
 function TDataModule1.validateArtist(fields: TFieldsArray): string;
 begin

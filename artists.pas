@@ -63,6 +63,7 @@ implementation
 var { Unit Variables }
   boolUnsavedChanges: Boolean = False; { Holds state of the edit panel }
   currentRecordID: Integer = -1; { Holds current record. -1 = no record }
+  currentRecordType: TRecordType;
 
 function TframeArtists.changesMsgBox(Sender: TObject): boolean;
 // outputs:
