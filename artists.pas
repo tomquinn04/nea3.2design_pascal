@@ -10,7 +10,7 @@ uses
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
   Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, datamodule, Vcl.Grids,
   Vcl.DBGrids, Vcl.Mask, Vcl.DBCtrls, Vcl.ComCtrls, Vcl.ToolWin,
-  Vcl.TitleBarCtrls, Vcl.Buttons;
+  Vcl.TitleBarCtrls, Vcl.Buttons, System.ImageList, Vcl.ImgList;
 
 type
   TframeArtists = class(TFrame)
@@ -40,16 +40,22 @@ type
     GridPanel5: TGridPanel;
     BtnDelete: TSpeedButton;
     BtnNew: TSpeedButton;
+    LblRecordStatus: TStaticText;
+    ImgStatus: TImage;
+    ImageListStatus: TImageList;
+    Image1: TImage;
     procedure GridArtistsListCellClick(Column: TColumn);
     procedure SearchBox1Change(Sender: TObject);
     procedure updateForm(recordID: Integer);
     procedure markUnsaved(Sender: TObject);
     procedure markSaved(Sender: TObject);
     function getCurrentID(Sender: TObject): integer;
-    procedure postChanges(Sender: TObject);
+    function postChanges(Sender: TObject): boolean;
     procedure BtnNewClick(Sender: TObject);
     function changesMsgBox(Sender: TObject): boolean;
     function sendForValidation(Sender: TObject): string;
+    function tabSwitchHandler(Sender: TObject): boolean;
+    procedure initForm(Sender: TObject);
   private
     { Private declarations }
   public
@@ -65,6 +71,29 @@ var { Unit Variables }
   currentRecordID: Integer = -1; { Holds current record. -1 = no record }
   currentRecordType: TRecordType;
 
+procedure TframeArtists.initForm(Sender: TObject);
+begin
+  currentRecordType := RecordNewNoID;
+  SearchBox1.Text := '';
+  currentRecordID := -1;
+
+  EditFirstName.Text := '';
+  EditLastName.Text := '';
+  EditTelephone.Text := '';
+  EditEmail.Text := '';
+  EditArtistAddress1.Text := '';
+  EditArtistAddress2.Text := '';
+  EditArtistAddress3.Text := '';
+  EditPostcode.Text := '';
+  EditPrivateNotes.Text := '';
+
+  boolUnsavedChanges := False;
+
+  ImageListStatus.GetBitmap(0, ImgStatus.Picture.Bitmap);
+
+  { Used when the frame is loaded and when a new record is to be created }
+end;
+
 function TframeArtists.changesMsgBox(Sender: TObject): boolean;
 // outputs:
 // true => changes saved / changes discarded / no changes
@@ -73,7 +102,7 @@ begin
   if boolUnsavedChanges then
   begin
     case MessageDlg('Save changes?', mtConfirmation, mbYesNoCancel, 0) of
-      mrYes: begin postChanges(Sender); Result := True; end;
+      mrYes: Result := postChanges(Sender);
       mrNo: Result := True;
       mrCancel: Result := False
     end;
@@ -89,11 +118,8 @@ end; { triggers a check for unsaved changes then updates the form
 
 procedure TframeArtists.BtnNewClick(Sender: TObject);
 begin
-  if changesmsgBox(self) then; // TODO
-end; { needs to create a new record, get the ID, then update the form
-        - for this to work I need to work out how to set default values
-            for each field, or just create a new record with default values
-              pre-filled }
+  if changesmsgBox(self) then initForm(self); // TODO
+end;
 
 function TframeArtists.getCurrentID(Sender: TObject): integer;
 begin
@@ -147,17 +173,19 @@ begin
                    // actually been any changes
 end;
 
-procedure TframeArtists.postChanges(Sender: TObject);
+function TframeArtists.postChanges(Sender: TObject): boolean;
 var validationOutput: String;
 begin
   validationOutput := sendForValidation(Sender);
   if validationOutput = '' then
   begin
     markSaved(Sender);
+    Result := true;
   end
   else
   begin
     Application.MessageBox(PWideChar(concat('Error while saving changes: ',validationOutput)), 'Error Saving Changes', MB_OK);
+    Result := false;
   end;
 end;
 
@@ -182,6 +210,27 @@ begin
 
   { ** pass array to validation function **}
   Result := dataModule1.validateArtist(fields);
+end;
+
+function TframeArtists.tabSwitchHandler(Sender: TObject): boolean;
+// outputs:
+// true => changes saved / changes discarded / no changes
+// false => operation cancelled
+begin
+  if boolUnsavedChanges then
+  begin
+    case MessageDlg('Save changes?', mtConfirmation, mbYesNoCancel, 0) of
+      mrYes:
+        begin
+          if sendForValidation(self) = '' then begin postChanges(self); Result := True; end
+          else begin postChanges(self); Result := False; end
+        end;
+      mrNo: begin Result := True; initForm(self); end;
+      mrCancel: Result := False;
+    end;
+  end
+  else begin Result := True; initForm(self); end; // in case there are no changes to save
+
 end;
 
 end.

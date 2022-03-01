@@ -24,6 +24,7 @@ type
     frameDashboard1: TframeDashboard;
     frameArtists1: TframeArtists;
     procedure FormCreate(Sender: TObject);
+    procedure PageControl1Changing(Sender: TObject; var AllowChange: Boolean);
   public
 
 
@@ -48,6 +49,11 @@ begin
   Screen.Cursor := 1234;  }
 end;
 
-
+procedure TForm1.PageControl1Changing(Sender: TObject;
+  var AllowChange: Boolean);
+begin
+  if frameArtists1.tabSwitchHandler(frameArtists1) = False then AllowChange := False
+  else AllowChange := True;
+end;
 
 end.

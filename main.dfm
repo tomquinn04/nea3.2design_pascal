@@ -149,6 +149,7 @@ object Form1: TForm1
     TabHeight = 40
     TabOrder = 0
     TabWidth = 120
+    OnChanging = PageControl1Changing
     object pageDashboard: TTabSheet
       Caption = 'Dashboard'
       inline frameDashboard1: TframeDashboard
@@ -436,10 +437,6 @@ object Form1: TForm1
               ExplicitTop = 378
               ExplicitWidth = 581
               ExplicitHeight = 179
-              inherited lblHelpSupport: TLabel
-                Width = 567
-                Height = 33
-              end
             end
           end
           inherited gridRight: TGridPanel
@@ -457,8 +454,6 @@ object Form1: TForm1
             ExplicitWidth = 349
             ExplicitHeight = 560
             inherited GridPanel15: TGridPanel
-              Width = 349
-              Height = 560
               ControlCollection = <
                 item
                   Column = 0
@@ -469,10 +464,6 @@ object Form1: TForm1
               ExplicitTop = 0
               ExplicitWidth = 349
               ExplicitHeight = 560
-              inherited txtMemos: TLabel
-                Width = 335
-                Height = 33
-              end
             end
           end
         end
@@ -653,8 +644,6 @@ object Form1: TForm1
         Height = 574
         Align = alClient
         TabOrder = 0
-        ExplicitLeft = 6
-        ExplicitTop = 34
         ExplicitWidth = 954
         ExplicitHeight = 574
         inherited gridRoot: TGridPanel
@@ -735,6 +724,17 @@ object Form1: TForm1
                   Control = frameArtists1.EditPrivateNotes
                   Row = 6
                   RowSpan = 5
+                end
+                item
+                  Column = 2
+                  Control = frameArtists1.LblRecordStatus
+                  Row = 17
+                end
+                item
+                  Column = 3
+                  ColumnSpan = 2
+                  Control = frameArtists1.ImgStatus
+                  Row = 17
                 end>
               ExplicitTop = 36
               ExplicitWidth = 587
@@ -880,7 +880,20 @@ object Form1: TForm1
                 ExplicitLeft = 84
                 ExplicitTop = 176
                 ExplicitWidth = 419
-                ExplicitHeight = 143
+              end
+              inherited LblRecordStatus: TStaticText
+                Left = 459
+                Top = 494
+                Height = 29
+                ExplicitLeft = 459
+                ExplicitTop = 494
+                ExplicitHeight = 29
+              end
+              inherited ImgStatus: TImage
+                Left = 504
+                Top = 494
+                Width = 82
+                Height = 29
               end
             end
             inherited GridTitle: TGridPanel
@@ -899,6 +912,10 @@ object Form1: TForm1
                 end>
               ExplicitWidth = 587
               ExplicitHeight = 36
+              inherited lblRecordTransaction: TLabel
+                Width = 361
+                Height = 31
+              end
               inherited GridPanel5: TGridPanel
                 Left = 379
                 Width = 202
@@ -957,7 +974,6 @@ object Form1: TForm1
               Height = 30
               ExplicitLeft = 108
               ExplicitWidth = 238
-              ExplicitHeight = 30
             end
             inherited GridPanel4: TGridPanel
               Top = 36
