@@ -91,7 +91,6 @@ begin
 
 // 1 - artistLastName
 if fields[1].Length > 30 then Result := 'Last Name cannot be longer than 30 characters'
-else if fields[1].Length < 1 then Result := 'Last Name cannot be blank'
 
 // 2 - artistFirstName
 else if fields[2].Length > 20 then Result := 'First Name cannot be longer than 20 characters'

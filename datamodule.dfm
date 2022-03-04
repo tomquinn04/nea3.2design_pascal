@@ -1,7 +1,7 @@
 object DataModule1: TDataModule1
-  Height = 230
-  Width = 446
-  PixelsPerInch = 110
+  Height = 251
+  Width = 486
+  PixelsPerInch = 120
   object FDConnection1: TFDConnection
     Params.Strings = (
       'ConnectionDef=gallerydb-testing')
