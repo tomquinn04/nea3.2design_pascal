@@ -5,7 +5,11 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.ExtCtrls, Vcl.StdCtrls,
-  dashboard, Vcl.Imaging.pngimage, transactions, artists;
+  dashboard, Vcl.Imaging.pngimage, transactions, artists, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
+  FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
+  FireDAC.Phys.MySQL, FireDAC.Phys.MySQLDef, FireDAC.VCLUI.Wait, Data.DB,
+  FireDAC.Comp.Client, datamodule;
 
 type
   TForm1 = class(TForm)
@@ -19,6 +23,10 @@ type
     pageSettings: TTabSheet;
     frameDashboard1: TframeDashboard;
     frameArtists1: TframeArtists;
+    procedure FormCreate(Sender: TObject);
+    procedure PageControl1Changing(Sender: TObject; var AllowChange: Boolean);
+  public
+
 
 
   private
@@ -33,9 +41,19 @@ var
 implementation
 
 {$R *.dfm}
+{$R cursors.res}
 
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  {Screen.Cursors[1234] := LoadCursor(HInstance, 'CDUCK');
+  Screen.Cursor := 1234;  }
+end;
 
-
-
+procedure TForm1.PageControl1Changing(Sender: TObject;
+  var AllowChange: Boolean);
+begin
+  if frameArtists1.tabSwitchHandler(frameArtists1) = False then AllowChange := False
+  else AllowChange := True;
+end;
 
 end.
