@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
-  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
+  datamodule;
 
 type
   TframeDashboard = class(TFrame)
@@ -36,6 +37,7 @@ type
     gridRight: TGridPanel;
     GridPanel15: TGridPanel;
     txtMemos: TLabel;
+    function tabSwitchHandler(Sender: TObject): boolean;
   private
     { Private declarations }
   public
@@ -45,5 +47,11 @@ type
 implementation
 
 {$R *.dfm}
+
+function TframeDashboard.tabSwitchHandler(Sender: TObject): boolean;
+begin
+  Result := True;
+  // tab switch handler - not yet implemented
+end;
 
 end.

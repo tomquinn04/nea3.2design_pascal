@@ -256,12 +256,17 @@ object Form1: TForm1
                   inherited txtSalesThisMonth: TLabel
                     Width = 224
                     Height = 103
+                    ExplicitHeight = 19
                   end
                   inherited lblSalesThisMonth: TLabel
                     Left = 60
                     Top = 106
+                    Width = 104
+                    Height = 19
                     ExplicitLeft = 60
                     ExplicitTop = 106
+                    ExplicitWidth = 104
+                    ExplicitHeight = 19
                   end
                 end
                 inherited GridPanel8: TGridPanel
@@ -285,12 +290,17 @@ object Form1: TForm1
                   inherited txtNewStockItems: TLabel
                     Width = 171
                     Height = 103
+                    ExplicitHeight = 19
                   end
                   inherited lblNewStockItems: TLabel
                     Left = 34
                     Top = 106
+                    Width = 102
+                    Height = 19
                     ExplicitLeft = 34
                     ExplicitTop = 106
+                    ExplicitWidth = 102
+                    ExplicitHeight = 19
                   end
                 end
                 inherited GridPanel14: TGridPanel
@@ -314,10 +324,17 @@ object Form1: TForm1
                   inherited txtSoldStockItems: TLabel
                     Width = 168
                     Height = 103
+                    ExplicitHeight = 19
                   end
                   inherited lblSoldStockItems: TLabel
+                    Left = 33
                     Top = 106
+                    Width = 101
+                    Height = 19
+                    ExplicitLeft = 28
                     ExplicitTop = 106
+                    ExplicitWidth = 101
+                    ExplicitHeight = 19
                   end
                 end
               end
@@ -381,12 +398,17 @@ object Form1: TForm1
                   inherited Label4: TLabel
                     Width = 280
                     Height = 109
+                    ExplicitHeight = 19
                   end
                   inherited Label5: TLabel
                     Left = 96
                     Top = 113
+                    Width = 88
+                    Height = 19
                     ExplicitLeft = 96
                     ExplicitTop = 113
+                    ExplicitWidth = 88
+                    ExplicitHeight = 19
                   end
                 end
                 inherited GridPanel12: TGridPanel
@@ -410,12 +432,17 @@ object Form1: TForm1
                   inherited Label6: TLabel
                     Width = 281
                     Height = 109
+                    ExplicitHeight = 19
                   end
                   inherited Label7: TLabel
                     Left = 70
                     Top = 113
+                    Width = 140
+                    Height = 19
                     ExplicitLeft = 70
                     ExplicitTop = 113
+                    ExplicitWidth = 140
+                    ExplicitHeight = 19
                   end
                 end
               end
@@ -880,20 +907,27 @@ object Form1: TForm1
                 ExplicitLeft = 84
                 ExplicitTop = 176
                 ExplicitWidth = 419
+                ExplicitHeight = 143
               end
               inherited LblRecordStatus: TStaticText
                 Left = 459
                 Top = 494
-                Height = 29
+                Width = 45
+                Height = 23
                 ExplicitLeft = 459
                 ExplicitTop = 494
-                ExplicitHeight = 29
+                ExplicitWidth = 45
+                ExplicitHeight = 23
               end
               inherited ImgStatus: TImage
                 Left = 504
                 Top = 494
                 Width = 82
                 Height = 29
+                ExplicitLeft = 504
+                ExplicitTop = 494
+                ExplicitWidth = 82
+                ExplicitHeight = 29
               end
             end
             inherited GridTitle: TGridPanel
@@ -912,10 +946,6 @@ object Form1: TForm1
                 end>
               ExplicitWidth = 587
               ExplicitHeight = 36
-              inherited lblRecordTransaction: TLabel
-                Width = 361
-                Height = 31
-              end
               inherited GridPanel5: TGridPanel
                 Left = 379
                 Width = 202
@@ -974,6 +1004,7 @@ object Form1: TForm1
               Height = 30
               ExplicitLeft = 108
               ExplicitWidth = 238
+              ExplicitHeight = 30
             end
             inherited GridPanel4: TGridPanel
               Top = 36
@@ -991,6 +1022,7 @@ object Form1: TForm1
               inherited GridArtistsList: TDBGrid
                 Width = 347
                 Height = 522
+                TitleFont.Height = -14
               end
             end
           end

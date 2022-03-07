@@ -84,9 +84,6 @@ object frameDashboard: TframeDashboard
           Value = 33.109738704271960000
         end>
       TabOrder = 0
-      ExplicitLeft = 3
-      ExplicitTop = 3
-      ExplicitHeight = 528
       object GridPanel7: TGridPanel
         AlignWithMargins = True
         Left = 3
@@ -207,17 +204,16 @@ object frameDashboard: TframeDashboard
               Caption = #163'--.--'
               Layout = tlCenter
               ExplicitWidth = 35
-              ExplicitHeight = 19
+              ExplicitHeight = 20
             end
             object lblSalesThisMonth: TLabel
-              Left = 59
+              Left = 56
               Top = 98
-              Width = 104
-              Height = 19
+              Width = 111
+              Height = 20
               Anchors = []
               Caption = 'Sales This Month'
-              ExplicitLeft = 92
-              ExplicitTop = 131
+              ExplicitLeft = 59
             end
           end
           object GridPanel8: TGridPanel
@@ -267,18 +263,17 @@ object frameDashboard: TframeDashboard
               Caption = '---'
               Layout = tlCenter
               ExplicitWidth = 18
-              ExplicitHeight = 19
+              ExplicitHeight = 20
             end
             object lblNewStockItems: TLabel
-              Left = 33
+              Left = 29
               Top = 98
-              Width = 102
-              Height = 19
+              Width = 110
+              Height = 20
               Margins.Left = 0
               Anchors = []
               Caption = 'New Stock Items'
-              ExplicitLeft = 1
-              ExplicitTop = 94
+              ExplicitLeft = 33
             end
           end
           object GridPanel14: TGridPanel
@@ -328,17 +323,16 @@ object frameDashboard: TframeDashboard
               Caption = '---'
               Layout = tlCenter
               ExplicitWidth = 18
-              ExplicitHeight = 19
+              ExplicitHeight = 20
             end
             object lblSoldStockItems: TLabel
-              Left = 33
+              Left = 28
               Top = 98
-              Width = 101
-              Height = 19
+              Width = 110
+              Height = 20
               Anchors = []
               Caption = 'Sold Stock Items'
-              ExplicitLeft = 31
-              ExplicitTop = 94
+              ExplicitLeft = 33
             end
           end
         end
@@ -396,7 +390,6 @@ object frameDashboard: TframeDashboard
             Value = 79.830525151961940000
           end>
         TabOrder = 1
-        ExplicitHeight = 176
         object GridPanel10: TGridPanel
           AlignWithMargins = True
           Left = 4
@@ -432,7 +425,6 @@ object frameDashboard: TframeDashboard
               Value = 100.000000000000000000
             end>
           TabOrder = 0
-          ExplicitHeight = 133
           object GridPanel11: TGridPanel
             AlignWithMargins = True
             Left = 3
@@ -466,7 +458,6 @@ object frameDashboard: TframeDashboard
                 Value = 20.000000000000000000
               end>
             TabOrder = 0
-            ExplicitHeight = 127
             DesignSize = (
               278
               126)
@@ -480,17 +471,17 @@ object frameDashboard: TframeDashboard
               Caption = #163'--.--'
               Layout = tlCenter
               ExplicitWidth = 35
-              ExplicitHeight = 19
+              ExplicitHeight = 20
             end
             object Label5: TLabel
-              Left = 95
-              Top = 104
-              Width = 88
-              Height = 19
+              Left = 91
+              Top = 103
+              Width = 96
+              Height = 20
               Anchors = []
               Caption = 'Sales This Year'
-              ExplicitLeft = 97
-              ExplicitTop = 102
+              ExplicitLeft = 95
+              ExplicitTop = 104
             end
           end
           object GridPanel12: TGridPanel
@@ -526,7 +517,6 @@ object frameDashboard: TframeDashboard
                 Value = 20.000000000000000000
               end>
             TabOrder = 1
-            ExplicitHeight = 127
             DesignSize = (
               279
               126)
@@ -540,17 +530,17 @@ object frameDashboard: TframeDashboard
               Caption = #163'--.--'
               Layout = tlCenter
               ExplicitWidth = 35
-              ExplicitHeight = 19
+              ExplicitHeight = 20
             end
             object Label7: TLabel
-              Left = 69
-              Top = 104
-              Width = 140
-              Height = 19
+              Left = 64
+              Top = 103
+              Width = 151
+              Height = 20
               Anchors = []
               Caption = 'Average Monthly Sales'
-              ExplicitLeft = 71
-              ExplicitTop = 102
+              ExplicitLeft = 69
+              ExplicitTop = 104
             end
           end
         end
@@ -610,8 +600,8 @@ object frameDashboard: TframeDashboard
           AlignWithMargins = True
           Left = 7
           Top = 3
-          Width = 563
-          Height = 31
+          Width = 567
+          Height = 33
           Margins.Left = 7
           Margins.Right = 7
           Margins.Bottom = 0
@@ -664,8 +654,8 @@ object frameDashboard: TframeDashboard
       object GridPanel15: TGridPanel
         Left = 0
         Top = 0
-        Width = 347
-        Height = 526
+        Width = 349
+        Height = 560
         Align = alClient
         BevelOuter = bvNone
         Color = clWhite
@@ -696,8 +686,8 @@ object frameDashboard: TframeDashboard
           AlignWithMargins = True
           Left = 7
           Top = 3
-          Width = 333
-          Height = 31
+          Width = 335
+          Height = 33
           Margins.Left = 7
           Margins.Right = 7
           Margins.Bottom = 0

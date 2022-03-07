@@ -52,7 +52,9 @@ end;
 procedure TForm1.PageControl1Changing(Sender: TObject;
   var AllowChange: Boolean);
 begin
-  if frameArtists1.tabSwitchHandler(frameArtists1) = False then AllowChange := False
+  if frameArtists1.tabSwitchHandler(frameArtists1) = False
+  or frameDashboard1.tabSwitchHandler(frameDashboard1) = False
+  then AllowChange := False
   else AllowChange := True;
 end;
 
