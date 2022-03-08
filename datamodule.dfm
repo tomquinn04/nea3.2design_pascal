@@ -1,6 +1,6 @@
 object DataModule1: TDataModule1
-  Height = 251
-  Width = 486
+  Height = 685
+  Width = 911
   PixelsPerInch = 120
   object FDConnection1: TFDConnection
     Params.Strings = (
@@ -192,5 +192,29 @@ object DataModule1: TDataModule1
       Origin = 'artistNotes'
       BlobType = ftMemo
     end
+  end
+  object FDQuery1: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'SELECT *,'
+      'stockAdjustment * productSalePrice AS lineSalePrice'
+      'FROM tbltransactions INNER JOIN tblproducts'
+      'ON tblproducts.productid = tbltransactions.productid'
+      'WHERE tbltransactions.transactionDate >= '#39':startDate'#39
+      'AND tbltransactions.transactionDate >= '#39':endDate'#39
+      'AND stockAdjustment < 0;')
+    Left = 496
+    Top = 408
+    ParamData = <
+      item
+        Name = 'startDate'
+        DataType = ftDate
+        FDDataType = dtDate
+      end
+      item
+        Name = 'endDate'
+        DataType = ftDate
+        FDDataType = dtDate
+      end>
   end
 end

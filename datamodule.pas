@@ -42,6 +42,7 @@ type
     QryArtistFromIDartistPhone: TStringField;
     QryArtistFromIDartistBankDetails: TStringField;
     QryArtistFromIDartistNotes: TMemoField;
+    FDQuery1: TFDQuery;
   private
     { Private declarations }
   public
