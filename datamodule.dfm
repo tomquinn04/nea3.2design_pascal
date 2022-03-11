@@ -1,6 +1,6 @@
 object DataModule1: TDataModule1
-  Height = 685
-  Width = 911
+  Height = 251
+  Width = 486
   PixelsPerInch = 120
   object FDConnection1: TFDConnection
     Params.Strings = (
@@ -193,7 +193,7 @@ object DataModule1: TDataModule1
       BlobType = ftMemo
     end
   end
-  object FDQuery1: TFDQuery
+  object QryTransactionsByDate: TFDQuery
     Connection = FDConnection1
     SQL.Strings = (
       'SELECT *,'
@@ -201,7 +201,7 @@ object DataModule1: TDataModule1
       'FROM tbltransactions INNER JOIN tblproducts'
       'ON tblproducts.productid = tbltransactions.productid'
       'WHERE tbltransactions.transactionDate >= '#39':startDate'#39
-      'AND tbltransactions.transactionDate >= '#39':endDate'#39
+      'AND tbltransactions.transactionDate <= '#39':endDate'#39
       'AND stockAdjustment < 0;')
     Left = 496
     Top = 408
@@ -209,12 +209,104 @@ object DataModule1: TDataModule1
       item
         Name = 'startDate'
         DataType = ftDate
-        FDDataType = dtDate
+        ParamType = ptInput
       end
       item
         Name = 'endDate'
         DataType = ftDate
-        FDDataType = dtDate
+        ParamType = ptInput
       end>
+    object QryTransactionsByDatetransactionID: TFDAutoIncField
+      FieldName = 'transactionID'
+      Origin = 'transactionID'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object QryTransactionsByDateproductID: TIntegerField
+      FieldName = 'productID'
+      Origin = 'productID'
+      Required = True
+    end
+    object QryTransactionsByDatestockAdjustment: TIntegerField
+      FieldName = 'stockAdjustment'
+      Origin = 'stockAdjustment'
+      Required = True
+    end
+    object QryTransactionsByDatetransactionDate: TDateField
+      FieldName = 'transactionDate'
+      Origin = 'transactionDate'
+      Required = True
+    end
+    object QryTransactionsByDatetransactionPaid: TBooleanField
+      AutoGenerateValue = arDefault
+      FieldName = 'transactionPaid'
+      Origin = 'transactionPaid'
+    end
+    object QryTransactionsByDateproductID_1: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'productID_1'
+      Origin = 'productID'
+      ProviderFlags = []
+      ReadOnly = True
+    end
+    object QryTransactionsByDateartistID: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'artistID'
+      Origin = 'artistID'
+      ProviderFlags = []
+      ReadOnly = True
+    end
+    object QryTransactionsByDateproductDescription: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'productDescription'
+      Origin = 'productDescription'
+      ProviderFlags = []
+      ReadOnly = True
+      Size = 50
+    end
+    object QryTransactionsByDateproductNotes: TMemoField
+      AutoGenerateValue = arDefault
+      FieldName = 'productNotes'
+      Origin = 'productNotes'
+      ProviderFlags = []
+      ReadOnly = True
+      BlobType = ftMemo
+    end
+    object QryTransactionsByDateproductSalePrice: TBCDField
+      AutoGenerateValue = arDefault
+      FieldName = 'productSalePrice'
+      Origin = 'productSalePrice'
+      ProviderFlags = []
+      ReadOnly = True
+      Precision = 8
+      Size = 2
+    end
+    object QryTransactionsByDateproductArtistCommission: TBCDField
+      AutoGenerateValue = arDefault
+      FieldName = 'productArtistCommission'
+      Origin = 'productArtistCommission'
+      ProviderFlags = []
+      ReadOnly = True
+      Precision = 8
+      Size = 2
+    end
+    object QryTransactionsByDateproductGalleryCommission: TBCDField
+      AutoGenerateValue = arDefault
+      FieldName = 'productGalleryCommission'
+      Origin = 'productGalleryCommission'
+      ProviderFlags = []
+      ReadOnly = True
+      Precision = 8
+      Size = 2
+    end
+    object QryTransactionsByDatelineSalePrice: TFMTBCDField
+      AutoGenerateValue = arDefault
+      FieldName = 'lineSalePrice'
+      Origin = 'lineSalePrice'
+      ProviderFlags = []
+      ReadOnly = True
+      Precision = 18
+      Size = 2
+    end
   end
 end

@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
   Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
-  datamodule;
+  datamodule, DateUtils;
 
 type
   TframeDashboard = class(TFrame)
@@ -38,6 +38,7 @@ type
     GridPanel15: TGridPanel;
     txtMemos: TLabel;
     function tabSwitchHandler(Sender: TObject): boolean;
+    procedure updateMonthSales(Sender: TObject);
   private
     { Private declarations }
   public
@@ -48,8 +49,37 @@ implementation
 
 {$R *.dfm}
 
+procedure TframeDashboard.updateMonthSales(Sender: TObject);
+var dateNow: TDateTime; startDateStr, endDateStr: string;
+begin
+  dateNow := Date();
+
+  { code to format date into MariaDB-compatible YYYY-MM-DD format }
+  startDateStr :=
+   YearOf(dateNow).ToString + '-' + Format('%.*d',[2, MonthOf(dateNow)]) + '-' + '01' ;
+
+  endDateStr :=
+   YearOf(dateNow).ToString + '-' + Format('%.*d',[2, MonthOf(dateNow)]) + '-'
+   + Format('%.*d', [2, DayOf(dateNow)]);
+
+  DataModule1.QryTransactionsByDate.Close();
+  DataModule1.QryTransactionsByDate.ParamByName('startDate').Value := startDateStr;
+  DataModule1.QryTransactionsByDate.ParamByName('endDate').Value := endDateStr;
+  DataModule1.QryTransactionsByDate.Active := True;
+  DataModule1.QryTransactionsByDate.OpenOrExecute;
+
+  //DataModule1.QryTransactionsByDate.
+
+  //txtSalesThisMonth.Caption
+   //:= DataModule1.QryTransactionsByDatesumSalePrice.Value.ToString;
+
+  txtSalesThisMonth.Caption
+   := DataModule1.sumColumn(DataModule1.QryTransactionsByDate, 'lineSalePrice').ToString;
+end;
+
 function TframeDashboard.tabSwitchHandler(Sender: TObject): boolean;
 begin
+  updateMonthSales(self);
   Result := True;
   // tab switch handler - not yet implemented
 end;

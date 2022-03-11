@@ -8,7 +8,7 @@ uses
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait,
   FireDAC.Comp.UI, Data.DB, FireDAC.Comp.Client, FireDAC.Phys.MySQL,
   FireDAC.Phys.MySQLDef, FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf,
-  FireDAC.DApt, FireDAC.Comp.DataSet, System.RegularExpressions;
+  FireDAC.DApt, FireDAC.Comp.DataSet, System.RegularExpressions, VCL.Dialogs;
 
 type
   TRecordType  = ShortInt;
@@ -42,7 +42,20 @@ type
     QryArtistFromIDartistPhone: TStringField;
     QryArtistFromIDartistBankDetails: TStringField;
     QryArtistFromIDartistNotes: TMemoField;
-    FDQuery1: TFDQuery;
+    QryTransactionsByDate: TFDQuery;
+    QryTransactionsByDatetransactionID: TFDAutoIncField;
+    QryTransactionsByDateproductID: TIntegerField;
+    QryTransactionsByDatestockAdjustment: TIntegerField;
+    QryTransactionsByDatetransactionDate: TDateField;
+    QryTransactionsByDatetransactionPaid: TBooleanField;
+    QryTransactionsByDateproductID_1: TIntegerField;
+    QryTransactionsByDateartistID: TIntegerField;
+    QryTransactionsByDateproductDescription: TStringField;
+    QryTransactionsByDateproductNotes: TMemoField;
+    QryTransactionsByDateproductSalePrice: TBCDField;
+    QryTransactionsByDateproductArtistCommission: TBCDField;
+    QryTransactionsByDateproductGalleryCommission: TBCDField;
+    QryTransactionsByDatelineSalePrice: TFMTBCDField;
   private
     { Private declarations }
   public
@@ -50,6 +63,7 @@ type
     function validateArtist(fields: TFieldsArray): string;
     function commitArtist(fields: TFieldsArray; id: shortint; recordType: TRecordType): string;
     function checkDBConnection: boolean;
+    function sumColumn(qry: TFDQuery; fieldName: string): integer;
   end;
 
 var
@@ -67,6 +81,20 @@ implementation
 
 {$R *.dfm}
 
+function TDataModule1.sumColumn(qry: TFDQuery; fieldName: string): integer;
+var runningTotal: integer;
+begin
+  if qry.EOF then Result := -1;
+
+  while not qry.EOF do
+  begin
+    runningTotal := runningTotal + qry.FieldByName(fieldName).AsInteger;
+    ///Inc(RunningTotal, qry.fieldByName(fieldName).AsInteger);
+    qry.Next;
+  end;
+  Result := runningTotal;
+end;
+
 function TDataModule1.checkDBConnection: boolean;
 begin
   Result := True; // TODO implement DB connection checking, username/pass form etc
@@ -79,7 +107,7 @@ begin
   validationResult := validateArtist(fields); // force data validation
   if validationResult = '' then
   begin
-
+    // artist save
   end
   else Result := validationResult;
 
