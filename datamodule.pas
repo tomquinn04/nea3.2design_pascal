@@ -84,6 +84,8 @@ implementation
 function TDataModule1.sumColumn(qry: TFDQuery; fieldName: string): integer;
 var runningTotal: integer;
 begin
+  runningTotal := 0;
+  qry.First;
   if qry.EOF then Result := -1;
 
   while not qry.EOF do
