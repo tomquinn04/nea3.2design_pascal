@@ -594,14 +594,12 @@ object frameDashboard: TframeDashboard
             Value = 79.830525151961940000
           end>
         TabOrder = 2
-        ExplicitTop = 356
-        ExplicitHeight = 169
         object lblHelpSupport: TLabel
           AlignWithMargins = True
           Left = 7
           Top = 3
-          Width = 567
-          Height = 33
+          Width = 563
+          Height = 31
           Margins.Left = 7
           Margins.Right = 7
           Margins.Bottom = 0
@@ -648,14 +646,11 @@ object frameDashboard: TframeDashboard
           Value = 100.000000000000000000
         end>
       TabOrder = 1
-      ExplicitLeft = 592
-      ExplicitTop = 3
-      ExplicitHeight = 528
       object GridPanel15: TGridPanel
         Left = 0
         Top = 0
-        Width = 349
-        Height = 560
+        Width = 347
+        Height = 526
         Align = alClient
         BevelOuter = bvNone
         Color = clWhite
@@ -678,16 +673,12 @@ object frameDashboard: TframeDashboard
             Value = 93.524696296198370000
           end>
         TabOrder = 0
-        ExplicitLeft = 3
-        ExplicitTop = 3
-        ExplicitWidth = 341
-        ExplicitHeight = 522
         object txtMemos: TLabel
           AlignWithMargins = True
           Left = 7
           Top = 3
-          Width = 335
-          Height = 33
+          Width = 333
+          Height = 31
           Margins.Left = 7
           Margins.Right = 7
           Margins.Bottom = 0

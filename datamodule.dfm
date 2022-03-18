@@ -197,23 +197,23 @@ object DataModule1: TDataModule1
     Connection = FDConnection1
     SQL.Strings = (
       'SELECT *,'
-      'stockAdjustment * productSalePrice AS lineSalePrice'
+      'stockAdjustment * -productSalePrice AS lineSalePrice'
       'FROM tbltransactions INNER JOIN tblproducts'
       'ON tblproducts.productid = tbltransactions.productid'
-      'WHERE tbltransactions.transactionDate >= '#39':startDate'#39
-      'AND tbltransactions.transactionDate <= '#39':endDate'#39
+      'WHERE tbltransactions.transactionDate >= :startDate'
+      'AND tbltransactions.transactionDate <= :endDate'
       'AND stockAdjustment < 0;')
     Left = 496
     Top = 408
     ParamData = <
       item
-        Name = 'startDate'
-        DataType = ftDate
+        Position = 1
+        Name = 'STARTDATE'
         ParamType = ptInput
       end
       item
-        Name = 'endDate'
-        DataType = ftDate
+        Position = 2
+        Name = 'ENDDATE'
         ParamType = ptInput
       end>
     object QryTransactionsByDatetransactionID: TFDAutoIncField
