@@ -40,6 +40,7 @@ type
     function tabSwitchHandler(Sender: TObject): boolean;
     procedure updateMonthSales(Sender: TObject);
     procedure updateNewStock(Sender: TObject);
+    procedure updateSoldStock(Sender: TObject);
   private
     { Private declarations }
   public
@@ -74,6 +75,8 @@ begin
   txtSalesThisMonth.Caption
    := FormatFloat('£#,###.##;1;0',
    DataModule1.sumColumn(DataModule1.QryTransactionsByDate, 'lineSalePrice'));
+
+  DataModule1.QryTransactionsByDate.Close();
 end;
 
 procedure TframeDashboard.updateNewStock(Sender: TObject);
@@ -99,12 +102,42 @@ begin
 
   txtNewStockItems.Caption
    := DataModule1.sumColumn(DataModule1.QryTransactionsInByDate, 'stockAdjustment').ToString;
+
+  DataModule1.QryTransactionsInByDate.Close();
+end;
+
+procedure TframeDashboard.updateSoldStock(Sender: TObject);
+{ this is the same boilerplate code as the monthly sales calculation }
+var dateNow: TDateTime; startDateStr, endDateStr: string;
+begin
+  dateNow := Date();
+
+  { code to format date into MariaDB-compatible YYYY-MM-DD format }
+  startDateStr :=
+   YearOf(dateNow).ToString + '-' + Format('%.*d',[2, MonthOf(dateNow)]) + '-' + '01';
+
+  endDateStr :=
+   YearOf(dateNow).ToString + '-' + Format('%.*d',[2, MonthOf(dateNow)]) + '-'
+   + Format('%.*d', [2, DayOf(dateNow)]);
+
+  { run query }
+  DataModule1.QryTransactionsByDate.Close();
+  DataModule1.QryTransactionsByDate.ParamByName('startDate').Value := startDateStr;
+  DataModule1.QryTransactionsByDate.ParamByName('endDate').Value := endDateStr;
+  DataModule1.QryTransactionsByDate.Active := True;
+  DataModule1.QryTransactionsByDate.OpenOrExecute;
+
+  txtSoldStockItems.Caption
+   := DataModule1.sumColumn(DataModule1.QryTransactionsByDate, 'stockAdjustment').ToString;
+
+  DataModule1.QryTransactionsByDate.Close();
 end;
 
 function TframeDashboard.tabSwitchHandler(Sender: TObject): boolean;
 begin
   updateMonthSales(self);
   updateNewStock(self);
+  updateSoldStock(self);
   Result := True;
   // tab switch handler - not yet implemented
 end;
