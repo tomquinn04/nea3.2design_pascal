@@ -39,6 +39,7 @@ type
     txtMemos: TLabel;
     function tabSwitchHandler(Sender: TObject): boolean;
     procedure updateMonthSales(Sender: TObject);
+    procedure updateNewStock(Sender: TObject);
   private
     { Private declarations }
   public
@@ -62,20 +63,46 @@ begin
    YearOf(dateNow).ToString + '-' + Format('%.*d',[2, MonthOf(dateNow)]) + '-'
    + Format('%.*d', [2, DayOf(dateNow)]);
 
+  { run query }
   DataModule1.QryTransactionsByDate.Close();
   DataModule1.QryTransactionsByDate.ParamByName('startDate').Value := startDateStr;
   DataModule1.QryTransactionsByDate.ParamByName('endDate').Value := endDateStr;
+  DataModule1.QryTransactionsByDate.ParamByName('stockFilter').Value := #60; // <
+  { only show negative stock transactions i.e. stock leaving the store }
   DataModule1.QryTransactionsByDate.Active := True;
   DataModule1.QryTransactionsByDate.OpenOrExecute;
 
-  //DataModule1.QryTransactionsByDate.
-
-  //txtSalesThisMonth.Caption
-   //:= DataModule1.QryTransactionsByDatesumSalePrice.Value.ToString;
-
+  { format and output value }
   txtSalesThisMonth.Caption
    := FormatFloat('£#,###.##;1;0',
    DataModule1.sumColumn(DataModule1.QryTransactionsByDate, 'lineSalePrice'));
+end;
+
+procedure TframeDashboard.updateNewStock(Sender: TObject);
+{ this is the same boilerplate code as the monthly sales calculation }
+var dateNow: TDateTime; startDateStr, endDateStr: string;
+begin
+  dateNow := Date();
+
+  { code to format date into MariaDB-compatible YYYY-MM-DD format }
+  startDateStr :=
+   YearOf(dateNow).ToString + '-' + Format('%.*d',[2, MonthOf(dateNow)]) + '-' + '01';
+
+  endDateStr :=
+   YearOf(dateNow).ToString + '-' + Format('%.*d',[2, MonthOf(dateNow)]) + '-'
+   + Format('%.*d', [2, DayOf(dateNow)]);
+
+  { run query }
+  DataModule1.QryTransactionsByDate.Close();
+  DataModule1.QryTransactionsByDate.ParamByName('startDate').Value := startDateStr;
+  DataModule1.QryTransactionsByDate.ParamByName('endDate').Value := endDateStr;
+  DataModule1.QryTransactionsByDate.ParamByName('stockFilter').Value := #62; // >
+  { only show positive stock transactions i.e. stock received }
+  DataModule1.QryTransactionsByDate.Active := True;
+  DataModule1.QryTransactionsByDate.OpenOrExecute;
+
+  txtNewStockItems.Caption
+   := DataModule1.sumColumn(DataModule1.QryTransactionsByDate, 'stockAdjustment').ToString;
 end;
 
 function TframeDashboard.tabSwitchHandler(Sender: TObject): boolean;

@@ -88,12 +88,15 @@ begin
   qry.First;
   if qry.EOF then Result := -1;
 
+  { iterate through a column of a query until the end of the query is reached }
   while not qry.EOF do
   begin
     runningTotal := runningTotal + qry.FieldByName(fieldName).AsInteger;
     ///Inc(RunningTotal, qry.fieldByName(fieldName).AsInteger);
     qry.Next;
   end;
+
+  { return total }
   Result := runningTotal;
 end;
 

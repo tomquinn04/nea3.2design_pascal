@@ -202,7 +202,7 @@ object DataModule1: TDataModule1
       'ON tblproducts.productid = tbltransactions.productid'
       'WHERE tbltransactions.transactionDate >= :startDate'
       'AND tbltransactions.transactionDate <= :endDate'
-      'AND stockAdjustment < 0;')
+      'AND stockAdjustment :stockFilter 0;')
     Left = 496
     Top = 408
     ParamData = <
@@ -215,6 +215,14 @@ object DataModule1: TDataModule1
         Position = 2
         Name = 'ENDDATE'
         ParamType = ptInput
+      end
+      item
+        Position = 3
+        Name = 'STOCKFILTER'
+        DataType = ftString
+        ParamType = ptInput
+        Size = 1
+        Value = Null
       end>
     object QryTransactionsByDatetransactionID: TFDAutoIncField
       FieldName = 'transactionID'
