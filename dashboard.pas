@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
-  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
+  datamodule, DateUtils;
 
 type
   TframeDashboard = class(TFrame)
@@ -36,6 +37,10 @@ type
     gridRight: TGridPanel;
     GridPanel15: TGridPanel;
     txtMemos: TLabel;
+    function tabSwitchHandler(Sender: TObject): boolean;
+    procedure updateMonthSales(Sender: TObject);
+    procedure updateNewStock(Sender: TObject);
+    procedure updateSoldStock(Sender: TObject);
   private
     { Private declarations }
   public
@@ -45,5 +50,98 @@ type
 implementation
 
 {$R *.dfm}
+
+procedure TframeDashboard.updateMonthSales(Sender: TObject);
+var dateNow: TDateTime; startDateStr, endDateStr: string;
+begin
+  dateNow := Date();
+
+  { code to format date into MariaDB-compatible YYYY-MM-DD format }
+  startDateStr :=
+   YearOf(dateNow).ToString + '-' + Format('%.*d',[2, MonthOf(dateNow)]) + '-' + '01';
+
+  endDateStr :=
+   YearOf(dateNow).ToString + '-' + Format('%.*d',[2, MonthOf(dateNow)]) + '-'
+   + Format('%.*d', [2, DayOf(dateNow)]);
+
+  { run query }
+  DataModule1.QryTransactionsByDate.Close();
+  DataModule1.QryTransactionsByDate.ParamByName('startDate').Value := startDateStr;
+  DataModule1.QryTransactionsByDate.ParamByName('endDate').Value := endDateStr;
+  DataModule1.QryTransactionsByDate.Active := True;
+  DataModule1.QryTransactionsByDate.OpenOrExecute;
+
+  { format and output value }
+  txtSalesThisMonth.Caption
+   := FormatFloat('£#,###.##;1;0',
+   DataModule1.sumColumn(DataModule1.QryTransactionsByDate, 'lineSalePrice'));
+
+  DataModule1.QryTransactionsByDate.Close();
+end;
+
+procedure TframeDashboard.updateNewStock(Sender: TObject);
+{ this is the same boilerplate code as the monthly sales calculation }
+var dateNow: TDateTime; startDateStr, endDateStr: string;
+begin
+  dateNow := Date();
+
+  { code to format date into MariaDB-compatible YYYY-MM-DD format }
+  startDateStr :=
+   YearOf(dateNow).ToString + '-' + Format('%.*d',[2, MonthOf(dateNow)]) + '-' + '01';
+
+  endDateStr :=
+   YearOf(dateNow).ToString + '-' + Format('%.*d',[2, MonthOf(dateNow)]) + '-'
+   + Format('%.*d', [2, DayOf(dateNow)]);
+
+  { run query }
+  DataModule1.QryTransactionsInByDate.Close();
+  DataModule1.QryTransactionsInByDate.ParamByName('startDate').Value := startDateStr;
+  DataModule1.QryTransactionsInByDate.ParamByName('endDate').Value := endDateStr;
+  DataModule1.QryTransactionsInByDate.Active := True;
+  DataModule1.QryTransactionsInByDate.OpenOrExecute;
+
+  txtNewStockItems.Caption
+   := DataModule1.sumColumn(DataModule1.QryTransactionsInByDate, 'stockAdjustment').ToString;
+
+  DataModule1.QryTransactionsInByDate.Close();
+end;
+
+procedure TframeDashboard.updateSoldStock(Sender: TObject);
+{ this is the same boilerplate code as the monthly sales calculation }
+var dateNow: TDateTime; startDateStr, endDateStr: string;
+begin
+  dateNow := Date();
+
+  { code to format date into MariaDB-compatible YYYY-MM-DD format }
+  startDateStr :=
+   YearOf(dateNow).ToString + '-' + Format('%.*d',[2, MonthOf(dateNow)]) + '-' + '01';
+
+  endDateStr :=
+   YearOf(dateNow).ToString + '-' + Format('%.*d',[2, MonthOf(dateNow)]) + '-'
+   + Format('%.*d', [2, DayOf(dateNow)]);
+
+  { run query }
+  DataModule1.QryTransactionsByDate.Close();
+  DataModule1.QryTransactionsByDate.ParamByName('startDate').Value := startDateStr;
+  DataModule1.QryTransactionsByDate.ParamByName('endDate').Value := endDateStr;
+  DataModule1.QryTransactionsByDate.Active := True;
+  DataModule1.QryTransactionsByDate.OpenOrExecute;
+
+  txtSoldStockItems.Caption
+   := (-DataModule1.sumColumn(DataModule1.QryTransactionsByDate, 'stockAdjustment')).ToString;
+  { total stock adjustment will be negative, invert it for viewing }
+
+  DataModule1.QryTransactionsByDate.Close();
+end;
+
+function TframeDashboard.tabSwitchHandler(Sender: TObject): boolean;
+begin
+  updateMonthSales(self);
+  updateNewStock(self);
+  updateSoldStock(self);
+  Result := True;
+  // there is no function to check if changes are saved so the tab switch is
+  // always accepted
+end;
 
 end.

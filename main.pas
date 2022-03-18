@@ -45,15 +45,20 @@ implementation
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-  {Screen.Cursors[1234] := LoadCursor(HInstance, 'CDUCK');
-  Screen.Cursor := 1234;  }
+  frameDashboard1.tabSwitchHandler(frameDashboard1);
+  { trigger TSH for dashboard to load values initially }
 end;
 
 procedure TForm1.PageControl1Changing(Sender: TObject;
   var AllowChange: Boolean);
 begin
-  if frameArtists1.tabSwitchHandler(frameArtists1) = False then AllowChange := False
+  if frameArtists1.tabSwitchHandler(frameArtists1) = False
+  or frameDashboard1.tabSwitchHandler(frameDashboard1) = False
+  then AllowChange := False
   else AllowChange := True;
+
+  { trigger all TSHs to prompt to save any changes
+    - could possibly only trigger the current tab and tab being switched to }
 end;
 
 end.

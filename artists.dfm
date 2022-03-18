@@ -482,15 +482,14 @@ object frameArtists: TframeArtists
           ExplicitHeight = 27
         end
         object LblRecordStatus: TStaticText
-          Left = 456
+          Left = 454
           Top = 464
-          Width = 45
+          Width = 47
           Height = 27
           Align = alRight
           Caption = 'Status:'
           TabOrder = 8
-          ExplicitLeft = 399
-          ExplicitHeight = 23
+          ExplicitHeight = 24
         end
         object ImgStatus: TImage
           Left = 501
@@ -540,8 +539,8 @@ object frameArtists: TframeArtists
           AlignWithMargins = True
           Left = 8
           Top = 4
-          Width = 358
-          Height = 29
+          Width = 350
+          Height = 23
           Margins.Left = 7
           Margins.Right = 7
           Margins.Bottom = 0
@@ -554,8 +553,6 @@ object frameArtists: TframeArtists
           Font.Style = [fsBold]
           ParentFont = False
           Layout = tlCenter
-          ExplicitWidth = 350
-          ExplicitHeight = 23
         end
         object GridPanel5: TGridPanel
           AlignWithMargins = True
@@ -720,7 +717,7 @@ object frameArtists: TframeArtists
           TabOrder = 0
           TitleFont.Charset = DEFAULT_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -14
+          TitleFont.Height = -15
           TitleFont.Name = 'Segoe UI'
           TitleFont.Style = []
           OnCellClick = GridArtistsListCellClick

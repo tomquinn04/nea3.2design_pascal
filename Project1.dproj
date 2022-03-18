@@ -122,12 +122,10 @@
         </DCCReference>
         <DCCReference Include="datamodule.pas">
             <Form>DataModule1</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="splash.pas">
             <Form>frmSplash</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <None Include="qryartistsgrid.sql"/>
         <RcItem Include="handrawn duck.cur">
