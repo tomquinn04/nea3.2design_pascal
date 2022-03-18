@@ -56,6 +56,20 @@ type
     QryTransactionsByDateproductArtistCommission: TBCDField;
     QryTransactionsByDateproductGalleryCommission: TBCDField;
     QryTransactionsByDatelineSalePrice: TFMTBCDField;
+    QryTransactionsInByDate: TFDQuery;
+    FDAutoIncField1: TFDAutoIncField;
+    IntegerField1: TIntegerField;
+    IntegerField2: TIntegerField;
+    DateField1: TDateField;
+    BooleanField1: TBooleanField;
+    IntegerField3: TIntegerField;
+    IntegerField4: TIntegerField;
+    StringField1: TStringField;
+    MemoField1: TMemoField;
+    BCDField1: TBCDField;
+    BCDField2: TBCDField;
+    BCDField3: TBCDField;
+    FMTBCDField1: TFMTBCDField;
   private
     { Private declarations }
   public

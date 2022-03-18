@@ -67,8 +67,6 @@ begin
   DataModule1.QryTransactionsByDate.Close();
   DataModule1.QryTransactionsByDate.ParamByName('startDate').Value := startDateStr;
   DataModule1.QryTransactionsByDate.ParamByName('endDate').Value := endDateStr;
-  DataModule1.QryTransactionsByDate.ParamByName('stockFilter').Value := #60; // <
-  { only show negative stock transactions i.e. stock leaving the store }
   DataModule1.QryTransactionsByDate.Active := True;
   DataModule1.QryTransactionsByDate.OpenOrExecute;
 
@@ -93,21 +91,20 @@ begin
    + Format('%.*d', [2, DayOf(dateNow)]);
 
   { run query }
-  DataModule1.QryTransactionsByDate.Close();
-  DataModule1.QryTransactionsByDate.ParamByName('startDate').Value := startDateStr;
-  DataModule1.QryTransactionsByDate.ParamByName('endDate').Value := endDateStr;
-  DataModule1.QryTransactionsByDate.ParamByName('stockFilter').Value := #62; // >
-  { only show positive stock transactions i.e. stock received }
-  DataModule1.QryTransactionsByDate.Active := True;
-  DataModule1.QryTransactionsByDate.OpenOrExecute;
+  DataModule1.QryTransactionsInByDate.Close();
+  DataModule1.QryTransactionsInByDate.ParamByName('startDate').Value := startDateStr;
+  DataModule1.QryTransactionsInByDate.ParamByName('endDate').Value := endDateStr;
+  DataModule1.QryTransactionsInByDate.Active := True;
+  DataModule1.QryTransactionsInByDate.OpenOrExecute;
 
   txtNewStockItems.Caption
-   := DataModule1.sumColumn(DataModule1.QryTransactionsByDate, 'stockAdjustment').ToString;
+   := DataModule1.sumColumn(DataModule1.QryTransactionsInByDate, 'stockAdjustment').ToString;
 end;
 
 function TframeDashboard.tabSwitchHandler(Sender: TObject): boolean;
 begin
   updateMonthSales(self);
+  updateNewStock(self);
   Result := True;
   // tab switch handler - not yet implemented
 end;

@@ -202,7 +202,7 @@ object DataModule1: TDataModule1
       'ON tblproducts.productid = tbltransactions.productid'
       'WHERE tbltransactions.transactionDate >= :startDate'
       'AND tbltransactions.transactionDate <= :endDate'
-      'AND stockAdjustment :stockFilter 0;')
+      'AND stockAdjustment < 0;')
     Left = 496
     Top = 408
     ParamData = <
@@ -215,14 +215,6 @@ object DataModule1: TDataModule1
         Position = 2
         Name = 'ENDDATE'
         ParamType = ptInput
-      end
-      item
-        Position = 3
-        Name = 'STOCKFILTER'
-        DataType = ftString
-        ParamType = ptInput
-        Size = 1
-        Value = Null
       end>
     object QryTransactionsByDatetransactionID: TFDAutoIncField
       FieldName = 'transactionID'
@@ -308,6 +300,122 @@ object DataModule1: TDataModule1
       Size = 2
     end
     object QryTransactionsByDatelineSalePrice: TFMTBCDField
+      AutoGenerateValue = arDefault
+      FieldName = 'lineSalePrice'
+      Origin = 'lineSalePrice'
+      ProviderFlags = []
+      ReadOnly = True
+      Precision = 18
+      Size = 2
+    end
+  end
+  object QryTransactionsInByDate: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'SELECT *,'
+      'stockAdjustment * -productSalePrice AS lineSalePrice'
+      'FROM tbltransactions INNER JOIN tblproducts'
+      'ON tblproducts.productid = tbltransactions.productid'
+      'WHERE tbltransactions.transactionDate >= :startDate'
+      'AND tbltransactions.transactionDate <= :endDate'
+      'AND stockAdjustment > 0;')
+    Left = 426
+    Top = 191
+    ParamData = <
+      item
+        Position = 1
+        Name = 'STARTDATE'
+        ParamType = ptInput
+      end
+      item
+        Position = 2
+        Name = 'ENDDATE'
+        ParamType = ptInput
+      end>
+    object FDAutoIncField1: TFDAutoIncField
+      FieldName = 'transactionID'
+      Origin = 'transactionID'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object IntegerField1: TIntegerField
+      FieldName = 'productID'
+      Origin = 'productID'
+      Required = True
+    end
+    object IntegerField2: TIntegerField
+      FieldName = 'stockAdjustment'
+      Origin = 'stockAdjustment'
+      Required = True
+    end
+    object DateField1: TDateField
+      FieldName = 'transactionDate'
+      Origin = 'transactionDate'
+      Required = True
+    end
+    object BooleanField1: TBooleanField
+      AutoGenerateValue = arDefault
+      FieldName = 'transactionPaid'
+      Origin = 'transactionPaid'
+    end
+    object IntegerField3: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'productID_1'
+      Origin = 'productID'
+      ProviderFlags = []
+      ReadOnly = True
+    end
+    object IntegerField4: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'artistID'
+      Origin = 'artistID'
+      ProviderFlags = []
+      ReadOnly = True
+    end
+    object StringField1: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'productDescription'
+      Origin = 'productDescription'
+      ProviderFlags = []
+      ReadOnly = True
+      Size = 50
+    end
+    object MemoField1: TMemoField
+      AutoGenerateValue = arDefault
+      FieldName = 'productNotes'
+      Origin = 'productNotes'
+      ProviderFlags = []
+      ReadOnly = True
+      BlobType = ftMemo
+    end
+    object BCDField1: TBCDField
+      AutoGenerateValue = arDefault
+      FieldName = 'productSalePrice'
+      Origin = 'productSalePrice'
+      ProviderFlags = []
+      ReadOnly = True
+      Precision = 8
+      Size = 2
+    end
+    object BCDField2: TBCDField
+      AutoGenerateValue = arDefault
+      FieldName = 'productArtistCommission'
+      Origin = 'productArtistCommission'
+      ProviderFlags = []
+      ReadOnly = True
+      Precision = 8
+      Size = 2
+    end
+    object BCDField3: TBCDField
+      AutoGenerateValue = arDefault
+      FieldName = 'productGalleryCommission'
+      Origin = 'productGalleryCommission'
+      ProviderFlags = []
+      ReadOnly = True
+      Precision = 8
+      Size = 2
+    end
+    object FMTBCDField1: TFMTBCDField
       AutoGenerateValue = arDefault
       FieldName = 'lineSalePrice'
       Origin = 'lineSalePrice'

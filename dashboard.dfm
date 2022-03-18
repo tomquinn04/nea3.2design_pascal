@@ -598,8 +598,8 @@ object frameDashboard: TframeDashboard
           AlignWithMargins = True
           Left = 7
           Top = 3
-          Width = 563
-          Height = 31
+          Width = 567
+          Height = 33
           Margins.Left = 7
           Margins.Right = 7
           Margins.Bottom = 0
@@ -649,8 +649,8 @@ object frameDashboard: TframeDashboard
       object GridPanel15: TGridPanel
         Left = 0
         Top = 0
-        Width = 347
-        Height = 526
+        Width = 349
+        Height = 560
         Align = alClient
         BevelOuter = bvNone
         Color = clWhite
@@ -673,12 +673,14 @@ object frameDashboard: TframeDashboard
             Value = 93.524696296198370000
           end>
         TabOrder = 0
+        ExplicitWidth = 347
+        ExplicitHeight = 526
         object txtMemos: TLabel
           AlignWithMargins = True
           Left = 7
           Top = 3
-          Width = 333
-          Height = 31
+          Width = 335
+          Height = 33
           Margins.Left = 7
           Margins.Right = 7
           Margins.Bottom = 0
