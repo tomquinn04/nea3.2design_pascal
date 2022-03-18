@@ -74,7 +74,8 @@ begin
    //:= DataModule1.QryTransactionsByDatesumSalePrice.Value.ToString;
 
   txtSalesThisMonth.Caption
-   := DataModule1.sumColumn(DataModule1.QryTransactionsByDate, 'lineSalePrice').ToString;
+   := FormatFloat('£#,###.##;1;0',
+   DataModule1.sumColumn(DataModule1.QryTransactionsByDate, 'lineSalePrice'));
 end;
 
 function TframeDashboard.tabSwitchHandler(Sender: TObject): boolean;

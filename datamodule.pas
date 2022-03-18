@@ -63,7 +63,7 @@ type
     function validateArtist(fields: TFieldsArray): string;
     function commitArtist(fields: TFieldsArray; id: shortint; recordType: TRecordType): string;
     function checkDBConnection: boolean;
-    function sumColumn(qry: TFDQuery; fieldName: string): integer;
+    function sumColumn(qry: TFDQuery; fieldName: string): double;
   end;
 
 var
@@ -81,8 +81,8 @@ implementation
 
 {$R *.dfm}
 
-function TDataModule1.sumColumn(qry: TFDQuery; fieldName: string): integer;
-var runningTotal: integer;
+function TDataModule1.sumColumn(qry: TFDQuery; fieldName: string): double;
+var runningTotal: double;
 begin
   runningTotal := 0;
   qry.First;
