@@ -128,7 +128,8 @@ begin
   DataModule1.QryTransactionsByDate.OpenOrExecute;
 
   txtSoldStockItems.Caption
-   := DataModule1.sumColumn(DataModule1.QryTransactionsByDate, 'stockAdjustment').ToString;
+   := (-DataModule1.sumColumn(DataModule1.QryTransactionsByDate, 'stockAdjustment')).ToString;
+  { total stock adjustment will be negative, invert it for viewing }
 
   DataModule1.QryTransactionsByDate.Close();
 end;
@@ -139,7 +140,8 @@ begin
   updateNewStock(self);
   updateSoldStock(self);
   Result := True;
-  // tab switch handler - not yet implemented
+  // there is no function to check if changes are saved so the tab switch is
+  // always accepted
 end;
 
 end.

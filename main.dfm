@@ -464,6 +464,10 @@ object Form1: TForm1
               ExplicitTop = 378
               ExplicitWidth = 581
               ExplicitHeight = 179
+              inherited lblHelpSupport: TLabel
+                Width = 567
+                Height = 33
+              end
             end
           end
           inherited gridRight: TGridPanel
@@ -477,20 +481,22 @@ object Form1: TForm1
                 Row = 0
               end>
             ExplicitLeft = 595
-            ExplicitTop = 4
             ExplicitWidth = 349
             ExplicitHeight = 560
             inherited GridPanel15: TGridPanel
+              Width = 349
+              Height = 560
               ControlCollection = <
                 item
                   Column = 0
                   Control = frameDashboard1.txtMemos
                   Row = 0
                 end>
-              ExplicitLeft = 0
-              ExplicitTop = 0
               ExplicitWidth = 349
-              ExplicitHeight = 560
+              inherited txtMemos: TLabel
+                Width = 335
+                Height = 33
+              end
             end
           end
         end
