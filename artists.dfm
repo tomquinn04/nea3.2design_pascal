@@ -489,7 +489,6 @@ object frameArtists: TframeArtists
           Align = alRight
           Caption = 'Status:'
           TabOrder = 8
-          ExplicitLeft = 456
           ExplicitHeight = 24
         end
         object ImgStatus: TImage
