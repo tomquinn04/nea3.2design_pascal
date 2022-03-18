@@ -56,11 +56,11 @@ begin
 
   { code to format date into MariaDB-compatible YYYY-MM-DD format }
   startDateStr :=
-   #39 + YearOf(dateNow).ToString + '-' + Format('%.*d',[2, MonthOf(dateNow)]) + '-' + '01' + #39;
+   YearOf(dateNow).ToString + '-' + Format('%.*d',[2, MonthOf(dateNow)]) + '-' + '01';
 
   endDateStr :=
-   #39 +YearOf(dateNow).ToString + '-' + Format('%.*d',[2, MonthOf(dateNow)]) + '-'
-   + Format('%.*d', [2, DayOf(dateNow)]) + #39;
+   YearOf(dateNow).ToString + '-' + Format('%.*d',[2, MonthOf(dateNow)]) + '-'
+   + Format('%.*d', [2, DayOf(dateNow)]);
 
   DataModule1.QryTransactionsByDate.Close();
   DataModule1.QryTransactionsByDate.ParamByName('startDate').Value := startDateStr;
