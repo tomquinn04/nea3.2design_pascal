@@ -253,7 +253,7 @@ object frameArtists: TframeArtists
           TabOrder = 2
           TextHint = 'Address 1'
           OnChange = markUnsaved
-          ExplicitHeight = 27
+          ExplicitHeight = 28
         end
         object EditArtistAddress2: TEdit
           AlignWithMargins = True
@@ -269,7 +269,7 @@ object frameArtists: TframeArtists
           TabOrder = 3
           TextHint = 'Address 2'
           OnChange = markUnsaved
-          ExplicitHeight = 27
+          ExplicitHeight = 28
         end
         object GridPanel2: TGridPanel
           Left = 82
@@ -316,7 +316,7 @@ object frameArtists: TframeArtists
             TabOrder = 0
             TextHint = 'Address 3'
             OnChange = markUnsaved
-            ExplicitHeight = 27
+            ExplicitHeight = 28
           end
           object EditPostcode: TEdit
             AlignWithMargins = True
@@ -332,7 +332,7 @@ object frameArtists: TframeArtists
             TabOrder = 1
             TextHint = 'Postcode'
             OnChange = markUnsaved
-            ExplicitHeight = 27
+            ExplicitHeight = 28
           end
         end
         object GridPanel3: TGridPanel
@@ -380,7 +380,7 @@ object frameArtists: TframeArtists
             TabOrder = 0
             TextHint = 'First Name'
             OnChange = markUnsaved
-            ExplicitHeight = 27
+            ExplicitHeight = 28
           end
           object EditLastName: TEdit
             AlignWithMargins = True
@@ -396,7 +396,7 @@ object frameArtists: TframeArtists
             TabOrder = 1
             TextHint = 'Last Name'
             OnChange = markUnsaved
-            ExplicitHeight = 27
+            ExplicitHeight = 28
           end
         end
         object GridPanel6: TGridPanel
@@ -444,7 +444,7 @@ object frameArtists: TframeArtists
             TabOrder = 0
             TextHint = 'Telephone'
             OnChange = markUnsaved
-            ExplicitHeight = 27
+            ExplicitHeight = 28
           end
           object EditEmail: TEdit
             AlignWithMargins = True
@@ -460,7 +460,7 @@ object frameArtists: TframeArtists
             TabOrder = 1
             TextHint = 'Email'
             OnChange = markUnsaved
-            ExplicitHeight = 27
+            ExplicitHeight = 28
           end
         end
         object EditPrivateNotes: TEdit
@@ -479,7 +479,7 @@ object frameArtists: TframeArtists
           TabOrder = 7
           TextHint = 'Private Notes'
           OnChange = markUnsaved
-          ExplicitHeight = 27
+          ExplicitHeight = 28
         end
         object LblRecordStatus: TStaticText
           Left = 454
@@ -489,7 +489,6 @@ object frameArtists: TframeArtists
           Align = alRight
           Caption = 'Status:'
           TabOrder = 8
-          ExplicitHeight = 24
         end
         object ImgStatus: TImage
           Left = 501
@@ -539,8 +538,8 @@ object frameArtists: TframeArtists
           AlignWithMargins = True
           Left = 8
           Top = 4
-          Width = 350
-          Height = 23
+          Width = 358
+          Height = 29
           Margins.Left = 7
           Margins.Right = 7
           Margins.Bottom = 0
@@ -553,6 +552,8 @@ object frameArtists: TframeArtists
           Font.Style = [fsBold]
           ParentFont = False
           Layout = tlCenter
+          ExplicitWidth = 350
+          ExplicitHeight = 23
         end
         object GridPanel5: TGridPanel
           AlignWithMargins = True
@@ -678,7 +679,6 @@ object frameArtists: TframeArtists
         TabOrder = 0
         TextHint = 'Start typing to search...'
         OnChange = SearchBox1Change
-        ExplicitHeight = 27
       end
       object GridPanel4: TGridPanel
         Left = 0

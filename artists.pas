@@ -56,6 +56,7 @@ type
     function sendForValidation(Sender: TObject): string;
     function tabSwitchHandler(Sender: TObject): boolean;
     procedure initForm(Sender: TObject);
+    function generateFieldsArray(Sender: TObject): TFieldsArray;
   private
     { Private declarations }
   public
@@ -179,6 +180,7 @@ begin
   validationOutput := sendForValidation(Sender);
   if validationOutput = '' then
   begin
+    DataModule1.commitArtist(generateFieldsArray(sender));
     markSaved(Sender);
     Result := true;
   end
@@ -188,15 +190,14 @@ begin
     Result := false;
   end;
 end;
-
-function TframeArtists.sendForValidation(Sender: TObject): string;
+function TframeArtists.generateFieldsArray(Sender: TObject): TFieldsArray;
 var fields : dataModule.TFieldsArray;
 begin
   { ** initialise array ** }
   SetLength(fields, 11);
 
   { ** fill array from form ** }
-  // fields[0] := not used
+  fields[0] :=  GetCurrentID(self).ToString;
   fields[1] :=  EditLastName.Text;
   fields[2] :=  EditFirstName.Text;
   fields[3] :=  EditArtistAddress1.Text;
@@ -206,8 +207,14 @@ begin
   fields[7] :=  EditEmail.Text;
   fields[8] :=  EditTelephone.Text;
   // fields[9] := not used
-  // fields[10] := not used
+  fields[10] := EditPrivateNotes.Text;
 
+  Result := fields;
+end;
+function TframeArtists.sendForValidation(Sender: TObject): string;
+var fields : dataModule.TFieldsArray;
+begin
+  fields := generateFieldsArray(Sender);
   { ** pass array to validation function **}
   Result := dataModule1.validateArtist(fields);
 end;
