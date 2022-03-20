@@ -17,8 +17,7 @@ object DataModule1: TDataModule1
   end
   object FDManager1: TFDManager
     ConnectionDefFileName = 
-      'C:\Users\tquin\source\repos\nea3.2development\FDConnectionDefs.i' +
-      'ni'
+      'FDConnectionDefs.ini'
     FormatOptions.AssignedValues = [fvMapRules]
     FormatOptions.OwnMapRules = True
     FormatOptions.MapRules = <>
