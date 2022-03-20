@@ -1,6 +1,6 @@
 object DataModule1: TDataModule1
-  Height = 681
-  Width = 943
+  Height = 572
+  Width = 823
   PixelsPerInch = 120
   object FDConnection1: TFDConnection
     Params.Strings = (
@@ -448,49 +448,71 @@ object DataModule1: TDataModule1
     ParamData = <
       item
         Name = 'ARTISTID'
+        DataType = ftSmallint
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'ARTISTLASTNAME'
+        DataType = ftString
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'ARTISTFIRSTNAME'
+        DataType = ftString
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'ARTISTADDRESS1'
+        DataType = ftString
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'ARTISTADDRESS2'
+        DataType = ftString
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'ARTISTADDRESS3'
+        DataType = ftString
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'ARTISTADDRESS4'
+        DataType = ftString
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'ARTISTEMAIL'
+        DataType = ftString
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'ARTISTPHONE'
+        DataType = ftString
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'ARTISTBANKDETAILS'
+        DataType = ftString
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'ARTISTNOTES'
+        DataType = ftMemo
         ParamType = ptInput
+        Value = Null
       end>
-    Left = 56
-    Top = 240
+    Left = 128
+    Top = 448
   end
 end
