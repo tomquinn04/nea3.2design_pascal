@@ -16,7 +16,8 @@ object DataModule1: TDataModule1
     Top = 32
   end
   object FDManager1: TFDManager
-    ConnectionDefFileName = 'FDConnectionDefs.ini'
+    ConnectionDefFileName = 
+      'FDConnectionDefs.ini'
     FormatOptions.AssignedValues = [fvMapRules]
     FormatOptions.OwnMapRules = True
     FormatOptions.MapRules = <>
