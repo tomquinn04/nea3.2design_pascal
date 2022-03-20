@@ -70,6 +70,7 @@ type
     BCDField2: TBCDField;
     BCDField3: TBCDField;
     FMTBCDField1: TFMTBCDField;
+    CmdArtistCommitUpdate: TFDCommand;
   private
     { Private declarations }
   public

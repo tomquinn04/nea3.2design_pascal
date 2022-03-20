@@ -1,6 +1,6 @@
 object DataModule1: TDataModule1
-  Height = 251
-  Width = 486
+  Height = 681
+  Width = 943
   PixelsPerInch = 120
   object FDConnection1: TFDConnection
     Params.Strings = (
@@ -16,8 +16,7 @@ object DataModule1: TDataModule1
     Top = 32
   end
   object FDManager1: TFDManager
-    ConnectionDefFileName = 
-      'FDConnectionDefs.ini'
+    ConnectionDefFileName = 'FDConnectionDefs.ini'
     FormatOptions.AssignedValues = [fvMapRules]
     FormatOptions.OwnMapRules = True
     FormatOptions.MapRules = <>
@@ -318,8 +317,8 @@ object DataModule1: TDataModule1
       'WHERE tbltransactions.transactionDate >= :startDate'
       'AND tbltransactions.transactionDate <= :endDate'
       'AND stockAdjustment > 0;')
-    Left = 426
-    Top = 191
+    Left = 578
+    Top = 207
     ParamData = <
       item
         Position = 1
@@ -423,5 +422,75 @@ object DataModule1: TDataModule1
       Precision = 18
       Size = 2
     end
+  end
+  object CmdArtistCommitUpdate: TFDCommand
+    Connection = FDConnection1
+    CommandText.Strings = (
+      'INSERT INTO tblartists'
+      '(artistID, artistLastName, artistFirstName, artistAddress1,'
+      'artistAddress2, artistAddress3, artistAddress4, artistEmail,'
+      'artistPhone, artistBankDetails, artistNotes)'
+      'VALUES'
+      '(:artistID, :artistLastName, :artistFirstName, :artistAddress1,'
+      ':artistAddress2, :artistAddress3, :artistAddress4, :artistEmail,'
+      ':artistPhone, :artistBankDetails, :artistNotes)'
+      'ON DUPLICATE KEY UPDATE'
+      'artistLastName = :artistLastName,'
+      'artistFirstName = :artistFirstName,'
+      'artistAddress1 = :artistAddress1,'
+      'artistAddress2 = :artistAddress2,'
+      'artistAddress3 = :artistAddress3,'
+      'artistAddress4 = :artistAddress4,'
+      'artistEmail = :artistEmail,'
+      'artistPhone = :artistPhone,'
+      'artistBankDetails = :artistBankDetails,'
+      'artistNotes = :artistNotes;')
+    ParamData = <
+      item
+        Name = 'ARTISTID'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ARTISTLASTNAME'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ARTISTFIRSTNAME'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ARTISTADDRESS1'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ARTISTADDRESS2'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ARTISTADDRESS3'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ARTISTADDRESS4'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ARTISTEMAIL'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ARTISTPHONE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ARTISTBANKDETAILS'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ARTISTNOTES'
+        ParamType = ptInput
+      end>
+    Left = 56
+    Top = 240
   end
 end
