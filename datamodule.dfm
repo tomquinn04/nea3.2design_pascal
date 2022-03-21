@@ -1,6 +1,6 @@
 object DataModule1: TDataModule1
-  Height = 251
-  Width = 486
+  Height = 572
+  Width = 823
   PixelsPerInch = 120
   object FDConnection1: TFDConnection
     Params.Strings = (
@@ -318,8 +318,8 @@ object DataModule1: TDataModule1
       'WHERE tbltransactions.transactionDate >= :startDate'
       'AND tbltransactions.transactionDate <= :endDate'
       'AND stockAdjustment > 0;')
-    Left = 426
-    Top = 191
+    Left = 578
+    Top = 207
     ParamData = <
       item
         Position = 1
@@ -423,5 +423,97 @@ object DataModule1: TDataModule1
       Precision = 18
       Size = 2
     end
+  end
+  object CmdArtistCommitUpdate: TFDCommand
+    Connection = FDConnection1
+    CommandText.Strings = (
+      'INSERT INTO tblartists'
+      '(artistID, artistLastName, artistFirstName, artistAddress1,'
+      'artistAddress2, artistAddress3, artistAddress4, artistEmail,'
+      'artistPhone, artistBankDetails, artistNotes)'
+      'VALUES'
+      '(:artistID, :artistLastName, :artistFirstName, :artistAddress1,'
+      ':artistAddress2, :artistAddress3, :artistAddress4, :artistEmail,'
+      ':artistPhone, :artistBankDetails, :artistNotes)'
+      'ON DUPLICATE KEY UPDATE'
+      'artistLastName = :artistLastName,'
+      'artistFirstName = :artistFirstName,'
+      'artistAddress1 = :artistAddress1,'
+      'artistAddress2 = :artistAddress2,'
+      'artistAddress3 = :artistAddress3,'
+      'artistAddress4 = :artistAddress4,'
+      'artistEmail = :artistEmail,'
+      'artistPhone = :artistPhone,'
+      'artistBankDetails = :artistBankDetails,'
+      'artistNotes = :artistNotes;')
+    ParamData = <
+      item
+        Name = 'ARTISTID'
+        DataType = ftSmallint
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'ARTISTLASTNAME'
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'ARTISTFIRSTNAME'
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'ARTISTADDRESS1'
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'ARTISTADDRESS2'
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'ARTISTADDRESS3'
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'ARTISTADDRESS4'
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'ARTISTEMAIL'
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'ARTISTPHONE'
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'ARTISTBANKDETAILS'
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'ARTISTNOTES'
+        DataType = ftMemo
+        ParamType = ptInput
+        Value = Null
+      end>
+    Left = 128
+    Top = 448
   end
 end

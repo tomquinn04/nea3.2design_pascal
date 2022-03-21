@@ -70,12 +70,13 @@ type
     BCDField2: TBCDField;
     BCDField3: TBCDField;
     FMTBCDField1: TFMTBCDField;
+    CmdArtistCommitUpdate: TFDCommand;
   private
     { Private declarations }
   public
     { Public declarations }
     function validateArtist(fields: TFieldsArray): string;
-    function commitArtist(fields: TFieldsArray; id: shortint; recordType: TRecordType): string;
+    function commitArtist(fields: TFieldsArray{; id: shortint; recordType: TRecordType}): string;
     function checkDBConnection: boolean;
     function sumColumn(qry: TFDQuery; fieldName: string): double;
   end;
@@ -120,13 +121,67 @@ begin
 end;
 
 
-function TDataModule1.commitArtist(fields: TFieldsArray; id: shortint; recordType: TRecordType): string;
-var validationResult: string;
+function TDataModule1.commitArtist(fields: TFieldsArray{; id: shortint; recordType: TRecordType}): string;
+var validationResult, sql: string;
 begin
   validationResult := validateArtist(fields); // force data validation
   if validationResult = '' then
   begin
-    // artist save
+//    DataModule1.CmdArtistCommitUpdate.Close;
+//
+//    DataModule1.CmdArtistCommitUpdate.ParamByName('ARTISTID').DataType := TFieldType.ftSmallint;
+//    DataModule1.CmdArtistCommitUpdate.ParamByName('artistLastName').DataType := TFieldType.ftString;
+//    DataModule1.CmdArtistCommitUpdate.ParamByName('artistFirstName').DataType := TFieldType.ftString;
+//    DataModule1.CmdArtistCommitUpdate.ParamByName('artistAddress1').DataType := TFieldType.ftString;
+//    DataModule1.CmdArtistCommitUpdate.ParamByName('artistAddress2').DataType := TFieldType.ftString;
+//    DataModule1.CmdArtistCommitUpdate.ParamByName('artistAddress3').DataType := TFieldType.ftString;
+//    DataModule1.CmdArtistCommitUpdate.ParamByName('artistAddress4').DataType := TFieldType.ftString;
+//    DataModule1.CmdArtistCommitUpdate.ParamByName('artistEmail').DataType := TFieldType.ftString;
+//    DataModule1.CmdArtistCommitUpdate.ParamByName('artistPhone').DataType := TFieldType.ftString;
+//    DataModule1.CmdArtistCommitUpdate.ParamByName('artistBankDetails').DataType := TFieldType.ftString;
+//    DataModule1.CmdArtistCommitUpdate.ParamByName('artistNotes').DataType := TFieldType.ftMemo;
+//    // uses same fieldsarray <-> field assignment as validateArtist
+//    DataModule1.CmdArtistCommitUpdate.ParamByName('ARTISTID').AsInteger := fields[0].ToInteger;
+//    DataModule1.CmdArtistCommitUpdate.ParamByName('artistLastName').AsString := fields[1];
+//    DataModule1.CmdArtistCommitUpdate.ParamByName('artistFirstName').AsString := fields[2];
+//    DataModule1.CmdArtistCommitUpdate.ParamByName('artistAddress1').AsString := fields[3];
+//    DataModule1.CmdArtistCommitUpdate.ParamByName('artistAddress2').AsString := fields[4];
+//    DataModule1.CmdArtistCommitUpdate.ParamByName('artistAddress3').AsString := fields[5];
+//    DataModule1.CmdArtistCommitUpdate.ParamByName('artistAddress4').AsString := fields[6];
+//    DataModule1.CmdArtistCommitUpdate.ParamByName('artistEmail').AsString := fields[7];
+//    DataModule1.CmdArtistCommitUpdate.ParamByName('artistPhone').AsString := fields[8];
+//    DataModule1.CmdArtistCommitUpdate.ParamByName('artistBankDetails').AsString := fields[9];
+//    DataModule1.CmdArtistCommitUpdate.ParamByName('artistNotes').AsMemo := fields[10];
+//
+//    DataModule1.CmdArtistCommitUpdate.Prepare;
+//    sql := DataModule1.CmdArtistCommitUpdate.SQLText;
+//    DataModule1.FDConnection1.ExecSQL(sql);
+//    DataModule1.CmdArtistCommitUpdate.Close;
+
+      sql :=
+        'INSERT INTO tblartists ' +
+        '(artistID, artistLastName, artistFirstName, artistAddress1,' +
+        'artistAddress2, artistAddress3, artistAddress4, artistEmail,' +
+        'artistPhone, artistBankDetails, artistNotes) ' +
+        'VALUES ' +
+        '(''' + fields[0] + ''', ''' + fields[1] + ''', ''' + fields[2] + ''', ''' + fields[3] + ''',''' +
+        fields[4] + ''', ''' + fields[5] + ''', ''' + fields[6] + ''', ''' + fields[7] + ''',''' +
+        fields[8] + ''', ''' + fields[9] + ''', ''' + fields[10] + ''') ' +
+        'ON DUPLICATE KEY UPDATE ' +
+        'artistLastName = ''' + fields[1] + ''', ' +
+        'artistFirstName = ''' + fields[2] + ''', ' +
+        'artistAddress1 = ''' + fields[3] + ''', ' +
+        'artistAddress2 = ''' + fields[4] + ''', ' +
+        'artistAddress3 = ''' + fields[5] + ''', ' +
+        'artistAddress4 = ''' + fields[6] + ''', ' +
+        'artistEmail = ''' + fields[7] + ''', ' +
+        'artistPhone = ''' + fields[8] + ''', ' +
+        'artistBankDetails = ''' + fields[9] + ''', ' +
+        'artistNotes = ''' + fields[10] + ''';';
+
+      DataModule1.FDConnection1.ExecSQL(sql);
+      DataModule1.QryArtists.Refresh;
+
   end
   else Result := validationResult;
 
